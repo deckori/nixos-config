@@ -24,8 +24,6 @@
       programs.niri.enable = true;
     };
 
-    wayland.windowManager.hyprland.enable = false;
-
   };
 
   programs.niri.enable = true;
