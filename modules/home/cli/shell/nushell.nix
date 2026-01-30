@@ -93,8 +93,6 @@
           cd $folder
         }
 
-        def "nt" [ ] {
-
         def --env y [...args] {
           let tmp = (mktemp -t "yazi-cwd.XXXXXX")
           ^yazi ...$args --cwd-file $tmp
@@ -103,17 +101,6 @@
             cd $cwd
           }
           rm -fp $tmp
-        }
-
-        notify-send --action 'y=Focus Window' test |
-          if $in == "y" {
-            hyprctl clients -j |
-              from json |
-              where workspace.id == 8 |
-              where class == kitty |
-              get title.0 |
-              xargs -I{} hyprctl dispatch focuswindow "title:{}"
-          }
         }
 
         def nufzf [] {
@@ -137,6 +124,8 @@
       '';
     environmentVariables = {
       EDITOR = "nvim";
+      SDL_VIDEODRIVER = "wayland,x11";
+      SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh";
       GCM_CREDENTIAL_STORE = "secretservice";
       config.buffer_editor = "nvim";
       config.edit_mode = "vi";
