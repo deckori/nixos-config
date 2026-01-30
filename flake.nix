@@ -39,8 +39,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    custom-nix-packages = {
-      url = "github:deckori/custom-nix-packages";
+    nixpkgs-custom = {
+      url = "github:coglinks/custom-nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-index-database = {
@@ -118,11 +119,11 @@
 
   outputs =
     {
-      custom-nix-packages,
       nix-on-droid,
       nixos-anywhere,
       nixos-raspberrypi,
       nixpkgs,
+      nixpkgs-custom,
       nixpkgs-unstable,
       self,
       yazi,
@@ -143,13 +144,7 @@
         inherit system;
         config.allowUnfree = true;
       };
-      pkgs-custom = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-        overlays = [
-          inputs.custom-nix-packages.overlays.default
-        ];
-      };
+      pkgs-custom = nixpkgs-custom.packages.${system};
       lib = nixpkgs.lib;
 
       # The below setup is my attempted setup for custom packages
@@ -163,8 +158,6 @@
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.${system}.nixfmt-tree;
-
-      packages = import ./pkgs { inherit lib pkgs; };
 
       devShells = forSystems allSystems (
         system:
@@ -200,6 +193,7 @@
             inherit
               self
               pkgs-32
+              pkgs-custom
               pkgs-unstable
               inputs
               username
