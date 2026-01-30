@@ -124,6 +124,7 @@
       '';
     environmentVariables = {
       EDITOR = "nvim";
+      LEDGER_FILE = "~/programs/hledger/finance/hledger.journal";
       SDL_VIDEODRIVER = "wayland,x11";
       SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh";
       GCM_CREDENTIAL_STORE = "secretservice";
