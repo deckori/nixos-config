@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   fetchFromGithub,
   ...
 }:
@@ -39,6 +40,8 @@ in
         # NOTE: Preferences
 
         set -g mouse on
+
+        set -g default-shell ${lib.getExe pkgs.nushell}
 
         # image.nvim setup
 
