@@ -13,6 +13,7 @@
 
   environment.systemPackages = with pkgs; [
     prismlauncher # For minecraft
+    boilr
     retroarch
     # (retroarch.override {
     #   cores = with libretro; [
@@ -24,6 +25,7 @@
     # })
     mangohud
     protonup-ng
+    ludusavi
     lumafly
     lutris
     heroic
