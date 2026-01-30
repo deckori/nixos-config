@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./winapps
+    # ./winapps
     ./gaming.nix
     ./misc-programs.nix
     ./pipewire.nix
