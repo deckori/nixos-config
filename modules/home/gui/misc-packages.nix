@@ -9,6 +9,9 @@
 
   home.packages = with pkgs; [
     #misc
+    imagemagick
+    bluez
+    bluez-tools
     discord
     copyq # clipboard manager
     thunderbird
