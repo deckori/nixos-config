@@ -137,6 +137,7 @@
       '';
     environmentVariables = {
       EDITOR = "nvim";
+      GCM_CREDENTIAL_STORE = "secretservice";
       config.buffer_editor = "nvim";
       config.edit_mode = "vi";
       config.show_banner = false;
