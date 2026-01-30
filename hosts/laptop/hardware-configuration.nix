@@ -38,7 +38,7 @@
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-label/BOOT";
+    device = "/dev/disk/by-label/NIXOS-ROOT";
     fsType = "vfat";
     options = [
       "fmask=0077"
@@ -46,25 +46,26 @@
     ];
   };
 
-  boot.initrd.luks.devices."kingston".device = "/dev/disk/by-uuid/00ddcc85-31c4-4b18-b478-d4b06790c333";
+  boot.initrd.luks.devices."kingston".device =
+    "/dev/disk/by-uuid/00ddcc85-31c4-4b18-b478-d4b06790c333";
 
-  fileSystems."/home" =
-    { device = "/dev/mapper/kingston";
-      fsType = "btrfs";
-      options = [ "subvol=home" ];
-    };
+  fileSystems."/home" = {
+    device = "/dev/mapper/kingston";
+    fsType = "btrfs";
+    options = [ "subvol=home" ];
+  };
 
-  fileSystems."/st" =
-    { device = "/dev/mapper/kingston";
-      fsType = "btrfs";
-      options = [ "subvol=st" ];
-    };
+  fileSystems."/st" = {
+    device = "/dev/mapper/kingston";
+    fsType = "btrfs";
+    options = [ "subvol=st" ];
+  };
 
-  fileSystems."/var/lib" =
-    { device = "/dev/mapper/kingston";
-      fsType = "btrfs";
-      options = [ "subvol=var/lib" ];
-    };
+  fileSystems."/var/lib" = {
+    device = "/dev/mapper/kingston";
+    fsType = "btrfs";
+    options = [ "subvol=var/lib" ];
+  };
 
   boot.initrd.luks.devices."swap".device = "/dev/disk/by-uuid/d93797fe-adbb-47a2-beeb-5ddc34e1673a";
 
