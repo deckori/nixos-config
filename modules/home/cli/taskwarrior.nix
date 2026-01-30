@@ -1,8 +1,10 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  pkgs-custom,
+  config,
+  ...
+}:
 
-let
-  taskopen = pkgs.callPackage ../../../pkgs/taskopen/default.nix { };
-in
 {
   sops = {
     secrets."taskwarrior/lenovo-loq/client_id" = { };
@@ -30,7 +32,7 @@ in
 
   # not sure if i can use with syntax over here
   home.packages = [
-    taskopen
+    pkgs-custom.taskopen
     pkgs.timewarrior
     pkgs.taskwarrior-tui
   ];
