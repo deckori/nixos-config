@@ -1,7 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-custom, ... }:
 {
   home.packages = with pkgs; [
     ## misc
+    pkgs-custom.say
     conda
     pdftk
     starship
