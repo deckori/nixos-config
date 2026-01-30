@@ -17,6 +17,7 @@
     virtualisation.docker.enable = true;
     consuetudo.programs.gitolite.enable = true;
     services = {
+      odoo.enable = true;
       davfs2.enable = false;
       gotenberg.enable = true;
       nextcloud.enable = true;
