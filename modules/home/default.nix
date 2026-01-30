@@ -6,6 +6,6 @@
     ./cli
     ./gui
     ./css-colors.nix
-    ./color-files.nix
+    # ./color-files.nix
   ];
 }
