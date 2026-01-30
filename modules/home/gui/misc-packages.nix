@@ -25,14 +25,13 @@
     (inkscape-with-extensions.override {
       inkscapeExtensions = with inkscape-extensions; [ textext ];
     })
-    davinci-resolve
+    kdePackages.kdenlive
     darktable
     gnome-sound-recorder
     pdf4qt
     gthumb
     feh
     blender
-    obs-studio
     obs-cmd
     pavucontrol
     soundwireserver
@@ -68,6 +67,8 @@
     ldtk
     tiled
   ];
+
+  programs.obs-studio.enable = true;
 
   services.flatpak = {
     packages = [
