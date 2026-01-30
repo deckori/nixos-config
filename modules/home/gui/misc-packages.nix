@@ -18,6 +18,7 @@
     flow-control
     evince # pdf
     firefox
+    brave
     file-roller # archive
     gnome-text-editor # gedit
 
