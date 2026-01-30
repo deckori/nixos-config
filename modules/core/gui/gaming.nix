@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
+  pkgs-custom,
   inputs,
   ...
 }:
@@ -15,7 +16,14 @@
 
   programs.gamemode.enable = true;
 
+  programs.opengamepadui = {
+    enable = true;
+    powerstation.enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
+    pkgs-custom.ryubing
+    nsz
     prismlauncher # For minecraft
     boilr
     retroarch
@@ -27,6 +35,7 @@
     #     snes9x
     #   ];
     # })
+    cartridges
     mangohud
     protonup-ng
     ludusavi
