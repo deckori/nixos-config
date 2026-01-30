@@ -39,8 +39,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    custom-nixpkgs = {
-      url = "github:coglinks/nixpkgs/inc";
+    custom-nix-packages = {
+      url = "github:deckori/custom-nix-packages";
     };
 
     nix-index-database = {
@@ -118,7 +118,7 @@
 
   outputs =
     {
-      custom-nixpkgs,
+      custom-nix-packages,
       nix-on-droid,
       nixos-anywhere,
       nixos-raspberrypi,
@@ -131,10 +131,6 @@
     let
       username = "REDACTED";
       system = "x86_64-linux";
-      pkgs-custom = import custom-nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
@@ -146,6 +142,13 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
+      };
+      pkgs-custom = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [
+          inputs.custom-nix-packages.overlays.default
+        ];
       };
       lib = nixpkgs.lib;
 
@@ -199,7 +202,6 @@
               pkgs-32
               pkgs-unstable
               inputs
-              pkgs-custom
               username
               yazi
               ;
@@ -220,7 +222,6 @@
               self
               pkgs-unstable
               inputs
-              pkgs-custom
               username
               ;
           };
@@ -241,7 +242,6 @@
             self
             pkgs-unstable
             inputs
-            pkgs-custom
             username
             ;
         };
