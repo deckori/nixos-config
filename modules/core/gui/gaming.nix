@@ -9,7 +9,6 @@
 
   programs.steam = {
     enable = true;
-    package = pkgs-unstable.steam;
   };
 
   environment.systemPackages = with pkgs; [
