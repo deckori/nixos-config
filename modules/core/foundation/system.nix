@@ -42,8 +42,8 @@
       CPU_HWP_DYN_BOOST_ON_AC = 1;
       CPU_HWP_DYN_BOOST_ON_BAT = 1;
 
-      PLATFORM_PROFILE_ON_AC = "performance";
-      PLATFORM_PROFILE_ON_BAT = "performance";
+      PLATFORM_PROFILE_ON_AC = "Ondemand";
+      PLATFORM_PROFILE_ON_BAT = "Ondemand";
 
       INTEL_GPU_MIN_FREQ_ON_AC = 500;
       INTEL_GPU_MIN_FREQ_ON_BAT = 500;
