@@ -20,6 +20,7 @@
       odoo.enable = true;
       davfs2.enable = false;
       gotenberg.enable = true;
+      suwayomi-server.enable = true;
       nextcloud.enable = true;
       taskchampion-sync-server.enable = true;
     };
