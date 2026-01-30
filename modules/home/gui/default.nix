@@ -3,6 +3,7 @@
 {
   imports = [
     ./audacious.nix
+    ./dev.nix
     ./cava.nix
     ./gtk.nix
     ./kitty.nix
