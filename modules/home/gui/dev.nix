@@ -4,5 +4,7 @@
     # Godot
     godot
 
+    # Drawing
+    krita
   ];
 }
