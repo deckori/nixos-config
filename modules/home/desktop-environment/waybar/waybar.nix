@@ -4,5 +4,7 @@
     enable = true;
     # package = inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar;
   };
-  home.packages = with pkgs; [ networkmanagerapplet ];
+  home.packages = with pkgs; [
+    networkmanagerapplet
+  ];
 }
