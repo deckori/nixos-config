@@ -13,6 +13,7 @@ in
 
     services.postgresql = {
       enable = true;
+      package = pkgs.postgresql_18;
       ensureDatabases = [ "mydatabase" ];
       authentication = lib.mkOverride 10 ''
         # type  database  DBuser  auth-method
