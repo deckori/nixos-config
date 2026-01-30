@@ -13,6 +13,8 @@
 
       rlang.symbol = "  ";
 
+      git_status.ignore_submodules = true;
+
       aws.symbol = "aws ";
 
       azure.symbol = "az ";
