@@ -9,6 +9,8 @@
 
   programs.steam = {
     enable = true;
+    # You can live with steam stable, but unstable is somehow the less error prone experience.
+    package = pkgs-unstable.steam;
   };
 
   environment.systemPackages = with pkgs; [
