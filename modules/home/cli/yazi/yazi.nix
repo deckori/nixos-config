@@ -110,6 +110,15 @@
             for = "unix";
           }
         ];
+        open-xournal = [
+          {
+            run = "xournalpp \"$@\" &";
+            desc = "Open Xournalpp";
+            orphan = true;
+            block = false;
+            for = "unix";
+          }
+        ];
         open-pdf = [
           {
             run = "zathura \"$@\" &";
@@ -133,6 +142,10 @@
         {
           mime = "*";
           use = "program-chooser";
+        }
+        {
+          url = "*.xopp";
+          use = "open-xournal";
         }
       ];
       open.prepend_rules = [
