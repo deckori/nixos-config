@@ -1,22 +1,21 @@
 {
-  pkgs,
-  lib,
-  config,
+  jdk21_headless,
+  makeWrapper,
+  fetchurl,
   ...
 }:
-
 let
-  jdk = pkgs.jdk21_headless;
+  jdk = jdk21_headless;
   suwayomi-server = {
     revision = null;
-    version = "v2.1.2038";
+    version = "v2.0.1854";
 
     nativeBuildInputs = [ pkgs.makeWrapper ];
     dontUnpack = true;
 
-    src = builtins.fetchurl {
+    src = fetchurl {
       url = "https://github.com/Suwayomi/Suwayomi-Server-preview/releases/download/${suwayomi-server.version}/Suwayomi-Server-${suwayomi-server.version}.jar";
-      hash = "sha256:e4c77e2a0cb715af6c1c5dda2ba88c4ce9a9a3ec88308fea6976949af0981768";
+      hash = "sha256-oDE0b77qxTovZTd+P9J01wNxYZ3BrNqoX03biei03pM=";
     };
 
     buildPhase = ''
@@ -29,11 +28,4 @@ let
     '';
   };
 in
-{
-  config = lib.mkIf config.services.suwayomi-server.enable {
-    services.suwayomi-server = {
-      package = suwayomi-server;
-      settings.server.systemTrayEnabled = true;
-    };
-  };
-}
+suwayomi-server
