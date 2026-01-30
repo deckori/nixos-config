@@ -1,6 +1,16 @@
 {
   description = "coglinks' nixos configuration";
 
+  # nixConfig = {
+  #   extra-substituters = [
+  #     "https://nixos-raspberrypi.cachix.org"
+  #   ];
+  #   extra-trusted-public-keys = [
+  #     "nixos-raspberrypi.cachix.org-1:4iMO9LXa8BqhU+Rpg6LQKiGa2lsNh/j2oiYLNOQ5sPI="
+  #   ];
+  #   connect-timeout = 5;
+  # };
+
   inputs = {
     secrets = {
       url = "path:/st/remotes/secrets";
@@ -10,6 +20,14 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    nixos-raspberrypi = {
+      url = "github:nvmd/nixos-raspberrypi/main";
+    };
+
+    nixos-anywhere = {
+      url = "github:nix-community/nixos-anywhere";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -100,11 +118,13 @@
 
   outputs =
     {
+      custom-nixpkgs,
+      nix-on-droid,
+      nixos-anywhere,
+      nixos-raspberrypi,
       nixpkgs,
       nixpkgs-unstable,
-      custom-nixpkgs,
       self,
-      nix-on-droid,
       yazi,
       ...
     }@inputs:
@@ -131,6 +151,25 @@
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.${system}.nixfmt-tree;
+
+      devShells = forSystems allSystems (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        {
+          default = pkgs.mkShell {
+            nativeBuildInputs = with pkgs; [
+              nil # lsp language server for nix
+              nixpkgs-fmt
+              nix-output-monitor
+              nixos-anywhere.packages.${system}.default
+            ];
+          };
+        }
+      );
+
+      installerImages = nixos-raspberrypi.installerImages.rpi5;
 
       nixosConfigurations = {
         laptop = nixpkgs.lib.nixosSystem {
@@ -200,6 +239,11 @@
           username = "nix-on-droid";
         };
       };
-
+      rpi5 = nixos-raspberrypi.lib.nixosSystemFull {
+        specialArgs = inputs;
+        modules = [
+          ./hosts/rpi5-2
+        ];
+      };
     };
 }
