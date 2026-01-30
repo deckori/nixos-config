@@ -6,6 +6,7 @@
     ./avahi.nix
     ./virtualization.nix
     ./docker.nix
+    ./odoo.nix
     ./gitolite.nix
     ./gotenberg.nix
     ./nextcloud.nix
