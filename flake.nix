@@ -148,9 +148,20 @@
         config.allowUnfree = true;
       };
       lib = nixpkgs.lib;
+
+      # The below setup is my attempted setup for custom packages
+      # This is a function that generates an attribute by calling a function you
+      # pass to it, with each system as an argument
+      forAllSystems = nixpkgs.lib.genAttrs system;
+
+      # The below setup is my attempted setup for raspberry pi 5
+      allSystems = nixpkgs.lib.systems.flakeExposed;
+      forSystems = systems: f: nixpkgs.lib.genAttrs systems (system: f system);
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.${system}.nixfmt-tree;
+
+      packages = import ./pkgs { inherit lib pkgs; };
 
       devShells = forSystems allSystems (
         system:
