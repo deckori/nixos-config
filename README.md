@@ -2,7 +2,7 @@ This repo is a fork of [Frost-Phoenix's Flakes](https://github.com/Frost-Phoenix
 
 ## File structure
 
-- `./modules`: contains all modules
+- `./modules`: contains common 
 - `./modules/<core OR home>/default.<host>.nix`: imports specific modules for specific hosts
 - `./modules/<core OR home>/default.nix`: imports common modules used by all hosts
 
