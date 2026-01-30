@@ -13,6 +13,8 @@
     package = pkgs-unstable.steam;
   };
 
+  programs.gamemode.enable = true;
+
   environment.systemPackages = with pkgs; [
     prismlauncher # For minecraft
     boilr
