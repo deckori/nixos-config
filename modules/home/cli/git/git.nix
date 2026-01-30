@@ -33,6 +33,8 @@
     git-annex
     git-crypt
     git-remote-gcrypt
+    git-credential-manager
+    pass
     gh
   ];
 }
