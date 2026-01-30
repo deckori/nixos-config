@@ -4,6 +4,7 @@
     ## misc
     pkgs-custom.say
     conda
+    p7zip
     pdftk
     starship
     quarto
