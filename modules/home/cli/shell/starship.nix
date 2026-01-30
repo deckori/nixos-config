@@ -2,8 +2,8 @@
 
 {
   programs.starship = {
-    enable = true;
-    enableNushellIntegration = true;
+    enable = false;
+    enableNushellIntegration = false;
     settings = {
       right_format = "$time";
 
