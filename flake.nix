@@ -1,5 +1,5 @@
 {
-  description = "coglinks' nixos configuration";
+  description = "deckori's nixos configuration";
 
   # nixConfig = {
   #   extra-substituters = [
@@ -40,7 +40,7 @@
     };
 
     nixpkgs-custom = {
-      url = "github:coglinks/custom-nixpkgs";
+      url = "github:deckori/custom-nixpkgs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
