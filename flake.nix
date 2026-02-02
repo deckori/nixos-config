@@ -227,7 +227,6 @@
             inputs.sops-nix.nixosModules.sops
             inputs.stylix.nixosModules.stylix
             inputs.nix-index-database.nixosModules.default
-            ./hosts/laptop
             ./overlays
           ];
           specialArgs = inputs // {
