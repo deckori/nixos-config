@@ -230,7 +230,7 @@
             ./hosts/laptop
             ./overlays
           ];
-          specialArgs = {
+          specialArgs = inputs // {
             host = "laptop";
             inherit
               self
