@@ -1293,15 +1293,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1769549358,
-        "narHash": "sha256-wdMpeTMOqAmYUinHLJape1f8Cdl9AWYvVOVmpGGa1n8=",
-        "owner": "coglinks",
+        "lastModified": 1770026644,
+        "narHash": "sha256-Nsi0ls8TIKxi3BrVXPeGbKal0bcNl85XgC6TTbD688w=",
+        "owner": "deckori",
         "repo": "custom-nixpkgs",
-        "rev": "c50b4db14b121715af357b22f55d76982a479c5f",
+        "rev": "d7a69f6a7cc814fd82297de61e6ebf443ff00a80",
         "type": "github"
       },
       "original": {
-        "owner": "coglinks",
+        "owner": "deckori",
         "repo": "custom-nixpkgs",
         "type": "github"
       }

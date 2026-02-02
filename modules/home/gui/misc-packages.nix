@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  pkgs-custom,
   username,
   ...
 }:
@@ -10,6 +11,9 @@
   home.packages = with pkgs; [
     #misc
     imagemagick
+    pkgs-custom.sticker-convert
+    phototonic
+    digikam
     bluez
     bluez-tools
     discord
@@ -76,6 +80,7 @@
 
   services.flatpak = {
     packages = [
+      "dev.krtirtho.Flemozi"
     ];
   };
 }
