@@ -12,7 +12,7 @@
     ];
     security = {
       soteria.enable = true;
-      polkit.enable = false;
+      polkit.enable = true;
     };
   };
 }
