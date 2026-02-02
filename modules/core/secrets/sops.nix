@@ -23,7 +23,7 @@
   #     located in:
   #     ${config.sops.secrets."myservice/my_subdir/my_secret".path}
   #     to database and hack the mainframe
-  #     " > /var/lib/REDACTED/testfile
+  #     " > /var/lib/${username}/testfile
   #   '';
   #   serviceConfig = {
   #     User = "${username}";

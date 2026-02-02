@@ -130,7 +130,7 @@
       ...
     }@inputs:
     let
-      username = "REDACTED";
+      username = (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/users/main"));
       system = "x86_64-linux";
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;

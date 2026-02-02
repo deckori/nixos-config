@@ -1,17 +1,19 @@
 {
   config,
+  inputs,
   lib,
+  username,
   pkgs,
   ...
 }:
 
 {
-  users.users.REDACTED = {
+  users.users.${username} = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     initialPassword = "testingThep=zza@here";
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJTRoiVMNdoS6EOKE40/nQlj4LgBflVdE0pkzzOK3wam REDACTED@laptop"
+      (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/.ssh/rpi5-main-user.pub"))
     ];
   };
   # Use less privileged nixos user

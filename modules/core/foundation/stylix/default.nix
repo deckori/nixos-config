@@ -53,7 +53,7 @@
     stylix = {
       enable = true;
       targets = {
-        firefox.profileNames = [ "REDACTED" ];
+        firefox.profileNames = [ "${username}" ];
         waybar.enable = false;
         rofi.enable = false;
         hyprlock.enable = false;
