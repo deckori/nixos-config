@@ -1,9 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./users-config-stub.nix
     ./network-config.nix
-    ./private.nix
   ];
 
   time.timeZone = "UTC";
