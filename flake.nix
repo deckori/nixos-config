@@ -220,6 +220,12 @@
               ;
           };
         };
+        rpi5 = nixos-raspberrypi.lib.nixosSystemFull {
+          specialArgs = inputs;
+          modules = [
+            ./hosts/rpi5-2
+          ];
+        };
       };
       nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
         pkgs = import nixpkgs { system = "aarch64-linux"; };
@@ -243,12 +249,6 @@
         extraSpecialArgs = {
           username = "nix-on-droid";
         };
-      };
-      rpi5 = nixos-raspberrypi.lib.nixosSystemFull {
-        specialArgs = inputs;
-        modules = [
-          ./hosts/rpi5-2
-        ];
       };
     };
 }
