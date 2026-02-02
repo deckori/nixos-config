@@ -1714,8 +1714,8 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1766171645,
-        "narHash": "sha256-aGtxTbs0oWWNO/+5bq3vhxVq3eyLXcyUv9Foz9Ccw3I=",
+        "lastModified": 1770028197,
+        "narHash": "sha256-SMY46tn+Jqu4uAu1tcmq/uh3R6lyBZIUO4j4ocmZJnc=",
         "path": "/st/remotes/secrets",
         "type": "path"
       },
