@@ -2,6 +2,7 @@
   inputs,
   pkgs,
   pkgs-custom,
+  pkgs-unstable,
   username,
   ...
 }:
@@ -21,8 +22,10 @@
     thunderbird
     flow-control
     evince # pdf
+    bruno
     firefox
-    brave
+    # inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin
+    google-chrome
     file-roller # archive
     gnome-text-editor # gedit
 
@@ -56,14 +59,15 @@
     logisim-evolution
     zotero
     kicad
-    # ciscoPacketTracer8 # Go to https://www.netacad.com/resources/lab-downloads?courseLang=en-US to download CiscoPacketTracer822_amd64_signed.deb (If the file name is different, change it to as required by nix). Reason is cuz of:
+    pkgs-unstable.ciscoPacketTracer9 # Go to https://www.netacad.com/resources/lab-downloads?courseLang=en-US to download CiscoPacketTracer822_amd64_signed.deb (If the file name is different, change it to as required by nix). Reason is cuz of:
     /*
-      Unfortunately, we cannot download file CiscoPacketTracer822_amd64_signed.deb automatically.
-      > Please go to https://www.netacad.com to download it yourself, and add it to the Nix store
-      > using either
-      >   nix-store --add-fixed sha256 CiscoPacketTracer822_amd64_signed.deb
-      > or
-      >   nix-prefetch-url --type sha256 file:///path/to/CiscoPacketTracer822_amd64_signed.de
+            Unfortunately, we cannot download file CiscoPacketTracer822_amd64_signed.deb automatically.
+            > Please go to https://www.netacad.com to download it yourself, and add it to the Nix store
+            > using either
+      Current name
+            >   nix-store --add-fixed sha256 CiscoPacketTracer_900_Ubuntu_64bit.deb
+            > or
+            >   nix-prefetch-url --type sha256 file:///path/to/CiscoPacketTracer_900_Ubuntu_64bit.deb
     */
 
     ## Utility
