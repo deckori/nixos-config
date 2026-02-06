@@ -112,6 +112,11 @@
 
     nix-gaming.url = "github:fufexan/nix-gaming";
 
+    firefox = {
+      url = "github:nix-community/flake-firefox-nightly";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
     yazi.url = "github:sxyazi/yazi/nightly";
