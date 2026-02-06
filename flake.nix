@@ -221,10 +221,26 @@
           };
         };
         rpi5 = nixos-raspberrypi.lib.nixosSystemFull {
-          specialArgs = inputs;
+          inherit system;
           modules = [
             ./hosts/rpi5-2
+            inputs.sops-nix.nixosModules.sops
+            inputs.stylix.nixosModules.stylix
+            inputs.nix-index-database.nixosModules.default
+            ./overlays
           ];
+          specialArgs = inputs // {
+            host = "laptop";
+            inherit
+              self
+              pkgs-32
+              pkgs-custom
+              pkgs-unstable
+              inputs
+              username
+              yazi
+              ;
+          };
         };
       };
       nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
