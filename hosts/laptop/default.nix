@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  host,
   lib,
   username,
   ...
@@ -36,4 +37,6 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   programs.ssh.askPassword = lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
+
+  networking.hostName = "${host}";
 }
