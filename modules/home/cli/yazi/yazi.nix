@@ -33,15 +33,15 @@
             "g"
             "s"
           ];
-          run = "cd /inc";
-          desc = "go to /inc";
+          run = "cd /st";
+          desc = "go to /st";
         }
         {
           on = [
             "g"
             "r"
           ];
-          run = "cd /inc/remotes";
+          run = "cd /st/remotes";
           desc = "go to remotes";
         }
         {
@@ -49,7 +49,7 @@
             "g"
             "t"
           ];
-          run = "cd /inc/test";
+          run = "cd /st/test";
           desc = "go to test dir";
         }
         {
@@ -65,7 +65,7 @@
             "g"
             "n"
           ];
-          run = "cd /inc/notes/sems/sem3";
+          run = "cd /st/notes/sems/sem4";
           desc = "go notes";
         }
         {
@@ -73,7 +73,7 @@
             "g"
             "N"
           ];
-          run = "cd /inc/annex/notes-lfs";
+          run = "cd /st/annex/notes-lfs";
           desc = "go notes-lfs";
         }
       ];
@@ -143,15 +143,15 @@
           mime = "*";
           use = "program-chooser";
         }
-        {
-          url = "*.xopp";
-          use = "open-xournal";
-        }
       ];
       open.prepend_rules = [
         {
           url = "*.pdf";
           use = "open-pdf";
+        }
+        {
+          url = "*.xopp";
+          use = "open-xournal";
         }
       ];
 
