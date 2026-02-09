@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  lib,
   username,
   ...
 }:
@@ -31,5 +32,7 @@
   programs.niri.enable = true;
   programs.hyprland.enable = false;
 
-  services.displayManager.sddm.enable = false;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  programs.ssh.askPassword = lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
 }
