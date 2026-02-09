@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./lix.nix
-    ./nix.nix
+    ./flatpak.nix
   ];
 }
