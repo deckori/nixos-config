@@ -9,10 +9,9 @@ let
 in
 {
   boot.tmp.useTmpfs = true;
-  boot = {
-    loader.raspberry-pi.firmwarePackage = kernelBundle.raspberrypifw;
-    kernelPackages = kernelBundle.linuxPackages_rpi5;
-  };
+  boot.loader.raspberry-pi.firmwarePackage = kernelBundle.raspberrypifw;
+  boot.loader.raspberry-pi.bootloader = "kernel";
+  boot.kernelPackages = kernelBundle.linuxPackages_rpi5;
 
   nixpkgs.overlays = lib.mkAfter [
     (self: super: {
