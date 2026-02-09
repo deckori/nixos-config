@@ -4,6 +4,7 @@
   pkgs-custom,
   pkgs-unstable,
   username,
+  lib,
   host,
   ...
 }:
@@ -25,7 +26,12 @@
         ;
     };
     users.${username} = {
-      imports = [ ../../home ];
+      imports = [
+        ../../home
+      ]
+      ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
+        ../../home/default.laptop.nix
+      ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "25.11";
