@@ -12,9 +12,13 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     initialPassword = "testingThep=zza@here";
-    openssh.authorizedKeys.keys = [
-      (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/.ssh/rpi5-main-user.pub"))
-    ];
+    openssh = {
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
+      authorizedKeys.keys = [
+        (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/.ssh/rpi5-main-user.pub"))
+      ];
+    };
   };
   # Use less privileged nixos user
   users.users.nixos = {
