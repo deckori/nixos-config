@@ -27,4 +27,6 @@
 
   # allow nix-copy to live system
   nix.settings.trusted-users = [ "nixos" ];
+
+  system.stateVersion = "25.11";
 }
