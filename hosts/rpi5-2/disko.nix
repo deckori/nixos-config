@@ -2,7 +2,7 @@
   disko.devices = {
     disk = {
       my-disk = {
-        device = "/dev/nvme0n1";
+        device = "/dev/disk/by-id/nvme-BIWIN_CE430T5D100-512G_2446143805918";
         type = "disk";
         content = {
           type = "gpt";
