@@ -5,8 +5,8 @@ pkgs.stdenv.mkDerivation {
   src = pkgs.fetchFromGitHub {
     owner = "Keyitdev";
     repo = "sddm-astronaut-theme";
-    rev = "22bbb5ef3008756357433c61cb4444d742fd09c9";
-    hash = "sha256-+PghFV+EK6zcAoAxzTUc5DRpqeSAlP2/m2nYcHZFWDo=";
+    rev = "d73842c761f7d7859f3bdd80e4360f09180fad41";
+    hash = "sha256-+94WVxOWfVhIEiVNWwnNBRmN+d1kbZCIF10Gjorea9M=";
   };
   #The following does not work
   #patchPhase = ''
