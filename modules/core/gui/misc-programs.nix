@@ -2,6 +2,7 @@
 
 {
   programs.ladybird.enable = true;
+  programs.kdeconnect.enable = true;
 
   programs.appimage = {
     enable = true;
@@ -12,5 +13,6 @@
     miraclecast
     linux-wifi-hotspot
     baobab
+    protonvpn-gui
   ];
 }
