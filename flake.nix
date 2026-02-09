@@ -44,6 +44,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -228,6 +233,7 @@
         rpi5 = nixos-raspberrypi.lib.nixosSystemFull {
           inherit system;
           modules = [
+            inputs.disko.nixosModules.disko
             ./hosts/rpi5-2
             inputs.sops-nix.nixosModules.sops
             inputs.stylix.nixosModules.stylix
