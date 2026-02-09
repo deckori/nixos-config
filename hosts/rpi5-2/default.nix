@@ -9,5 +9,11 @@
     ./random.nix
     ./users.nix
     ./disko.nix
+    ../../modules/core
   ];
+  consuetudo = {
+    # gpu.name = "hybrid-intel-nvidia";
+    services.enable = true;
+  };
+
 }

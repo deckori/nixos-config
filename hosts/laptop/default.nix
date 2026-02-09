@@ -10,6 +10,7 @@
     ./fixes.nix
     ./hardware-configuration.nix
     ../../modules/core
+    ../../modules/core/default.laptop.nix
   ];
 
   consuetudo = {
