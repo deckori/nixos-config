@@ -31,9 +31,20 @@
   #          xserver.desktopManager.plasma5.enable = true;
   #        };
 
+  boot.loader."raspberry-pi" = {
+    enable = true;
+    variant = "rpi5";
+    kernelPackages = pkgs.linuxPackages_rpi5;
+    bootloader = "kernel";
+    firmware = {
+      enable = true;
+      device = "/dev/disk/by-id/nvme-BIWIN_CE430T5D100-512G_2446143805918-part1";
+    };
+  };
+
   system.nixos.tags =
     let
-      cfg = config.boot.loader.raspberryPi;
+      cfg = config.boot.loader.raspberry-pi;
     in
     [
       "raspberry-pi-${cfg.variant}"
