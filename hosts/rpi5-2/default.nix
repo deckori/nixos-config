@@ -9,7 +9,12 @@
     ./random.nix
     ./users.nix
     ./disko.nix
-    ../../modules/core
+    # ../../modules/core/cli
+    ../../modules/core/services
+    ../../modules/core/option.nix
+    # ../../modules/core/misc.nix
+    ../../modules/core/secrets
+    ../../modules/core/foundation
   ];
   consuetudo = {
     # gpu.name = "hybrid-intel-nvidia";
