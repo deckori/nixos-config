@@ -13,8 +13,13 @@
               content = {
                 type = "filesystem";
                 format = "vfat";
-                mountpoint = "/boot";
-                mountOptions = [ "umask=0077" ];
+                mountpoint = "/boot/firmware";
+                mountOptions = [
+                  "noatime"
+                  "noauto"
+                  "x-systemd.automount"
+                  "x-systemd.idle-timeout=1min"
+                ];
               };
             };
 
