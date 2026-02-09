@@ -84,9 +84,6 @@
                     "/swap" = {
                       mountpoint = "/.swapvol";
                       mountOptions = [ "nodatacow" ];
-                      swap = {
-                        swapfile.size = "4G";
-                      };
                     };
                   };
 

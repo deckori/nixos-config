@@ -10,7 +10,7 @@ in
 {
   boot.tmp.useTmpfs = true;
   boot = {
-    loader.raspberryPi.firmwarePackage = kernelBundle.raspberrypifw;
+    loader.raspberry-pi.firmwarePackage = kernelBundle.raspberrypifw;
     kernelPackages = kernelBundle.linuxPackages_rpi5;
   };
 
