@@ -12,13 +12,6 @@
     raspberry-pi-5.display-vc4
   ];
 
-  swapDevices = [
-    {
-      device = "/.swapvol/swapfile";
-      size = 4096; # MB
-    }
-  ];
-
   # fileSystems = {
   #   "/boot/firmware" = {
   #     device = "/dev/disk/by-label/FIRMWARE";
