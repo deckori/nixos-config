@@ -1,4 +1,9 @@
-{ inputs, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   # Disabled as it's not needed for now
@@ -7,7 +12,10 @@
   #  inherit (pkgs.stdenv.hostPlatform) system;
   #  inherit (config.nixpkgs) config;
   #};
-  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+  boot.binfmt.emulatedSystems = lib.optionals (pkgs.stdenv.hostPlatform.system == "aarch64-linux") [
+    "x86_64-linux"
+    "i686-linux"
+  ];
 
   nix.settings = {
     # max-jobs = 3;
