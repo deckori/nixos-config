@@ -9,6 +9,7 @@
     ./random.nix
     ./users.nix
     ./disko.nix
+    ./cachix.nix
     # ../../modules/core/cli
     # ../../modules/core/services
     # ../../modules/core/option.nix
