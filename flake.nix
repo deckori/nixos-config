@@ -231,7 +231,8 @@
           };
         };
         rpi5 = nixos-raspberrypi.lib.nixosSystemFull {
-          inherit system;
+          pkgs = import nixpkgs { system = "aarch64-linux"; };
+          system = "aarch64-linux";
           modules = [
             inputs.disko.nixosModules.disko
             ./hosts/rpi5-2
