@@ -1,5 +1,4 @@
 {
-  config,
   lib,
   pkgs,
   pkgs-custom,
@@ -82,9 +81,6 @@
         use ${pkgs.nu_scripts}/share/nu_scripts/modules/virtual_environments/nu_conda/nu_conda.nu
         $env.nu_conda = '${pkgs.nu_scripts}/share/nu_scripts/modules/virtual_environments/nu_conda/nu_conda.nu'
 
-        # Plugins
-        overlay use ${pkgs-custom.alias-finder-nu}/share/alias-finder/alias-finder.nu
-
         def ll [] { ls -l | select name mode user group size modified}
         def l [] { ls -al | select name mode user group size modified}
 
@@ -121,6 +117,10 @@
         )
 
         $env.XDG_CONFIG_HOME = ($env.HOME | path join .config)
+      ''
+      ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") ''
+        # Plugins
+        overlay use ${pkgs-custom.alias-finder-nu}/share/alias-finder/alias-finder.nu
       '';
     environmentVariables = {
       EDITOR = "nvim";
