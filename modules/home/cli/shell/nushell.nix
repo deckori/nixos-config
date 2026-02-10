@@ -118,13 +118,12 @@
 
         $env.XDG_CONFIG_HOME = ($env.HOME | path join .config)
       ''
-      ++ lib.concatStringsSep "\n" (
-        lib.optionals pkgs.stdenv.hostPlatform.isx86_64 [
-          ''
-            overlay use ${pkgs-custom.alias-finder-nu}/share/alias-finder/alias-finder.nu
-          ''
-        ]
-      );
+    # This import gives a list error. don't know how to fix
+    # ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") ''
+    #   # Plugins
+    #   overlay use ${pkgs-custom.alias-finder-nu}/share/alias-finder/alias-finder.nu
+    # ''
+    ;
     environmentVariables = {
       EDITOR = "nvim";
       LEDGER_FILE = "~/programs/hledger/finance/hledger.journal";
