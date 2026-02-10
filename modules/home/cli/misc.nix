@@ -39,7 +39,6 @@
     tdf # cli pdf viewer
     tokei # project line counter
     translate-shell # cli translator
-    woomer
     yt-dlp-light
 
     ## TUI
