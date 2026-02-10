@@ -16,9 +16,9 @@
     # ../../modules/core/secrets
     # ../../modules/core/foundation
   ];
-  consuetudo = {
-    # gpu.name = "hybrid-intel-nvidia";
-    services.enable = true;
-  };
+  # consuetudo = {
+  #   # gpu.name = "hybrid-intel-nvidia";
+  #   services.enable = true;
+  # };
 
 }
