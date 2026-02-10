@@ -231,7 +231,10 @@
           };
         };
         rpi5 = nixos-raspberrypi.lib.nixosSystemFull {
-          pkgs = import nixpkgs { system = "aarch64-linux"; };
+          pkgs = import nixpkgs {
+            system = "aarch64-linux";
+            config.allowUnfree = true;
+          };
           system = "aarch64-linux";
           modules = [
             inputs.disko.nixosModules.disko
@@ -256,7 +259,10 @@
         };
       };
       nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
-        pkgs = import nixpkgs { system = "aarch64-linux"; };
+        pkgs = import nixpkgs {
+          system = "aarch64-linux";
+          config.allowUnfree = true;
+        };
 
         modules = [
           inputs.sops-nix.nixosModules.sops
