@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   pkgs-custom,
   config,
   ...
@@ -31,9 +32,13 @@
   };
 
   # not sure if i can use with syntax over here
-  home.packages = [
-    pkgs-custom.taskopen
-    pkgs.timewarrior
-    pkgs.taskwarrior-tui
-  ];
+  home.packages =
+    with pkgs;
+    [
+      timewarrior
+      taskwarrior-tui
+    ]
+    ++ lib.optionals (stdenv.hostPlatform.system == "x86_64-linux") [
+      pkgs-custom.taskopen
+    ];
 }
