@@ -45,7 +45,9 @@
       isNormalUser = true;
       # doesnt work for some reason
       # hashedPasswordFile = config.sops.secrets.my-password.path;
-      initialPassword = "test";
+      initialPassword = (
+        lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/passwords/users/main-user")
+      );
       description = "${username}";
       extraGroups = [
         "networkmanager"
@@ -53,6 +55,11 @@
         "wheel"
       ];
       shell = pkgs.bash;
+
+      openssh.authorizedKeys.keys = [
+        (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/.ssh/rpi5-main-user.pub"))
+      ];
+
     };
   };
   nix.settings.allowed-users = [ "${username}" ];
