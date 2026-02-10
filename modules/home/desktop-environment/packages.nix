@@ -5,25 +5,29 @@
   ...
 }:
 {
-  home.packages = with pkgs; [
-    waypaper
-    inputs.adw-bluetooth.packages.${pkgs.stdenv.hostPlatform.system}.default
-    inputs.hypr-contrib.packages.${pkgs.stdenv.hostPlatform.system}.grimblast
-    inputs.hyprpicker.packages.${pkgs.stdenv.hostPlatform.system}.hyprpicker
-    ashell
-    swww
-    nwg-displays
-    hyprpolkitagent
-    gradia
-    copyq
-    grim
-    slurp
-    wlogout
-    wl-clip-persist
-    cliphist
-    wf-recorder
-    glib
-    wayland
-    direnv
-  ];
+  home.packages =
+    with pkgs;
+    [
+      waypaper
+      ashell
+      swww
+      nwg-displays
+      hyprpolkitagent
+      gradia
+      copyq
+      grim
+      slurp
+      wlogout
+      wl-clip-persist
+      cliphist
+      wf-recorder
+      glib
+      wayland
+      direnv
+    ]
+    ++ lib.optionals (stdenv.hostPlatform.system == "x86_64-linux") [
+      inputs.adw-bluetooth.packages.${stdenv.hostPlatform.system}.default
+      inputs.hypr-contrib.packages.${stdenv.hostPlatform.system}.grimblast
+      inputs.hyprpicker.packages.${stdenv.hostPlatform.system}.hyprpicker
+    ];
 }
