@@ -12,7 +12,6 @@
     ./cachix.nix
     # ../../modules/core/cli
     ../../modules/core/services
-    ../../modules/core/option.nix
     # ../../modules/core/misc.nix
     # ../../modules/core/secrets
     # ../../modules/core/foundation
@@ -22,5 +21,12 @@
   #   # gpu.name = "hybrid-intel-nvidia";
   #   services.enable = true;
   # };
+
+  services.odoo.enable = false;
+  services.davfs2.enable = false;
+  services.gotenberg.enable = false;
+  services.suwayomi-server.enable = true;
+  services.nextcloud.enable = false;
+  services.taskchampion-sync-server.enable = true;
 
 }
