@@ -22,6 +22,8 @@
   #   services.enable = true;
   # };
 
+  virtualisation.libvirtd.enable = false;
+  services.avahi.enable = true;
   services.odoo.enable = false;
   services.davfs2.enable = false;
   services.gotenberg.enable = false;

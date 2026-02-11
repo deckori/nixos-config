@@ -15,8 +15,10 @@
 
   config = lib.mkIf config.consuetudo.services.enable {
     virtualisation.docker.enable = true;
+    virtualisation.libvirtd.enable = true;
     consuetudo.programs.gitolite.enable = true;
     services = {
+      avahi.enable = true;
       odoo.enable = true;
       davfs2.enable = false;
       gotenberg.enable = true;
