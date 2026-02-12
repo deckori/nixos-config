@@ -8,6 +8,7 @@
 {
   imports = with nixos-raspberrypi.nixosModules; [
     # Hardware configuration
+    nixos-raspberrypi.lib.inject-overlays-global
     raspberry-pi-5.base
     raspberry-pi-5.page-size-16k
     raspberry-pi-5.display-vc4
