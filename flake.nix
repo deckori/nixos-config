@@ -22,7 +22,7 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nixos-raspberrypi = {
-      url = "github:nvmd/nixos-raspberrypi/main";
+      url = "github:nvmd/nixos-raspberrypi/develop";
     };
 
     nixos-anywhere = {
