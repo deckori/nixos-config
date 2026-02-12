@@ -32,17 +32,13 @@ in
 
   environment.systemPackages = with pkgs; [
     file
+    nushell
     git
     htop
-    psmisc
-    lsof
-    openssl
     wget
     tmux
     screen
-    ncdu
     tree
-    emacs-nox
     vim
   ];
 

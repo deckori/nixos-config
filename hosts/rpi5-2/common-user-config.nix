@@ -15,11 +15,6 @@
       ENV{UDISKS_IGNORE}="1"
   '';
 
-  environment.systemPackages = with pkgs; [
-    tree
-    htop
-  ];
-
   services.tailscale = {
     enable = true;
     useRoutingFeatures = "both";
