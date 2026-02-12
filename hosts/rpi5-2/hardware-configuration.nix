@@ -9,7 +9,10 @@
   imports = with nixos-raspberrypi.nixosModules; [
     # Hardware configuration
     raspberry-pi-5.base
+    raspberry-pi-5.page-size-16k
     raspberry-pi-5.display-vc4
+    raspberry-pi-5.display-rp1
+    raspberry-pi-5.bluetooth
   ];
 
   # fileSystems = {
