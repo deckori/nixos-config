@@ -15,7 +15,7 @@
     # ../../modules/core/misc.nix
     # ../../modules/core/secrets
     # ../../modules/core/foundation
-    ../../modules/core/foundation/package-manager
+    ../../modules/core/foundation/package-manager/nix.nix
   ];
   # consuetudo = {
   #   # gpu.name = "hybrid-intel-nvidia";
