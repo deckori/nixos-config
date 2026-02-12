@@ -230,11 +230,16 @@
               ;
           };
         };
-        rpi5 = nixos-raspberrypi.lib.nixosSystemFull {
+        rpi5 = nixos-raspberrypi.lib.nixosSystemFull rec {
+          pkgs-unstable = import nixpkgs-unstable {
+            system = "aarch64-linux";
+            config.allowUnfree = true;
+          };
           pkgs = import nixpkgs {
             system = "aarch64-linux";
             config.allowUnfree = true;
           };
+          pkgs-custom = nixpkgs-custom.packages.${"aarch64-linux"};
           system = "aarch64-linux";
           modules = [
             inputs.disko.nixosModules.disko
@@ -244,18 +249,16 @@
             inputs.nix-index-database.nixosModules.default
             ./overlays
           ];
-          specialArgs = inputs // {
+          _module.args = {
             host = "laptop";
             inherit
               self
-              pkgs-32
-              pkgs-custom
-              pkgs-unstable
               inputs
               username
               yazi
               ;
           };
+          specialArgs = inputs;
         };
       };
       nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
