@@ -245,6 +245,7 @@
             inherit
               inputs
               self
+              nixos-raspberrypi
               username
               yazi
               ;
