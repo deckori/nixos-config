@@ -39,4 +39,5 @@
   programs.ssh.askPassword = lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
 
   networking.hostName = "${host}";
+  services.openssh.enable = true;
 }
