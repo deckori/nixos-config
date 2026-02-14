@@ -30,5 +30,4 @@
   services.suwayomi-server.enable = true;
   services.nextcloud.enable = false;
   services.taskchampion-sync-server.enable = true;
-
 }
