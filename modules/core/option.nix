@@ -6,11 +6,7 @@
 
 {
   options.consuetudo = {
-
     wm.enable = lib.mkEnableOption "Desktop environment packages";
-
-    services.enable = lib.mkEnableOption "Service packages";
-
   };
 
   config = lib.mkIf config.consuetudo.services.enable {
@@ -23,7 +19,7 @@
       davfs2.enable = false;
       gotenberg.enable = true;
       suwayomi-server.enable = true;
-      nextcloud.enable = true;
+      nextcloud.enable = false;
       taskchampion-sync-server.enable = true;
     };
   };
