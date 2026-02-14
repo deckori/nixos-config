@@ -18,7 +18,7 @@
     # gpu.name = "hybrid-intel-nvidia";
     wm.enable = true;
     services.enable = true;
-
+    btop-cuda.enable = true;
   };
 
   home-manager.users.${username} = {
