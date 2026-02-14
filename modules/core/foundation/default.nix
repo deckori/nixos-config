@@ -10,5 +10,6 @@
     ./security.nix
     ./stylix
     ./user.nix
+    ./passwords.nix
   ];
 }
