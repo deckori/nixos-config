@@ -62,6 +62,7 @@
 
     };
   };
+
   nix.settings.allowed-users = [ "${username}" ];
 
   users.defaultUserShell = pkgs.bash;
