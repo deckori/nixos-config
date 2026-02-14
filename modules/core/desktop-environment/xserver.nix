@@ -1,21 +1,28 @@
-{ username, ... }:
 {
-  services = {
-    xserver = {
-      enable = true;
-      xkb.layout = "us,ara";
-    };
-    displayManager = {
-      enable = true;
-      autoLogin = {
-        enable = false;
-        user = "${username}";
+  username,
+  config,
+  lib,
+  ...
+}:
+{
+  config = lib.mkIf config.consuetudo.wm.enable {
+    services = {
+      xserver = {
+        enable = true;
+        xkb.layout = "us,ara";
+      };
+      displayManager = {
+        enable = true;
+        autoLogin = {
+          enable = false;
+          user = "${username}";
+        };
+      };
+      libinput = {
+        enable = true;
       };
     };
-    libinput = {
-      enable = true;
-    };
+    # To prevent getting stuck at shutdown
+    systemd.settings.Manager.DefaultTimeoutStopSec = "10s";
   };
-  # To prevent getting stuck at shutdown
-  systemd.settings.Manager.DefaultTimeoutStopSec = "10s";
 }
