@@ -5,6 +5,7 @@
     [
       ## misc
       conda
+      visidata
       p7zip
       pdftk
       starship
