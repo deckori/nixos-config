@@ -5,10 +5,10 @@
     [
       ## misc
       conda
-      visidata
+      visidata # tui editor for excel like, csv, and other formats
       p7zip
+      ytermusic # youtube music command line frontend
       pdftk
-      starship
       quarto
       chezmoi
       python313Packages.conda
