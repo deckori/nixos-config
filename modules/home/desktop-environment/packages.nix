@@ -16,6 +16,7 @@
       hyprpolkitagent
       gradia
       copyq
+      gobatmon
       grim
       slurp
       wlogout
