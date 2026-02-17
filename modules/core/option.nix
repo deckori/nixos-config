@@ -16,5 +16,16 @@
 
     consuetudo.programs.gitolite.enable = lib.mkEnableOption "Gitolite setup";
     consuetudo.programs.niri.enable = lib.mkEnableOption "Nixified config file for niri";
+
+    consuetudo.colors = {
+      rgb = lib.mkOption {
+        type = lib.types.functionTo lib.types.str;
+        description = "Returns comma separated rgb values for a color. To be used in css files:)";
+      };
+      rgba = lib.mkOption {
+        type = lib.types.functionTo lib.types.str;
+        description = "Returns comma separated rgba values for a color. To be used in css files:)";
+      };
+    };
   };
 }
