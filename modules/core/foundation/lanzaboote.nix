@@ -6,22 +6,23 @@
 }:
 
 {
-  imports = [ inputs.lanzaboote.nixosModules.lanzaboote ];
+  config = lib.mkIf (pkgs.stdenv.hostPlatform.system == "x86_64-linux") {
+    imports = [ inputs.lanzaboote.nixosModules.lanzaboote ];
 
-  environment.systemPackages = [
-    # For debugging and troubleshooting Secure Boot.
-    pkgs.sbctl
-  ];
+    environment.systemPackages = [
+      # For debugging and troubleshooting Secure Boot.
+      pkgs.sbctl
+    ];
 
-  # Lanzaboote currently replaces the systemd-boot module.
-  # This setting is usually set to true in configuration.nix
-  # generated at installation time. So we force it to false
-  # for now.
-  boot.loader.systemd-boot.enable = lib.mkForce false;
+    # Lanzaboote currently replaces the systemd-boot module.
+    # This setting is usually set to true in configuration.nix
+    # generated at installation time. So we force it to false
+    # for now.
+    boot.loader.systemd-boot.enable = lib.mkForce false;
 
-  boot.lanzaboote = {
-    enable = true;
-    pkiBundle = "/var/lib/sbctl";
+    boot.lanzaboote = {
+      enable = true;
+      pkiBundle = "/var/lib/sbctl";
+    };
   };
-
 }

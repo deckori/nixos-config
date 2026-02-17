@@ -1,14 +1,19 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
-  services.qbittorrent = {
-    enable = true;
-    webuiPort = 9999;
-  };
+  config = lib.mkIf config.services.qbittorent.enable {
+    services.qbittorrent = {
+      webuiPort = 9999;
+    };
 
-  environment.systemPackages = with pkgs; [
-    qbittorrent-nox
-    qbittorrent-cli
-    qbittorrent
-  ];
+    environment.systemPackages = with pkgs; [
+      qbittorrent-nox
+      qbittorrent-cli
+    ];
+  };
 }

@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   host,
   lib,
   username,
@@ -10,25 +9,15 @@
   imports = [
     ./fixes.nix
     ./hardware-configuration.nix
+    ./user.nix
     ../../modules/core
-    ../../modules/core/default.laptop.nix
   ];
 
-  consuetudo = {
-    # gpu.name = "hybrid-intel-nvidia";
-    wm.enable = true;
-    btop-cuda.enable = true;
-  };
+  services.logind.settings.Login.HandleLidSwitch = "ignore";
 
-  home-manager.users.${username} = {
-    consuetudo = {
-      wm.enable = true;
-      programs.niri.enable = true;
-    };
-
-    programs.hyprlock.enable = true;
-    services.hypridle.enable = true;
-  };
+  consuetudo.wm.enable = true;
+  consuetudo.gui.enable = true;
+  consuetudo.btop-cuda.enable = true;
 
   programs.niri.enable = true;
   programs.hyprland.enable = false;
@@ -36,6 +25,10 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   programs.ssh.askPassword = lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
+
+  services.printing.enable = true;
+  consuetudo.nvidia-intel.enable = true;
+  consuetudo.power.enable = true;
 
   networking.hostName = "${host}";
   services.openssh.enable = true;
@@ -50,4 +43,18 @@
   services.taskchampion-sync-server.enable = true;
   virtualisation.docker.enable = true;
   consuetudo.programs.gitolite.enable = true;
+  services.qbittorent.enable = true;
+
+  home-manager.users.${username} = {
+    consuetudo = {
+      wm.enable = true;
+      programs.niri.enable = true;
+    };
+
+    programs.hyprlock.enable = true;
+    services.hypridle.enable = true;
+    system.stateVersion = "25.11";
+  };
+
+  system.stateVersion = "25.11";
 }
