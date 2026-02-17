@@ -2,20 +2,19 @@
 
 {
   imports = [
-    ./bootloader.nix
-    ./lanzaboote.nix
-    ./package-manager
-    ./power.nix
-    ./gpu.nix
-    ./language.nix
-    ./clock.nix
     ./bluetooth.nix
-    ./package-manager
+    ./bootloader.nix
+    ./clock.nix
+    ./gpu.nix
     ./hardware.nix
+    ./language.nix
+    ./lanzaboote.nix
     ./misc.nix
     ./network.nix
+    ./package-manager
+    ./passwords.nix
+    ./power.nix
     ./security.nix
     ./stylix
-    ./passwords.nix
   ];
 }
