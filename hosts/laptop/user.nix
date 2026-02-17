@@ -27,10 +27,7 @@
     };
     users.${username} = {
       imports = [
-        ../../home
-      ]
-      ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
-        ../../home/default.laptop.nix
+        ../../modules/home
       ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
