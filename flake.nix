@@ -197,6 +197,7 @@
           modules = [
             inputs.sops-nix.nixosModules.sops
             inputs.lanzaboote.nixosModules.lanzaboote
+            inputs.nix-flatpak.nixosModules.nix-flatpak
             inputs.stylix.nixosModules.stylix
             inputs.nix-index-database.nixosModules.default
             ./hosts/laptop
@@ -238,6 +239,7 @@
           system = "aarch64-linux";
 
           modules = [
+            inputs.nix-flatpak.nixosModules.nix-flatpak
             inputs.disko.nixosModules.disko
             ./hosts/rpi5-2
             inputs.sops-nix.nixosModules.sops

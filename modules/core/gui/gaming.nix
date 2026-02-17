@@ -4,14 +4,12 @@
   pkgs-custom,
   config,
   lib,
-  inputs,
   ...
 }:
 {
   options.consuetudo.gaming-config.enable = lib.mkEnableOption "Gaming Setup Configurations";
 
   config = lib.mkIf config.consuetudo.gaming-config.enable {
-    imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
 
     programs.steam = {
       enable = true;
