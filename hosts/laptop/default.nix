@@ -43,7 +43,8 @@
   services.taskchampion-sync-server.enable = true;
   virtualisation.docker.enable = true;
   consuetudo.programs.gitolite.enable = true;
-  services.qbittorent.enable = true;
+  services.qbittorrent.enable = true;
+  services.scanservjs.enable = true;
 
   home-manager.users.${username} = {
     consuetudo = {
