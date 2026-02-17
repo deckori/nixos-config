@@ -9,22 +9,7 @@
   ...
 }:
 {
-  imports = [ inputs.home-manager.nixosModules.home-manager ];
   home-manager = {
-    sharedModules = [
-      inputs.sops-nix.homeManagerModules.sops
-    ];
-    useUserPackages = true;
-    useGlobalPkgs = true;
-    extraSpecialArgs = {
-      inherit
-        inputs
-        username
-        pkgs-custom
-        pkgs-unstable
-        host
-        ;
-    };
     users.${username} = {
       imports = [
         ../../modules/home
@@ -36,7 +21,6 @@
       home.homeDirectory = "/home/${username}";
       programs.home-manager.enable = true;
     };
-    backupFileExtension = "hm-backup";
   };
 
   users.users = {
