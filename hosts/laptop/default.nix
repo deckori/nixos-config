@@ -46,6 +46,8 @@
   services.qbittorrent.enable = true;
   services.scanservjs.enable = true;
 
+  consuetudo.hyprlock.enable = true;
+
   home-manager.users.${username} = {
     consuetudo = {
       wm.enable = true;
