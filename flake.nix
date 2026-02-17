@@ -196,6 +196,7 @@
           inherit system;
           modules = [
             inputs.sops-nix.nixosModules.sops
+            inputs.lanzaboote.nixosModules.lanzaboote
             inputs.stylix.nixosModules.stylix
             inputs.nix-index-database.nixosModules.default
             ./hosts/laptop

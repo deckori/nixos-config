@@ -1,13 +1,11 @@
 {
   pkgs,
   lib,
-  inputs,
   ...
 }:
 
 {
   config = lib.mkIf (pkgs.stdenv.hostPlatform.system == "x86_64-linux") {
-    imports = [ inputs.lanzaboote.nixosModules.lanzaboote ];
 
     environment.systemPackages = [
       # For debugging and troubleshooting Secure Boot.
