@@ -1,7 +1,15 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  pkgs-custom,
+  ...
+}:
 
 {
-  home.packages = with pkgs; [ ripdrag ];
+  home.packages = with pkgs; [
+    ripdrag
+    pkgs-custom.program-chooser
+  ];
   programs.yazi = {
     enable = true;
     package = inputs.yazi.packages.${pkgs.stdenv.hostPlatform.system}.default;
@@ -139,6 +147,10 @@
         ];
       };
       open.append_rules = [
+        {
+          url = "*.pdf";
+          use = "open-xournal";
+        }
         {
           mime = "*";
           use = "program-chooser";
