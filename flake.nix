@@ -195,12 +195,9 @@
         laptop = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
-            inputs.sops-nix.nixosModules.sops
             inputs.lanzaboote.nixosModules.lanzaboote
-            inputs.nix-flatpak.nixosModules.nix-flatpak
-            inputs.stylix.nixosModules.stylix
-            inputs.nix-index-database.nixosModules.default
             ./hosts/laptop
+            ./modules/shared-modules.nix
             ./overlays
           ];
           specialArgs = {
@@ -239,12 +236,9 @@
           system = "aarch64-linux";
 
           modules = [
-            inputs.nix-flatpak.nixosModules.nix-flatpak
             inputs.disko.nixosModules.disko
+            ./modules/shared-modules.nix
             ./hosts/rpi5-2
-            inputs.sops-nix.nixosModules.sops
-            inputs.stylix.nixosModules.stylix
-            inputs.nix-index-database.nixosModules.default
           ];
 
           specialArgs = {
