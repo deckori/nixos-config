@@ -12,7 +12,7 @@
       inputs.sops-nix.homeManagerModules.sops
       inputs.sops-nix.homeManagerModules.sops
       inputs.nix-flatpak.homeManagerModules.nix-flatpak
-      inputs.stylix.homeManagerModules.stylix
+      inputs.stylix.homeModules.stylix
     ];
     useUserPackages = true;
     useGlobalPkgs = true;
