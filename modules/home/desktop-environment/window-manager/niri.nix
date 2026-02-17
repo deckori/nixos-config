@@ -6,10 +6,6 @@
 }:
 
 {
-  options.consuetudo = {
-    programs.niri.enable = lib.mkEnableOption "Nixified config file for niri";
-  };
-
   config = lib.mkIf config.consuetudo.programs.niri.enable {
 
     home.packages = with pkgs; [ niri ];

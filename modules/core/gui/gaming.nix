@@ -7,8 +7,6 @@
   ...
 }:
 {
-  options.consuetudo.gaming-config.enable = lib.mkEnableOption "Gaming Setup Configurations";
-
   config = lib.mkIf config.consuetudo.gaming-config.enable {
 
     programs.steam = {
