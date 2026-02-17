@@ -1,14 +1,10 @@
 {
-  inputs,
   pkgs,
   pkgs-custom,
   pkgs-unstable,
-  username,
   ...
 }:
 {
-  imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
-
   home.packages = with pkgs; [
     #misc
     imagemagick
