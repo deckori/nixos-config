@@ -28,6 +28,9 @@
     users.${username} = {
       imports = [
         ../../modules/home
+      ]
+      ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
+        ../../modules/home/default.laptop.nix
       ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
