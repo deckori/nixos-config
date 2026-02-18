@@ -13,7 +13,7 @@
 
   inputs = {
     secrets = {
-      url = "path:/st/remotes/secrets";
+      url = "deck-repos:secrets.git";
       flake = false;
     };
 
