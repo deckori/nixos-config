@@ -3,6 +3,5 @@
 {
   imports = [
     ./yazi.nix
-    ./plugins
   ];
 }

@@ -6,6 +6,7 @@
     ./desktop-environment
     ./home-manager.nix
     ./display-manager
+    ./home-cachix
     ./cli
     ./secrets
     ./foundation
