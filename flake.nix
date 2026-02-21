@@ -12,8 +12,9 @@
   };
 
   inputs = {
+    # deck-repos is a custom Host definition i made in $HOME/.ssh/config. Create the definition before you use this flake
     secrets = {
-      url = "deck-repos:secrets.git";
+      url = "git+ssh://deck-repos:/secrets.git";
       flake = false;
     };
 
