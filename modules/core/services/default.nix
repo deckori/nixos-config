@@ -5,6 +5,7 @@
     ./davfs2.nix
     ./avahi.nix
     ./virtualization.nix
+    ./photoprism.nix
     ./docker.nix
     ./suwayomi-server.nix
     ./odoo.nix
