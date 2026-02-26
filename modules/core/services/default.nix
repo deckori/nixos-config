@@ -4,6 +4,7 @@
   imports = [
     ./davfs2.nix
     ./avahi.nix
+    ./jellyfin.nix
     ./virtualization.nix
     ./photoprism.nix
     ./docker.nix
