@@ -10,9 +10,7 @@
   home-manager = {
     sharedModules = [
       inputs.sops-nix.homeManagerModules.sops
-      inputs.sops-nix.homeManagerModules.sops
       inputs.nix-flatpak.homeManagerModules.nix-flatpak
-      inputs.stylix.homeModules.stylix
     ];
     useUserPackages = true;
     useGlobalPkgs = true;
