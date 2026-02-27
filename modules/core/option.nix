@@ -8,7 +8,6 @@
   options.consuetudo.gaming-config.enable = lib.mkEnableOption "Gaming Setup Configurations";
 
   options.consuetudo.gui.enable = lib.mkEnableOption "GUI environment configs";
-  options.consuetudo.nvidia-intel.enable = lib.mkEnableOption "Hybrid Nvidia and Intel GPU configuration";
 
   options.consuetudo.programs.gitolite.enable = lib.mkEnableOption "Gitolite setup";
   options.consuetudo.programs.niri.enable = lib.mkEnableOption "Nixified config file for niri";

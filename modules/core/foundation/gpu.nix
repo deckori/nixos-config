@@ -8,6 +8,8 @@
 #Nvidia settings for hybrid graphics(Intel and Nvidia)
 # https://wiki.nixos.org/wiki/NVIDIA
 {
+  options.consuetudo.nvidia-intel.enable = lib.mkEnableOption "Hybrid Nvidia and Intel GPU configuration";
+
   config = lib.mkIf config.consuetudo.nvidia-intel.enable {
     boot.extraModulePackages = [
       config.boot.kernelPackages.nvidia_x11
