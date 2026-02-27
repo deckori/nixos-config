@@ -7,6 +7,8 @@
 }:
 
 {
+  options.consuetudo.programs.gitolite.enable = lib.mkEnableOption "Gitolite setup";
+
   config = lib.mkIf config.consuetudo.programs.gitolite.enable {
     environment.systemPackages = [ pkgs.gitolite ];
     services.gitolite = {
