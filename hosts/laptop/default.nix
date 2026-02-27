@@ -68,5 +68,6 @@
     linux-wifi-hotspot
     baobab
     protonvpn-gui
+    digikam
   ];
 }

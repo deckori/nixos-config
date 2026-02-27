@@ -10,7 +10,6 @@
     imagemagick
     pkgs-custom.sticker-convert
     phototonic
-    digikam
     bluez
     bluez-tools
     discord
