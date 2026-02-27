@@ -26,12 +26,4 @@
   #     WorkingDirectory = "/var/lib/${username}";
   #   };
   # };
-
-  home-manager.users.${username} = {
-    sops = {
-      age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
-      defaultSopsFile = ../secrets/files/secrets.yaml;
-      defaultSopsFormat = "yaml";
-    };
-  };
 }
