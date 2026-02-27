@@ -11,7 +11,6 @@
     services.nextcloud = {
       package = pkgs.nextcloud32;
       # hostName = (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/hosts/laptop"));
-      hostName = (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/hosts/laptop"));
       config = {
         adminpassFile = "${inputs.secrets}/passwords/nextcloud/user";
         # dbname = "nextcloud";

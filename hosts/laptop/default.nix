@@ -39,7 +39,10 @@
   services.davfs2.enable = false;
   services.gotenberg.enable = false;
   services.suwayomi-server.enable = true;
-  services.nextcloud.enable = true;
+  services.nextcloud = {
+    enable = true;
+    hostName = "laptop";
+  };
   services.taskchampion-sync-server.enable = true;
   virtualisation.docker.enable = true;
   consuetudo.programs.gitolite.enable = true;
