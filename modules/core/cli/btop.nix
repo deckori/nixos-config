@@ -6,6 +6,8 @@
 }:
 
 {
+  options.consuetudo.btop-cuda.enable = lib.mkEnableOption "Install btop with cuda and a wrapper";
+
   config = lib.mkIf config.consuetudo.btop-cuda.enable {
     environment.systemPackages = with pkgs; [
       btop-cuda
