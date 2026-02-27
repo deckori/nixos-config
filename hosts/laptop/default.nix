@@ -68,7 +68,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    pulseaudioFull
     miraclecast
     linux-wifi-hotspot
     baobab
