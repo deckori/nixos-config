@@ -49,6 +49,8 @@
   services.qbittorrent.enable = true;
   services.scanservjs.enable = true;
 
-  consuetudo.hyprlock.enable = true;
+  # NOTE: Be sure to check whether the following lock screen is enabled (in home-manager typically)
+  # security.pam.services.hyprlock = { };
+
   system.stateVersion = "25.11";
 }

@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./lockscreen
     ./variables.nix
     ./window-manager
     ./xdg.nix
