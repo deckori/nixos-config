@@ -6,7 +6,7 @@
 }:
 
 {
-  config = lib.mkIf config.consuetudo.wm.enable {
+  config = lib.mkIf config.programs.niri.enable {
     environment.systemPackages = with pkgs; [
       xwayland-satellite # xwayland support
     ];

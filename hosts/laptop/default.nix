@@ -15,7 +15,6 @@
 
   services.logind.settings.Login.HandleLidSwitch = "ignore";
 
-  consuetudo.wm.enable = true;
   consuetudo.gui.enable = true;
 
   programs.niri.enable = true;
