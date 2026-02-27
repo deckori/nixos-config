@@ -6,7 +6,7 @@
 }:
 
 {
-  config = lib.mkIf config.services.qbittorent.enable {
+  config = lib.mkIf config.services.qbittorrent.enable {
     services.qbittorrent = {
       webuiPort = 9999;
     };
