@@ -48,6 +48,7 @@
   services.taskchampion-sync-server.enable = true;
   virtualisation.docker.enable = true;
   consuetudo.programs.gitolite.enable = true;
+  services.photoprism.enable = true;
   services.qbittorrent.enable = true;
   services.scanservjs.enable = true;
 
