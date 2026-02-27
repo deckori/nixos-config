@@ -1824,17 +1824,14 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1772046546,
-        "narHash": "sha256-VIlvEmmXbKTBMLUdEpDlJwEIiTcS2sclKMQJ6Oq5LGc=",
-        "ref": "refs/heads/main",
-        "rev": "fb101d980b5996849523f5740c8f9bc9a352ebe2",
-        "revCount": 7,
-        "type": "git",
-        "url": "ssh://deck-repos:/secrets.git"
+        "lastModified": 1772047893,
+        "narHash": "sha256-RTBHJScNdpjbvB8JXuM9KxOselnNzIYBIXdHYUgViVk=",
+        "path": "/st/remotes/secrets",
+        "type": "path"
       },
       "original": {
-        "type": "git",
-        "url": "ssh://deck-repos:/secrets.git"
+        "path": "/st/remotes/secrets",
+        "type": "path"
       }
     },
     "sops-nix": {
