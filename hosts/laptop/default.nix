@@ -24,8 +24,7 @@
 
   stylix.targets.qt.enable = true;
 
-  services.logind.settings.Login.HandleLidSwitch = "ignore";
-
+  services.xserver.enable = true;
   programs.niri.enable = true;
   programs.hyprland.enable = false;
 
