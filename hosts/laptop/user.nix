@@ -9,21 +9,21 @@
   ...
 }:
 {
-  # home-manager = {
-  #   users.${username} = {
-  #     imports = [
-  #       ../../modules/home
-  #       ./home.setup.nix
-  #     ]
-  #     ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
-  #       ../../modules/home/default.laptop.nix
-  #     ];
-  #     home.username = "${username}";
-  #     home.homeDirectory = "/home/${username}";
-  #     programs.home-manager.enable = true;
-  #     home.stateVersion = "25.11";
-  #   };
-  # };
+  home-manager = {
+    users.${username} = {
+      imports = [
+        ../../modules/home
+        ./home.setup.nix
+      ]
+      ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
+        ../../modules/home/default.laptop.nix
+      ];
+      home.username = "${username}";
+      home.homeDirectory = "/home/${username}";
+      programs.home-manager.enable = true;
+      home.stateVersion = "25.11";
+    };
+  };
 
   users.users = {
     ${username} = {
