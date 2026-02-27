@@ -44,17 +44,14 @@
       ludusavi
       lumafly
       lutris
-      heroic
       bottles
       # support both 32-bit and 64-bit applications
       wineWow64Packages.stable
       winetricks
 
       ## Utils
-      # gamemode
       # gamescope
-      # winetricks
-      # inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.wine-ge
+      inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.wine-ge
 
       ## Minecraft
       # prismlauncher
@@ -82,6 +79,7 @@
     services.flatpak.packages = [
       "com.github.Matoking.protontricks"
       "io.itch.itch"
+      "com.heroicgameslauncher.hgl"
     ];
   };
 }
