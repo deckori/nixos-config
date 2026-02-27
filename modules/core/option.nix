@@ -4,7 +4,6 @@
 }:
 
 {
-  options.consuetudo.wm.enable = lib.mkEnableOption "Desktop environment packages";
   options.consuetudo.gaming-config.enable = lib.mkEnableOption "Gaming Setup Configurations";
 
   options.consuetudo.gui.enable = lib.mkEnableOption "GUI environment configs";
