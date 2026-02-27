@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   imports = [
@@ -10,5 +10,6 @@
     ./packages.nix
     ./rofi.nix
     ./swayosd.nix
+    ./options.nix
   ];
 }
