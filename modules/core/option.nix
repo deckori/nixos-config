@@ -10,7 +10,6 @@
   options.consuetudo.gui.enable = lib.mkEnableOption "GUI environment configs";
   options.consuetudo.hyprlock.enable = lib.mkEnableOption "Hyprlock with PAM";
   options.consuetudo.nvidia-intel.enable = lib.mkEnableOption "Hybrid Nvidia and Intel GPU configuration";
-  options.consuetudo.power.enable = lib.mkEnableOption "Power related configuration";
 
   options.consuetudo.programs.gitolite.enable = lib.mkEnableOption "Gitolite setup";
   options.consuetudo.programs.niri.enable = lib.mkEnableOption "Nixified config file for niri";

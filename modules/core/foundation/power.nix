@@ -6,6 +6,8 @@
   ...
 }:
 {
+  options.consuetudo.power.enable = lib.mkEnableOption "Power related configuration";
+
   config = lib.mkIf config.consuetudo.power.enable {
     environment.systemPackages = with pkgs; [
       acpi
