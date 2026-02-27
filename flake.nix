@@ -147,15 +147,12 @@
       system = "x86_64-linux";
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
-        config.allowUnfree = true;
       };
       pkgs-32 = import nixpkgs {
         system = "i686-linux";
-        config.allowUnfree = true;
       };
       pkgs = import nixpkgs {
         inherit system;
-        config.allowUnfree = true;
       };
       pkgs-custom = nixpkgs-custom.packages.${system};
       lib = nixpkgs.lib;
