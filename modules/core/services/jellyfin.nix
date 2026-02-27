@@ -1,7 +1,14 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = [
-    pkgs.jellyfin-desktop
+  services.jellyfin = {
+    openFirewall = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    jellyfin-desktop
+    jellyfin
+    jellyfin-web
+    jellyfin-ffmpeg
   ];
 }

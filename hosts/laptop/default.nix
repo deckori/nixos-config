@@ -49,6 +49,7 @@
   virtualisation.docker.enable = true;
   consuetudo.programs.gitolite.enable = true;
   services.photoprism.enable = true;
+  services.jellyfin.enable = true;
   services.qbittorrent.enable = true;
   services.scanservjs.enable = true;
 
