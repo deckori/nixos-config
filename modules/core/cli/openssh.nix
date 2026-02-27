@@ -8,7 +8,6 @@
 {
   config = lib.mkIf config.services.openssh.enable {
     services.openssh = {
-      enable = true;
       ports = [ 22 ];
       settings = {
         PasswordAuthentication = false;
@@ -19,7 +18,7 @@
     };
 
     services.fail2ban = {
-      enable = true;
+      enable = config.services.openssh.enable;
       # Ban IP after 5 failures
       maxretry = 5;
       ignoreIP = [

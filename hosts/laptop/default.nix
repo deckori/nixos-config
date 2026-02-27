@@ -15,6 +15,9 @@
 
   system.stateVersion = "25.11";
 
+  services.openssh.enable = true;
+  programs.ssh.askPassword = lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
+  networking.hostName = "${host}";
   qt = {
     enable = true;
   };
@@ -28,14 +31,10 @@
 
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-  programs.ssh.askPassword = lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
 
   services.printing.enable = true;
   consuetudo.nvidia-intel.enable = true;
   consuetudo.power.enable = true;
-
-  networking.hostName = "${host}";
-  services.openssh.enable = true;
 
   virtualisation.libvirtd.enable = true;
   services.avahi.enable = true;
