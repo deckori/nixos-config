@@ -43,23 +43,6 @@
   #     base16Scheme = lib.mkForce ./assets/light-pallete.yaml;
   #   };
   # };
-
-  home-manager.users.${username} = {
-
-    imports = [
-      ./theming.nix
-    ];
-
-    stylix = {
-      enable = true;
-      targets = {
-        firefox.profileNames = [ "${username}" ];
-        waybar.enable = false;
-        rofi.enable = false;
-        hyprlock.enable = false;
-      };
-    };
-  };
 }
 
 # Function to convert the colours in an image based on my color scheme

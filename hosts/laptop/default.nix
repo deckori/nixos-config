@@ -47,17 +47,5 @@
   services.scanservjs.enable = true;
 
   consuetudo.hyprlock.enable = true;
-
-  home-manager.users.${username} = {
-    consuetudo = {
-      wm.enable = true;
-      programs.niri.enable = true;
-    };
-
-    programs.hyprlock.enable = true;
-    services.hypridle.enable = true;
-    home.stateVersion = "25.11";
-  };
-
   system.stateVersion = "25.11";
 }

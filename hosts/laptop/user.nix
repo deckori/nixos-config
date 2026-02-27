@@ -13,6 +13,7 @@
     users.${username} = {
       imports = [
         ../../modules/home
+        ./home.setup.nix
       ]
       ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
         ../../modules/home/default.laptop.nix
@@ -20,6 +21,7 @@
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
       programs.home-manager.enable = true;
+      home.stateVersion = "25.11";
     };
   };
 
@@ -28,9 +30,6 @@
       isNormalUser = true;
       # doesnt work for some reason
       # hashedPasswordFile = config.sops.secrets.my-password.path;
-      initialPassword = (
-        lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/passwords/users/main-user")
-      );
       description = "${username}";
       extraGroups = [
         "networkmanager"
@@ -38,11 +37,6 @@
         "wheel"
       ];
       shell = pkgs.bash;
-
-      openssh.authorizedKeys.keys = [
-        (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/.ssh/rpi5-main-user.pub"))
-      ];
-
     };
   };
 
