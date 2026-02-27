@@ -17,7 +17,6 @@
 
   consuetudo.wm.enable = true;
   consuetudo.gui.enable = true;
-  consuetudo.btop-cuda.enable = true;
 
   programs.niri.enable = true;
   programs.hyprland.enable = false;
