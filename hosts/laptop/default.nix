@@ -23,8 +23,6 @@
 
   services.logind.settings.Login.HandleLidSwitch = "ignore";
 
-  consuetudo.gui.enable = true;
-
   programs.niri.enable = true;
   programs.hyprland.enable = false;
 
