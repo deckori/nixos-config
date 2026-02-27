@@ -13,6 +13,14 @@
     ../../modules/core
   ];
 
+  system.stateVersion = "25.11";
+
+  qt = {
+    enable = true;
+  };
+
+  stylix.targets.qt.enable = true;
+
   services.logind.settings.Login.HandleLidSwitch = "ignore";
 
   consuetudo.gui.enable = true;
@@ -50,5 +58,20 @@
   # NOTE: Be sure to check whether the following lock screen is enabled (in home-manager typically)
   # security.pam.services.hyprlock = { };
 
-  system.stateVersion = "25.11";
+  # Packages
+  programs.ladybird.enable = true;
+  programs.kdeconnect.enable = true;
+
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    pulseaudioFull
+    miraclecast
+    linux-wifi-hotspot
+    baobab
+    protonvpn-gui
+  ];
 }
