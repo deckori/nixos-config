@@ -10,6 +10,24 @@
 }:
 
 {
+  services.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # lowLatency.enable = true;
+  };
+  hardware.alsa.enablePersistence = true;
+
+  services.printing = {
+    drivers = with pkgs; [
+      brlaser
+      brgenml1lpr
+      brgenml1cupswrapper
+    ];
+  };
+
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
