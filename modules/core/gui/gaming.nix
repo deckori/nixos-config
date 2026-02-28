@@ -2,6 +2,7 @@
   pkgs,
   pkgs-unstable,
   pkgs-custom,
+  inputs,
   config,
   lib,
   ...
@@ -81,5 +82,12 @@
       "io.itch.itch"
       "com.heroicgameslauncher.hgl"
     ];
+
+    services.sunshine = {
+      enable = true;
+      autoStart = true;
+      capSysAdmin = true; # only needed for Wayland -- omit this when using with Xorg
+      openFirewall = true;
+    };
   };
 }
