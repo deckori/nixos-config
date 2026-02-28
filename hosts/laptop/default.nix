@@ -34,6 +34,7 @@
   services.printing.enable = true;
   consuetudo.nvidia-intel.enable = true;
   consuetudo.power.enable = true;
+  consuetudo.gaming-config.enable = true;
 
   virtualisation.libvirtd.enable = true;
   services.avahi.enable = true;
