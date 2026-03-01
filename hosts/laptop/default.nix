@@ -60,6 +60,7 @@
   # Packages
   programs.ladybird.enable = true;
   programs.kdeconnect.enable = true;
+  programs.zoom-us.enable = true;
 
   programs.appimage = {
     enable = true;
