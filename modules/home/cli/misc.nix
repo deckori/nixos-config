@@ -11,7 +11,7 @@
       pdftk
       quarto
       chezmoi
-      python313Packages.conda
+      # python314Packages.conda
 
       ## Better core utils
       duf # disk information
