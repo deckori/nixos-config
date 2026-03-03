@@ -28,9 +28,7 @@
     kodi-wayland
     audacity
     gimp
-    (inkscape-with-extensions.override {
-      inkscapeExtensions = with inkscape-extensions; [ textext ];
-    })
+    inkscape
     kdePackages.kdenlive
     darktable
     gnome-sound-recorder
