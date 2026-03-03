@@ -2,6 +2,7 @@
   inputs,
   pkgs-custom,
   pkgs-unstable,
+  pkgs-stable,
   username,
   host,
   ...
@@ -20,6 +21,7 @@
         username
         pkgs-custom
         pkgs-unstable
+        pkgs-stable
         host
         ;
     };

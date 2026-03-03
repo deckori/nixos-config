@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-stable, ... }:
 {
   home.packages = with pkgs; [
     # Godot
     godot
 
     # Art
-    krita
+    pkgs-stable.krita
   ];
 }

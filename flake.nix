@@ -21,6 +21,7 @@
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
@@ -138,6 +139,7 @@
       nixos-raspberrypi,
       nixpkgs,
       nixpkgs-custom,
+      nixpkgs-stable,
       nixpkgs-unstable,
       self,
       yazi,
@@ -146,6 +148,10 @@
     let
       username = (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/users/main"));
       system = "x86_64-linux";
+      pkgs-stable = import nixpkgs-stable {
+        inherit system;
+        config.allowUnfree = true;
+      };
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
@@ -208,6 +214,7 @@
               pkgs-32
               pkgs-custom
               pkgs-unstable
+              pkgs-stable
               inputs
               username
               yazi
