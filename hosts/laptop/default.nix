@@ -44,6 +44,7 @@
   services.suwayomi-server.enable = true;
   services.nextcloud = {
     enable = true;
+    package = pkgs.nextcloud32;
     hostName = "laptop";
   };
   services.taskchampion-sync-server.enable = true;
