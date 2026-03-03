@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   hardware.bluetooth = {
@@ -10,4 +10,7 @@
     };
   };
   services.blueman.enable = true;
+  environment.systemPackages = with pkgs; [
+    bluez-alsa
+  ];
 }
