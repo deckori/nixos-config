@@ -43,7 +43,7 @@
   services.gotenberg.enable = false;
   services.suwayomi-server.enable = true;
   services.nextcloud = {
-    enable = true;
+    enable = false;
     package = pkgs.nextcloud32;
     hostName = "laptop";
   };
