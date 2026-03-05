@@ -244,37 +244,8 @@
         rpi5 = nixos-raspberrypi.lib.nixosSystemFull {
           specialArgs = inputs;
           modules = [
-            (
-              {
-                config,
-                pkgs,
-                lib,
-                nixos-raspberrypi,
-                disko,
-                ...
-              }:
-              {
-                imports = with nixos-raspberrypi.nixosModules; [
-                  # Hardware configuration
-                  raspberry-pi-5.base
-                  raspberry-pi-5.page-size-16k
-                  raspberry-pi-5.display-vc4
-                  ./hosts/rpi5-2/pi5-configtxt.nix
-                ];
-              }
-            )
             # Disk configuration
             inputs.disko.nixosModules.disko
-            # WARNING: formatting disk with disko is DESTRUCTIVE, check if
-            # `disko.devices.disk.nvme0.device` is set correctly!
-            # ./disko-usb-btrfs.nix
-            ./hosts/rpi5-2/disko.nix
-            # Further user configuration
-            common-user-config
-            {
-              boot.tmp.useTmpfs = true;
-            }
-
             # Advanced: Use non-default kernel from kernel-firmware bundle
             (
               {
