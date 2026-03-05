@@ -291,7 +291,7 @@
         { config, pkgs, ... }:
         {
           imports = [
-            ./modules/nice-looking-console.nix
+            ./hosts/rpi5-2/modules/nice-looking-console.nix
             users-config-stub
             network-config
           ];
@@ -415,7 +415,7 @@
             # WARNING: formatting disk with disko is DESTRUCTIVE, check if
             # `disko.devices.disk.nvme0.device` is set correctly!
             # ./disko-usb-btrfs.nix
-            ./disko.nix
+            ./hosts/rpi5-2/disko.nix
             # Further user configuration
             common-user-config
             {
