@@ -19,16 +19,7 @@
         ;
     };
     backupFileExtension = "hm-backup";
-
-    users.nix-on-droid = {
-      imports = [
-        ./home.setup.nix
-      ];
-      home.username = "nix-on-droid";
-      home.homeDirectory = "/data/data/com.termux.nix/files/home";
-      programs.home-manager.enable = true;
-      home.stateVersion = "24.05";
-    };
+    config = ./home.setup.nix;
   };
 
   users.users.nix-on-droid = {
