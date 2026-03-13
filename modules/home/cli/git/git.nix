@@ -6,10 +6,10 @@
 
     lfs.enable = true;
 
-    signing = {
-      key = "0FA54B4EDF6CE0E9";
-      signByDefault = true;
-    };
+    # signing = {
+    #   key = "0FA54B4EDF6CE0E9";
+    #   signByDefault = true;
+    # };
     settings = {
       user = {
         name = "deckori";
