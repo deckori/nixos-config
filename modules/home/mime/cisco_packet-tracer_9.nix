@@ -3,10 +3,9 @@
 {
   xdg.desktopEntries."cisco-packet-tracer_9" = {
     name = "Cisco Packet Tracer 9";
-    desktopName = "Cisco Packet Tracer 9";
-    icon = "${pkgs.packet-tracer_9}/opt/pt/art/app.png";
+    icon = "${pkgs.cisco-packet-tracer_9}/opt/pt/art/app.png";
     exec = "packettracer9 %f";
-    mimeTypes = [
+    mimeType = [
       "application/x-pkt"
       "application/x-pka"
       "application/x-pkz"
@@ -14,7 +13,7 @@
     ];
   };
 
-  xdg.dataFile."mime/packages/packettracer.xml".text = ''
+  xdg.dataFile."mime/packages/cisco-packet-tracer.xml".text = ''
     <?xml version="1.0" encoding="utf-8"?>
     <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
 
