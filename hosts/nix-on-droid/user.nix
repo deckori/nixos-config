@@ -34,8 +34,6 @@
     ];
   };
 
-  nix.settings.allowed-users = [ "nix-on-droid" ];
-
   # users.defaultUserShell = pkgs.bash;
 
   # The following is a workaround that patches an issue created by setting Nushell as the login shell. See: https://wiki.nixos.org/wiki/Nushell
