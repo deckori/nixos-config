@@ -152,7 +152,7 @@
           use = "open-xournal";
         }
         {
-          mime = "*";
+          url = "*";
           use = "program-chooser";
         }
       ];
