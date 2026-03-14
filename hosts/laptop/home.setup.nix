@@ -11,6 +11,8 @@
   programs.obs-studio.enable = true;
   programs.zathura.enable = true;
   programs.cava.enable = true;
+
+  consuetudo.programs.nemo.enable = true;
   consuetudo.programs.cisco-packet-tracer_9.enable = true;
   services.flatpak = {
     packages = [
