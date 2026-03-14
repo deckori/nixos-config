@@ -22,17 +22,17 @@
     config = ./home.setup.nix;
   };
 
-  users.users.nix-on-droid = {
-    # isNormalUser = true;
-    # extraGroups = [
-    #   "wheel"
-    #   "networkmanager"
-    #   "video"
-    # ];
-    # openssh.authorizedKeys.keys = [
-    #   (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/.ssh/access-s25-for-loq.pub"))
-    # ];
-  };
+  # users.users.nix-on-droid = {
+  # isNormalUser = true;
+  # extraGroups = [
+  #   "wheel"
+  #   "networkmanager"
+  #   "video"
+  # ];
+  # openssh.authorizedKeys.keys = [
+  #   (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/.ssh/access-s25-for-loq.pub"))
+  # ];
+  # };
 
   # users.defaultUserShell = pkgs.bash;
 
