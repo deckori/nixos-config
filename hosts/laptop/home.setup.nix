@@ -6,6 +6,7 @@
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
 
+  programs.cava.enable = true;
   home.packages = with pkgs; [
     ardour
     jellyfin-desktop

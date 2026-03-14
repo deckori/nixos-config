@@ -1,7 +1,6 @@
 { username, ... }:
 {
   programs.cava = {
-    enable = true;
 
     settings = {
       general = {
