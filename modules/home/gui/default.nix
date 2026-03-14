@@ -2,12 +2,10 @@
 
 {
   imports = [
-    ./audacious.nix
-    ./dev.nix
     ./cava.nix
     ./gtk.nix
+    ./cisco_packet-tracer_9.nix
     ./kitty.nix
-    ./misc-packages.nix
     ./nemo.nix
     ./zathura.nix
   ];
