@@ -6,7 +6,6 @@
 }:
 {
   gtk = {
-    enable = true;
     font = {
       name = lib.mkDefault "Maple Mono";
       size = lib.mkForce 12;
