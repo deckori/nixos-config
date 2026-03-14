@@ -19,7 +19,6 @@
       "dev.krtirtho.Flemozi"
     ];
   home.packages = with pkgs; [
-    ardour
     jellyfin-desktop
     mattermost-desktop
     fluffychat
