@@ -7,6 +7,7 @@
   services.hypridle.enable = true;
 
   programs.cava.enable = true;
+  consuetudo.programs.cisco-packet-tracer_9.enable = true;
   home.packages = with pkgs; [
     ardour
     jellyfin-desktop
