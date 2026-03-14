@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.gpg-agent = {
+  services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
     pinentry = {
