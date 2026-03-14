@@ -14,10 +14,13 @@
 
   consuetudo.programs.nemo.enable = true;
   consuetudo.programs.cisco-packet-tracer_9.enable = true;
+
   services.flatpak = {
     packages = [
       "dev.krtirtho.Flemozi"
     ];
+  };
+
   home.packages = with pkgs; [
     jellyfin-desktop
     mattermost-desktop
