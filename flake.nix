@@ -273,7 +273,6 @@
         modules = [
           # inputs.sops-nix.nixosModules.sops
           # inputs.stylix.nixosModules.stylix
-          inputs.sops-nix.nixosModules.sops
           ./hosts/nix-on-droid
         ];
 
