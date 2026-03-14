@@ -28,6 +28,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-2511.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-2405.url = "github:NixOS/nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -68,7 +69,8 @@
 
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
-      inputs.nixpkgs.follows = "nixpkgs-2405";
+      # inputs.nixpkgs.follows = "nixpkgs-2405";
+      inputs.nixpkgs.follows = "nixpkgs-2511";
     };
 
     lanzaboote = {
@@ -145,6 +147,7 @@
       nixos-raspberrypi,
       nixpkgs,
       nixpkgs-2405,
+      nixpkgs-2511,
       nixpkgs-custom,
       nixpkgs-stable,
       nixpkgs-unstable,
@@ -264,7 +267,8 @@
       };
 
       nixOnDroidConfigurations.s25 = nix-on-droid.lib.nixOnDroidConfiguration {
-        pkgs = import nixpkgs-2405 {
+        # pkgs = import nixpkgs-2405 {
+        pkgs = import nixpkgs-2511 {
           system = "aarch64-linux";
           config.allowUnfree = true;
         };
