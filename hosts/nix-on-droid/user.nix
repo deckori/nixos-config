@@ -29,9 +29,9 @@
     #   "networkmanager"
     #   "video"
     # ];
-    openssh.authorizedKeys.keys = [
-      (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/.ssh/access-s25-for-loq.pub"))
-    ];
+    # openssh.authorizedKeys.keys = [
+    #   (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/.ssh/access-s25-for-loq.pub"))
+    # ];
   };
 
   # users.defaultUserShell = pkgs.bash;
