@@ -29,15 +29,6 @@
     enable = true;
   };
 
-  services.pulseaudio.enable = false;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # lowLatency.enable = true;
-  };
-
   stylix.targets.qt.enable = true;
 
   services.xserver.enable = true;
