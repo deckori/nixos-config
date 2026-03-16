@@ -6,6 +6,7 @@
     ./startup.nix
     ./noctalia-shell.nix
     ./design
+    ./io.nix
     ./keybinds
   ];
 
