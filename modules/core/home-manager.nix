@@ -12,6 +12,7 @@
     sharedModules = [
       inputs.sops-nix.homeManagerModules.sops
       inputs.nix-flatpak.homeManagerModules.nix-flatpak
+      inputs.noctalia.homeModules.default
     ];
     useUserPackages = true;
     useGlobalPkgs = true;
