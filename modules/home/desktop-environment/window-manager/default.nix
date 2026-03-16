@@ -3,8 +3,7 @@
 {
   imports = [
     ./hyprland/hyprland.nix
-    ./niri.nix
-    ./noctalia-shell.nix
+    ./niri
     ./rofi.nix
     ./options.nix
   ];
