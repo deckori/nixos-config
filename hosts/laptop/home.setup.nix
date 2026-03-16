@@ -1,4 +1,9 @@
-{ pkgs, pkgs-unstable, ... }:
+{
+  pkgs,
+  pkgs-custom,
+  pkgs-unstable,
+  ...
+}:
 
 {
   consuetudo.wm.enable = true;
