@@ -1,14 +1,14 @@
 { ... }:
 
 {
-  binds = {
+  programs.niri.settings.binds = {
     # Mod-Shift-/, which is usually the same as Mod-?,
     # shows a list of important hotkeys.
     # "Mod+Shift+Slash".action.show-hotkey-overlay;
 
     "Print".action.screenshot.show-pointer = false;
     "Ctrl+Print".action.screenshot-screen.show-pointer = false;
-    "Alt+Print".action.screenshot-window.show-pointer = false;
+    "Alt+Print".action.screenshot-window = [ ];
 
     # Applications such as remote-desktop clients and software KVM switches may
     # request that niri stops processing the keyboard shortcuts defined here
