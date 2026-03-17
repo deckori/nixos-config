@@ -8,7 +8,6 @@
         "firefox"
         "thunderbird"
         "beeper"
-        "swayosd-server"
       ];
     }
     { sh = "env QT_QPA_PLATFORMTHEME=qt5ct noctalia-shell"; }

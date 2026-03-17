@@ -6,7 +6,7 @@
   ...
 }:
 {
-  config = lib.mkIf config.consuetudo.wm.enable {
+  config = lib.mkIf config.programs.hyprland.enable {
     home.packages = with pkgs; [ swayosd ];
 
     wayland.windowManager.hyprland = {
