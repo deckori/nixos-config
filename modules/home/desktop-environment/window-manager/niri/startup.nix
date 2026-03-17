@@ -4,7 +4,6 @@
   programs.niri.settings.spawn-at-startup = [
     {
       command = [
-        "noctalia-shell"
         "kitty"
         "firefox"
         "thunderbird"
@@ -15,6 +14,7 @@
         "swayosd-server"
       ];
     }
+    { sh = "env QT_QPA_PLATFORMTHEME=qt5ct noctalia-shell"; }
     { sh = "steam -silent -console"; }
     {
       argv = [
