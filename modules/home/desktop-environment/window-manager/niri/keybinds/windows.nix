@@ -122,6 +122,8 @@
     "Mod+Ctrl+R".action.reset-window-height = [ ];
 
     "Mod+F".action.maximize-column = [ ];
+    # v25.11 option. Won't work with niri-flake
+    # "Mod+F".action.maximize-window-to-edges = [ ];
     "Mod+Shift+F".action.fullscreen-window = [ ];
 
     "Mod+Ctrl+F".action.expand-column-to-available-width = [ ];
