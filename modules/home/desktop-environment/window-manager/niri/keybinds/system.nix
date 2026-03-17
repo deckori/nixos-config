@@ -17,26 +17,23 @@ in
     # XF86AudioMute        allow-when-locked=false { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     # XF86AudioMicMute     allow-when-locked=false { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-    "XF86AudioRaiseVolume".action.spawn-sh = "swayosd-client --output-volume raise";
-    "XF86AudioLowerVolume".action.spawn-sh = "swayosd-client --output-volume lower";
-    "XF86AudioMute".action.spawn-sh = "swayosd-client --output-volume mute-toggle";
-    "XF86AudioMicMute".action.spawn-sh = "swayosd-client --input-volume mute-toggle";
+    "XF86AudioRaiseVolume".action.spawn-sh = "${ipc} volume increase";
+    "Mod+Alt+WheelScrollUp".action.spawn-sh = "${ipc} volume increase";
 
-    "XF86AudioPlay".action.spawn-sh = "swayosd-client --playerctl play-pause";
-    "XF86AudioNext".action.spawn-sh = "swayosd-client --playerctl next";
-    "XF86AudioPrev".action.spawn-sh = "swayosd-client --playerctl previous";
+    "XF86AudioLowerVolume".action.spawn-sh = "${ipc} volume decrease";
+    "Mod+Alt+WheelScrollDown".action.spawn-sh = "${ipc} volume decrease";
 
-    "XF86MonBrightnessUp".action.spawn-sh = "swayosd-client --brightness raise";
-    "XF86MonBrightnessDown".action.spawn-sh = "swayosd-client --brightness lower";
+    "XF86AudioMute".action.spawn-sh = "${ipc} volume muteOutput";
+    "XF86AudioMicMute".action.spawn-sh = "${ipc} volume muteInput";
 
-    "Alt+XF86AudioRaiseVolume".action.spawn-sh = "swayosd-client --output-volume +1";
-    "Mod+Alt+WheelScrollUp".action.spawn-sh = "swayosd-client --output-volume +1";
+    "XF86AudioPlay".action.spawn-sh = "${ipc} media playPause";
+    "XF86AudioNext".action.spawn-sh = "${ipc} media next";
+    "XF86AudioPrev".action.spawn-sh = "${ipc} media previous";
 
-    "Alt+XF86AudioLowerVolume".action.spawn-sh = "swayosd-client --output-volume -1";
-    "Mod+Alt+WheelScrollDown".action.spawn-sh = "swayosd-client --output-volume -1";
-
-    "Alt+XF86MonBrightnessUp".action.spawn-sh = "swayosd-client --brightness +1";
-    "Alt+XF86MonBrightnessDown".action.spawn-sh = "swayosd-client --brightness -1";
+    "XF86MonBrightnessUp".action.spawn-sh = "${ipc} brightness increase";
+    "Mod+Ctrl+Alt+WheelScrollUp".action.spawn-sh = "${ipc} brightness increase";
+    "XF86MonBrightnessDown".action.spawn-sh = "${ipc} brightness decrease";
+    "Mod+Ctrl+Alt+WheelScrollDown".action.spawn-sh = "${ipc} brightness decrease";
 
     "Super+Alt+L".action.spawn = "${ipc} lockScreen lock";
     "Mod+S".action.spawn-sh = "${ipc} sessionMenu lockAndSuspend";
