@@ -12,7 +12,7 @@ in
     "Mod+Space".action.spawn-sh = "${ipc} launcher toggle";
     "Mod+Shift+S".action.spawn-sh = "${ipc} settings toggle";
     "Mod+Shift+C".action.spawn-sh = "${ipc} controlCenter toggle";
-    "Mod+Ctrl+C".action.spawn-sh = "${ipc} calendar toggle";
+    "Mod+Alt+C".action.spawn-sh = "${ipc} calendar toggle";
     "Mod+X".action.spawn-sh = "${ipc} launcher clipboard";
     "Mod+Z".action.spawn-sh = "${ipc} sessionMenu toggle";
     "Mod+P".action.spawn-sh = "hyprpicker -a";
