@@ -21,7 +21,6 @@
 
   services.flatpak = {
     packages = [
-      "dev.krtirtho.Flemozi"
     ];
   };
 
