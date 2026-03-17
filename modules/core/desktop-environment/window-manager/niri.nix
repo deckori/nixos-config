@@ -10,7 +10,12 @@
     environment.systemPackages = with pkgs; [
       xwayland-satellite # xwayland support
     ];
-    # Polkit is now configured by the niri module
+
+    programs.niri.package = pkgs.niri;
+
+    # systemd.user.services.niri-flake-polkit.enable = false;
+
+    # Polkit is now configured by noctalia-shell
     # security = {
     #   soteria.enable = true;
     #   polkit.enable = true;

@@ -77,7 +77,7 @@
       url = "github:nix-community/lanzaboote/v1.0.0";
     };
 
-    niri-flake.url = "github:sodiboo/niri-flake";
+    # niri-flake.url = "github:sodiboo/niri-flake";
 
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
