@@ -9,7 +9,7 @@
       };
     };
   };
-  services.blueman.enable = true;
+  services.blueman.enable = false;
   environment.systemPackages = with pkgs; [
     bluez-alsa
   ];
