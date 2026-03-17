@@ -21,7 +21,7 @@
     };
 
     border = {
-      off = true;
+      enable = true;
       width = 4;
     };
 
