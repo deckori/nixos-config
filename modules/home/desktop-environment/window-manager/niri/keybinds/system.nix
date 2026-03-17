@@ -1,5 +1,8 @@
 { ... }:
 
+let
+  ipc = "noctalia-shell ipc call";
+in
 {
   programs.niri.settings.binds = {
     # Example volume keys mappings for PipeWire & WirePlumber.
@@ -35,6 +38,8 @@
     "Alt+XF86MonBrightnessUp".action.spawn-sh = "swayosd-client --brightness +1";
     "Alt+XF86MonBrightnessDown".action.spawn-sh = "swayosd-client --brightness -1";
 
-    "Mod+S".action.spawn-sh = "systemctl suspend";
+    "Super+Alt+L".action.spawn = "${ipc} lockScreen lock";
+    "Mod+S".action.spawn-sh = "${ipc} sessionMenu lockAndSuspend";
+    "Mod+M".action.spawn-sh = "${ipc} systemMonitor toggle";
   };
 }
