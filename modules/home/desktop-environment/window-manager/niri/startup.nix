@@ -14,12 +14,6 @@
     { sh = "steam -silent -console"; }
     {
       argv = [
-        "waypaper"
-        "--restore"
-      ];
-    }
-    {
-      argv = [
         "gobatmon"
         "-normal-warning-threshold"
         "40"

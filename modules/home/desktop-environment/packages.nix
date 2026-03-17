@@ -9,7 +9,6 @@
   home.packages =
     with pkgs;
     [
-      waypaper
       swww
       nwg-displays
       hyprpolkitagent
