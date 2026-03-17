@@ -3,16 +3,13 @@
 {
   programs.niri.settings.window-rules = [
     {
-      # Work around WezTerm's initial configure bug
       matches = [
         { app-id = "^org\\.wezfurlong\\.wezterm$"; }
       ];
-
-      default-column-width = { };
+      default-column-width = { }; # leave it empty for client-decided width
     }
 
     {
-      # Firefox PiP + CopyQ + Flemozi floating
       matches = [
         {
           app-id = "firefox$";
@@ -21,23 +18,24 @@
         { app-id = "copyq$"; }
         { app-id = "flemozi$"; }
       ];
-
       open-floating = true;
     }
 
     {
-      # Block password managers from screen capture
       matches = [
         { app-id = "^org\\.keepassxc\\.KeePassXC$"; }
         { app-id = "^org\\.gnome\\.World\\.Secrets$"; }
       ];
-
       block-out-from = "screen-capture";
     }
 
     {
-      # Rounded corners for all windows
-      geometry-corner-radius = 7;
+      geometry-corner-radius = {
+        top-left = 7.0;
+        top-right = 7.0;
+        bottom-left = 7.0;
+        bottom-right = 7.0;
+      };
       clip-to-geometry = true;
     }
   ];
