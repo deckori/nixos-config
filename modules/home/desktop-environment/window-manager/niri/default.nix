@@ -10,5 +10,8 @@
     ./keybinds
   ];
 
-  programs.niri.settings.screenshot-path = "";
+  programs.niri.settings = {
+    debug.honor-xdg-activation-with-invalid-serial = [ ];
+    screenshot-path = "";
+  };
 }
