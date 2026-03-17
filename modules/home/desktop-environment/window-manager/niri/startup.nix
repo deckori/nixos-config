@@ -8,7 +8,6 @@
         "firefox"
         "thunderbird"
         "beeper"
-        "/run/current-system/sw/bin/soteria"
         "ashell"
         "swayosd-server"
       ];
