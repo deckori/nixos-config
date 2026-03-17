@@ -47,7 +47,6 @@
     bluez
     bluez-tools
     discord
-    copyq # clipboard manager
     thunderbird
     flow-control
     evince # pdf

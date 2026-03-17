@@ -13,7 +13,6 @@ in
     "Mod+Shift+S".action.spawn-sh = "${ipc} settings toggle";
     "Mod+Shift+C".action.spawn-sh = "noctalia-shell ipc call controlCenter toggle";
     "Mod+X".action.spawn-sh = "noctalia-shell ipc call launcher clipboard";
-    # "Mod+X".action.spawn-sh = "copyq toggle";
     "Mod+Z".action.spawn-sh = "${ipc} sessionMenu toggle";
     "Mod+P".action.spawn-sh = "hyprpicker -a";
     "Ctrl+Alt+period".action.spawn = "${ipc} launcher emoji";

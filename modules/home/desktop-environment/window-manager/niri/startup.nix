@@ -9,7 +9,6 @@
         "thunderbird"
         "beeper"
         "/run/current-system/sw/bin/soteria"
-        "copyq"
         "ashell"
         "swayosd-server"
       ];

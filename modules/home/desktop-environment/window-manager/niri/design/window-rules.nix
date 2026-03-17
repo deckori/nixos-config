@@ -15,7 +15,6 @@
           app-id = "firefox$";
           title = "^Picture-in-Picture$";
         }
-        { app-id = "copyq$"; }
         { app-id = "flemozi$"; }
       ];
       open-floating = true;
