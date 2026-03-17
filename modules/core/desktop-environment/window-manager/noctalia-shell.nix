@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  # Disable in favor of noctalia's applet
+  programs.nm-applet.enable = false;
   # Calender events dependancy
   services.gnome.evolution-data-server.enable = true;
   networking.networkmanager.enable = true;
