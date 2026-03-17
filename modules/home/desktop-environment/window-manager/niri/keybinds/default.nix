@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ./misc.kdl
-    ./programs.kdl
-    ./system.kdl
-    ./windows.kdl
+    ./misc.nix
+    ./programs.nix
+    ./system.nix
+    ./windows.nix
   ];
 }
