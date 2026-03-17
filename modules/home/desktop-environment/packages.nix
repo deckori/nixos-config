@@ -10,7 +10,6 @@
     with pkgs;
     [
       waypaper
-      ashell
       swww
       nwg-displays
       hyprpolkitagent

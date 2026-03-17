@@ -8,7 +8,6 @@
         "firefox"
         "thunderbird"
         "beeper"
-        "ashell"
         "swayosd-server"
       ];
     }
