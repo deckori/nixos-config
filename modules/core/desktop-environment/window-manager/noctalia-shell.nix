@@ -5,6 +5,9 @@
   programs.nm-applet.enable = false;
   # Calender events dependancy
   services.gnome.evolution-data-server.enable = true;
+  # Screen recorder plugin dependancy
+  programs.gpu-screen-recorder.enable = true;
+
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
   services.power-profiles-daemon.enable = true;
