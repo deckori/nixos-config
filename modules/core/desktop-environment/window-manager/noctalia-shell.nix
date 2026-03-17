@@ -7,7 +7,7 @@
 
   # Disable in favor of noctalia's applet
   programs.nm-applet.enable = false;
-  # Calender events dependancy
+  # Calendar events dependancy
   services.gnome.evolution-data-server.enable = true;
   # Screen recorder plugin dependancy
   programs.gpu-screen-recorder.enable = true;
