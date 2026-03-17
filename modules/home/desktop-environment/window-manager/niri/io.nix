@@ -19,34 +19,52 @@
       };
     };
 
-    outputs."eDP-1" = {
+    outputs = {
 
-      mode = "1920x1080@144.001";
-      # mode = "1920x1080@60.001";
+      "eDP-1" = {
 
-      scale = 1;
+        focus-at-startup = true;
 
-      transform = "normal";
-      # transform = "90";
+        variable-refresh-rate = "on-demand";
 
-      position = {
-        x = 0;
-        y = 0;
+        mode = {
+          width = 1920;
+          height = 1080;
+          refresh = 144.001;
+        };
+
+        scale = 1;
+
+        transform = {
+          rotation = 0;
+          # rotation = 90;
+        };
+
+        position = {
+          x = 0;
+          y = 0;
+        };
       };
-    };
 
-    outputs."HDMI-A-5" = {
+      "HDMI-A-5" = {
 
-      mode = "1920x1080@100";
+        mode = {
+          width = 1920;
+          height = 1080;
+          refresh = 100.000;
+        };
 
-      scale = 0.9;
+        scale = 0.9;
 
-      transform = "normal";
-      # transform = "90";
+        transform = {
+          rotation = 0;
+          # rotation = 90;
+        };
 
-      position = {
-        x = 0;
-        y = -1200;
+        position = {
+          x = 0;
+          y = -1200;
+        };
       };
     };
   };
