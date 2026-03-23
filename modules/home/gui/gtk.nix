@@ -38,4 +38,6 @@
     package = pkgs.bibata-cursors;
     size = 24;
   };
+
+  stylix.targets.gtk.colors.enable = false;
 }
