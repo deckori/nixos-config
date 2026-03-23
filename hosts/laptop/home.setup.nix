@@ -43,6 +43,7 @@
     # Chat
     mattermost-desktop
     session-desktop
+    fluffychat
     beeper
     element-desktop
 
@@ -90,6 +91,7 @@
     dconf-editor
     gnome-disk-utility
     zenity
+    freefilesync
 
     ## Level editor
     ldtk
