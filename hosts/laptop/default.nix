@@ -29,8 +29,6 @@
     enable = true;
   };
 
-  stylix.targets.qt.enable = true;
-
   services.xserver.enable = true;
   xdg.portal.enable = true;
 

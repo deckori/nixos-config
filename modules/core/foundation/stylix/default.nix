@@ -36,6 +36,7 @@
         name = "Noto Color Emoji";
       };
     };
+    targets.qt.enable = false;
   };
 
   # specialisation.light.configuration = {
