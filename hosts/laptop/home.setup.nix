@@ -26,20 +26,25 @@
   };
 
   home.packages = with pkgs; [
-    jellyfin-desktop
-    mattermost-desktop
-    fluffychat
-    beeper
-    element-desktop
-
     # Game dev
     godot
 
-    # Music production
-    ardour
+    # Multimedia Editors
+    audacity # Audio
+    kdePackages.kdenlive # Video
+    gimp # Photos
+    darktable # Photos
+    inkscape # Art
+    krita # Art
+    ardour # Music
+    pdf4qt # PDF suite
+    blender # 3D Modelling
 
-    # Art
-    krita
+    # Chat
+    mattermost-desktop
+    session-desktop
+    beeper
+    element-desktop
 
     #misc
     imagemagick
@@ -58,18 +63,12 @@
     file-roller # archive
     gnome-text-editor # gedit
 
-    ## Multimedia
+    ## Multimedia Viewers
+    jellyfin-desktop
     kodi-wayland
-    audacity
-    gimp
-    inkscape
-    kdePackages.kdenlive
-    darktable
     gnome-sound-recorder
-    pdf4qt
     gthumb
     feh
-    blender
     obs-cmd
     pavucontrol
     soundwireserver
