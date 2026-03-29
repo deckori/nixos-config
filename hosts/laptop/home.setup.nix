@@ -7,8 +7,8 @@
 
 {
   consuetudo.wm.enable = true;
-  programs.hyprlock.enable = true;
-  services.hypridle.enable = true;
+  programs.hyprlock.enable = false;
+  services.hypridle.enable = false;
 
   gtk.enable = true;
 
@@ -44,7 +44,6 @@
     mattermost-desktop
     session-desktop
     fluffychat
-    beeper
     element-desktop
 
     #misc

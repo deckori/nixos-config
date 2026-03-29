@@ -76,7 +76,7 @@
   };
 
   # NOTE: Be sure to check whether the following lock screen is enabled (in home-manager typically)
-  security.pam.services.hyprlock = { };
+  # security.pam.services.hyprlock = { };
 
   # Packages
   programs.ladybird.enable = true;
