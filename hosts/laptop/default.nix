@@ -44,6 +44,8 @@
   consuetudo.gaming-config.enable = true;
   consuetudo.btop-cuda.enable = true;
 
+  consuetudo.winApps.enable = true;
+
   virtualisation.libvirtd.enable = true;
   services.avahi.enable = true;
   services.odoo.enable = false;
