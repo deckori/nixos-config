@@ -112,5 +112,7 @@
     ueberzugpp
     nushell
     bitwarden-cli
+
+    beeper # ChatApp, Timezone is not properly set when installed via home-manager
   ];
 }
