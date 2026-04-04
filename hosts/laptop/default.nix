@@ -103,7 +103,7 @@
     linux-wifi-hotspot
     gitolite
     baobab
-    protonvpn-gui
+    proton-vpn-cli
     digikam
     wl-clipboard
     pinentry-gnome3
