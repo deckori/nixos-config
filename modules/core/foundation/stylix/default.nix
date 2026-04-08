@@ -36,7 +36,10 @@
         name = "Noto Color Emoji";
       };
     };
-    targets.qt.enable = false;
+    targets = {
+      gtksourceview.enable = false;
+      qt.enable = false;
+    };
   };
 
   # specialisation.light.configuration = {
