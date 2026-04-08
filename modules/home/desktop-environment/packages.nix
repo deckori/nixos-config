@@ -9,7 +9,7 @@
   home.packages =
     with pkgs;
     [
-      swww
+      awww
       nwg-displays
       hyprpolkitagent
       gradia
