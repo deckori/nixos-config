@@ -21,7 +21,7 @@
     programs.gamemode.enable = true;
 
     programs.opengamepadui = {
-      enable = true;
+      enable = false;
       powerstation.enable = true;
     };
 
