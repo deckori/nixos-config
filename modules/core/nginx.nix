@@ -2,7 +2,7 @@
 
 {
   services.nginx = {
-    enable = true;
+    enable = false;
     recommendedTlsSettings = true;
     recommendedOptimisation = true;
     recommendedGzipSettings = true;
