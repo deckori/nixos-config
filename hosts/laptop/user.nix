@@ -35,6 +35,7 @@
         "networkmanager"
         "kvm"
         "wheel"
+        "inputs" # temporarily for show-key nocatalia plugin
       ];
       shell = pkgs.bash;
     };
