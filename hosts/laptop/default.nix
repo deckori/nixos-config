@@ -14,7 +14,7 @@
     ../../modules/core
   ];
 
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
   services.flatpak.enable = true;
 
   boot.lanzaboote.enable = true;
