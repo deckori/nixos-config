@@ -16,7 +16,10 @@
       ];
     };
 
-    services.noctalia-shell.enable = true;
+    services.noctalia-shell = {
+      enable = true;
+      package = pkgs.noctalia-shell;
+    };
 
     environment.systemPackages = with pkgs; [
       # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
