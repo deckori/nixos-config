@@ -27,5 +27,7 @@
       podman-compose
       docker-compose
     ];
+
+    networking.extraHosts = "127.0.0.1 koito.deck.com scrobbler.deck.com";
   };
 }
