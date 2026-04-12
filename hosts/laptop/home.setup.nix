@@ -48,6 +48,7 @@
     #misc
     imagemagick
     tesseract
+    evtest
     pkgs-custom.sticker-convert
     phototonic
     discord
