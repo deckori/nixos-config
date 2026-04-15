@@ -52,6 +52,9 @@
     pkgs-custom.sticker-convert
     phototonic
     discord
+    vesktop
+    gemini-cli
+    claude-code
     thunderbird
     #   flow-control
     #   evince # pdf
