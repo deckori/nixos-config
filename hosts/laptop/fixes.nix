@@ -3,7 +3,7 @@
 {
   # The following convert the laptop's co-pilot key into a normal right control key
   services.keyd = {
-    enable = true;
+    enable = false; # Replaced by xremap
     keyboards = {
       default = {
         /*
