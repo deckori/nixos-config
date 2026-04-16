@@ -26,19 +26,13 @@
     enable = true;
     package = pkgs.xremap; # Use the official package to skip building xremap from source
     userName = username;
-    config.experimental_map.chords = [
-      {
-        # name = "Copilot to Ctrl_R";
-        # keys = [ "Super_L, Shift_L, F23" ];
-        keys = [
-          "Super_L"
-          "Shift_L"
-          "F23"
-        ];
-        actions = "Ctrl_R";
-        timeout = 500;
-      }
-    ];
+    yamlConfig = ''
+      experimental_map:
+        - chords:
+            - keys: [Super_L, Shift_L, F23]
+              actions: Ctrl_R
+              timeout: 30
+    '';
   };
 
   boot.blacklistedKernelModules = [
