@@ -1,4 +1,4 @@
-{ ... }:
+{ username, pkgs, ... }:
 
 {
   # The following convert the laptop's co-pilot key into a normal right control key
@@ -20,6 +20,25 @@
         };
       };
     };
+  };
+
+  services.xremap = {
+    enable = true;
+    package = pkgs.xremap; # Use the official package to skip building xremap from source
+    userName = username;
+    config.experimental_map.chords = [
+      {
+        # name = "Copilot to Ctrl_R";
+        # keys = [ "Super_L, Shift_L, F23" ];
+        keys = [
+          "Super_L"
+          "Shift_L"
+          "F23"
+        ];
+        actions = "Ctrl_R";
+        timeout = 500;
+      }
+    ];
   };
 
   boot.blacklistedKernelModules = [

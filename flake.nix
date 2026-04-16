@@ -77,6 +77,8 @@
       url = "github:nix-community/lanzaboote/v1.0.0";
     };
 
+    xremap-flake.url = "github:xremap/nix-flake";
+
     # niri-flake.url = "github:sodiboo/niri-flake";
 
     noctalia = {
