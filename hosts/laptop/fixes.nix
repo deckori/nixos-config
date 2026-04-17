@@ -31,7 +31,7 @@
         - chords:
             - keys: [Super_L, Shift_L, F23]
               actions: Ctrl_R
-              timeout: 30
+              timeout: 300
     '';
   };
 
