@@ -42,6 +42,7 @@
       cartridges
       mangohud
       protonup-ng
+      protontricks
       ludusavi
       lumafly
       lutris
