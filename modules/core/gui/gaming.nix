@@ -45,8 +45,6 @@
       protontricks
       ludusavi
       lumafly
-      lutris
-      bottles
       # support both 32-bit and 64-bit applications
       wineWow64Packages.stable
       winetricks
