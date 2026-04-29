@@ -18,7 +18,7 @@
   programs.kitty.enable = true;
 
   consuetudo.programs.nemo.enable = true;
-  consuetudo.programs.cisco-packet-tracer_9.enable = true;
+  consuetudo.programs.cisco-packet-tracer_9.enable = false;
 
   services.flatpak = {
     packages = [
