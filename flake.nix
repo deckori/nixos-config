@@ -145,6 +145,9 @@
 
     nix-gaming.url = "github:fufexan/nix-gaming";
 
+    # For hsr
+    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+
     firefox = {
       url = "github:nix-community/flake-firefox-nightly";
       inputs.nixpkgs.follows = "nixpkgs";
