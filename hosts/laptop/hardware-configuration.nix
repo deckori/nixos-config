@@ -74,12 +74,6 @@
     options = [ "subvol=st" ];
   };
 
-  fileSystems."/var/lib" = {
-    device = "/dev/mapper/kingston";
-    fsType = "btrfs";
-    options = [ "subvol=var/lib" ];
-  };
-
   boot.initrd.luks.devices."swap".device = "/dev/disk/by-uuid/d93797fe-adbb-47a2-beeb-5ddc34e1673a";
 
   boot.resumeDevice = "/dev/mapper/swap";
