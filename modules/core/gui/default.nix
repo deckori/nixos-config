@@ -5,6 +5,6 @@
     ./winapps
     ./qbittorrent.nix
     ./flatpak.nix
-    ./gaming.nix
+    ./gaming
   ];
 }

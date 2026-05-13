@@ -91,11 +91,11 @@
 
     # For hsr
     nix.settings = inputs.aagl.nixConfig; # Set up Cachix
-    programs.anime-game-launcher.enable = true; # Adds launcher and /etc/hosts rules
-    programs.anime-games-launcher.enable = true;
+    programs.anime-game-launcher.enable = false; # Adds launcher and /etc/hosts rules
+    programs.anime-games-launcher.enable = false;
     programs.honkers-railway-launcher.enable = true;
-    programs.honkers-launcher.enable = true;
-    programs.wavey-launcher.enable = true;
-    programs.sleepy-launcher.enable = true;
+    programs.honkers-launcher.enable = false;
+    programs.wavey-launcher.enable = false;
+    programs.sleepy-launcher.enable = false;
   };
 }
