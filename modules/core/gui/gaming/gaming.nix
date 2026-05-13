@@ -28,7 +28,6 @@
     environment.systemPackages = with pkgs; [
       ryubing
       nsz
-      prismlauncher # For minecraft
       boilr
       retroarch
       # (retroarch.override {
@@ -54,7 +53,7 @@
       inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.wine-ge
 
       ## Minecraft
-      # prismlauncher
+      prismlauncher
       (modrinth-app.override {
         jdks = [
           jdk8
