@@ -145,6 +145,8 @@
 
     nix-gaming.url = "github:fufexan/nix-gaming";
 
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+
     # For hsr
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
 

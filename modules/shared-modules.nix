@@ -11,6 +11,7 @@
     inputs.noctalia.nixosModules.default
     inputs.aagl.nixosModules.default # For hsr
     # inputs.niri-flake.nixosModules.niri
+    inputs.nix-minecraft.nixosModules.minecraft-servers # For minecraft
   ];
 
   nixpkgs.config.allowUnfree = true;
