@@ -55,6 +55,14 @@
 
       ## Minecraft
       # prismlauncher
+      (modrinth-app.override {
+        jdks = [
+          jdk8
+          jdk17
+          jdk21
+          jdk25
+        ];
+      })
 
       ## Cli games
       _2048-in-terminal
