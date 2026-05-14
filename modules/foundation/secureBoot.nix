@@ -10,6 +10,8 @@
     }:
 
     {
+      imports = [ inputs.lanzaboote.nixosModules.lanzaboote ];
+
       environment.systemPackages = [
         # For debugging and troubleshooting Secure Boot.
         pkgs.sbctl
@@ -21,6 +23,7 @@
       # for now.
       boot.loader.systemd-boot.enable = lib.mkForce false;
 
+      boot.lanzaboote.enable = true;
       boot.lanzaboote = {
         pkiBundle = "/var/lib/sbctl";
       };
