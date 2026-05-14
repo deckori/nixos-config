@@ -1,0 +1,88 @@
+{ inputs, self, ... }:
+
+{
+  flake.nixosModules.laptopHardwareConfiguration =
+    {
+      pkgs,
+      config,
+      lib,
+      modulesPath,
+      ...
+    }:
+    {
+      environment.systemPackages = with pkgs; [
+        pulseaudioFull
+      ];
+      hardware.alsa.enablePersistence = true;
+
+      services.printing = {
+        drivers = with pkgs; [
+          brlaser
+          brgenml1lpr
+          brgenml1cupswrapper
+        ];
+      };
+
+      imports = [
+        (modulesPath + "/installer/scan/not-detected.nix")
+      ];
+
+      boot.initrd.availableKernelModules = [
+        "xhci_pci"
+        "ahci"
+        "nvme"
+        "usbhid"
+        "uas"
+        "usb_storage"
+        "sd_mod"
+      ];
+
+      boot.initrd.kernelModules = [ ];
+      boot.kernelModules = [ "kvm-intel" ];
+      boot.extraModulePackages = [ ];
+
+      boot.initrd.luks.devices."nixos-root".device =
+        "/dev/disk/by-uuid/3e6d255d-3e55-4448-ad41-95e293cfff3d";
+
+      fileSystems."/" = {
+        device = "/dev/mapper/nixos-root";
+        fsType = "btrfs";
+        options = [ "subvol=@" ];
+      };
+
+      fileSystems."/boot" = {
+        device = "/dev/disk/by-label/NIXOS-ROOT";
+        fsType = "vfat";
+        options = [
+          "fmask=0077"
+          "dmask=0077"
+        ];
+      };
+
+      boot.initrd.luks.devices."kingston".device =
+        "/dev/disk/by-uuid/00ddcc85-31c4-4b18-b478-d4b06790c333";
+
+      fileSystems."/home" = {
+        device = "/dev/mapper/kingston";
+        fsType = "btrfs";
+        options = [ "subvol=home" ];
+      };
+
+      fileSystems."/st" = {
+        device = "/dev/mapper/kingston";
+        fsType = "btrfs";
+        options = [ "subvol=st" ];
+      };
+
+      boot.initrd.luks.devices."swap".device = "/dev/disk/by-uuid/d93797fe-adbb-47a2-beeb-5ddc34e1673a";
+
+      boot.resumeDevice = "/dev/mapper/swap";
+
+      swapDevices = [
+        { device = "/dev/mapper/swap"; }
+      ];
+
+      nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+      hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+    };
+}
