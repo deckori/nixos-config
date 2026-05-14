@@ -9,6 +9,7 @@
     modules = [
       self.nixosModules.laptopHardwareConfiguration
       self.nixosModules.bootLoader
+      self.nixosModules.secureBoot
     ];
   };
 }
