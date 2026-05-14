@@ -3,16 +3,19 @@
   config,
   ...
 }:
-
+let
+  username = config.consuetudo.mainUsername;
+in
 {
   flake.nixosModules.laptopUser =
     { pkgs, ... }:
     {
-      users.users.${config.consuetudo.mainUsername} = {
+      users.users.${username} = {
         isNormalUser = true;
+        group = username;
         # doesnt work for some reason
         # hashedPasswordFile = config.sops.secrets.my-password.path;
-        description = "${config.consuetudo.mainUsername}";
+        description = "${username}";
         extraGroups = [
           "networkmanager"
           "kvm"
@@ -22,13 +25,12 @@
         shell = pkgs.bash;
       };
 
-    };
-  flake.nixosModules.laptopHomeManager =
-    { ... }:
-    {
+      users.groups.${username} = { };
+
       home-manager = {
-        users.${config.consuetudo.mainUsername} = {
+        users.${username} = {
           home.stateVersion = "26.05";
+          home.username = "${username}";
           imports = [
             self.homeModules.btop
           ];
