@@ -204,7 +204,8 @@
         "home-manager": "home-manager",
         "import-tree": "import-tree",
         "lanzaboote": "lanzaboote",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "secrets": "secrets"
       }
     },
     "rust-overlay": {
@@ -226,6 +227,22 @@
         "owner": "oxalica",
         "repo": "rust-overlay",
         "type": "github"
+      }
+    },
+    "secrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1773299510,
+        "narHash": "sha256-tGDEd80Y16O2O8ru2v6c4zkaNvFVYNiCQK2I7OU8QsE=",
+        "ref": "refs/heads/main",
+        "rev": "c237a2c3024646409b9a11a7772c9e223aa8fef3",
+        "revCount": 13,
+        "type": "git",
+        "url": "ssh://deck-repos:/secrets.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://deck-repos:/secrets.git"
       }
     }
   },
