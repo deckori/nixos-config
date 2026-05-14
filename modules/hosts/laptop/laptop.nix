@@ -10,6 +10,9 @@
       self.nixosModules.bootLoader
       self.nixosModules.secureBoot
 
+      self.nixosModules.homeManager
+      self.nixosModules.laptopUser
+
       # Hardware Configuration
       (
         {
