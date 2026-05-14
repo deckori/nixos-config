@@ -6,6 +6,6 @@
   # and flake.homeModules
   # safely :D
   imports = [
-    inputs.home-manager.flakelModules.home-manager
+    inputs.home-manager.flakeModules.home-manager
   ];
 }
