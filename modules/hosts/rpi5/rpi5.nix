@@ -12,10 +12,10 @@
       nixos-raspberrypi = inputs.nixos-raspberrypi;
     };
     modules = [
-      self.nixosModules.shared
       self.nixosModules.nix
       self.nixosModules.lix
       self.nixosModules.mainUsername
+      self.nixosModules.rpi5DiskConfiguration
       inputs.disko.nixosModules.disko
 
       (
@@ -30,14 +30,16 @@
             inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.base
             inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.page-size-16k
             inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.display-vc4
-
-            # Disk
-            (import ../../../hosts/rpi5-2/disko.nix)
           ];
 
           boot.tmp.useTmpfs = true;
 
-          services.photoprism.enable = true;
+          services.photoprism = {
+            enable = true;
+            originalsPath = "/st/photoprism/originals";
+            storagePath = "/st/photoprism/storage";
+          };
+          
           services.jellyfin.enable = true;
           services.suwayomi-server.enable = true;
 
