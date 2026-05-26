@@ -22,6 +22,7 @@
       self.nixosModules.lix
 
       # Package config
+      self.nixosModules.shell
       self.nixosModules.cliMisc
       self.nixosModules.ssh
 
