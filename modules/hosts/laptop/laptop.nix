@@ -26,7 +26,7 @@
       self.nixosModules.cliMisc
       self.nixosModules.ssh
 
-      # Hardware Configuration
+      # Laptop specific configuration merged from old hosts/laptop/default.nix
       (
         {
           pkgs,
@@ -36,9 +36,87 @@
           ...
         }:
         {
+          system.stateVersion = "26.05";
+          services.flatpak.enable = true;
+
+          services.openssh.enable = true;
+          programs.ssh.askPassword = lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
+          programs.gnupg.agent = {
+            pinentryPackage = pkgs.pinentry-gnome3;
+          };
+          networking.hostName = "laptop";
+          qt.enable = true;
+
+          services.xserver.enable = true;
+          xdg.portal.enable = true;
+
+          programs.niri.enable = true;
+          programs.hyprland.enable = false;
+
+          services.displayManager.sddm.enable = true;
+          services.desktopManager.plasma6.enable = true;
+
+          services.printing.enable = true;
+          
+          # Custom module options (Assuming these are defined in modules/core)
+          # consuetudo.nvidia-intel.enable = true;
+          # consuetudo.power.enable = true;
+          # consuetudo.gaming-config.enable = true;
+          # consuetudo.btop-cuda.enable = true;
+          # consuetudo.winApps.enable = true;
+
+          virtualisation.libvirtd.enable = true;
+          services.avahi.enable = true;
+          services.suwayomi-server.enable = true;
+
+          services.taskchampion-sync-server = {
+            enable = true;
+            host = (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/hosts/laptop"));
+          };
+          virtualisation.docker.enable = true;
+          services.qbittorrent.enable = true;
+          services.scanservjs.enable = true;
+          services.tor.enable = true;
+          services.magic-wormhole-mailbox-server.enable = true;
+
+          services.gitolite = {
+            enable = true;
+            adminPubkey = (
+              lib.strings.removeSuffix "\n" (
+                builtins.readFile "${inputs.secrets}/.ssh/laptop-hosted-gitolite.pub"
+              )
+            );
+          };
+
+          programs.ladybird.enable = true;
+          programs.kdeconnect.enable = true;
+          programs.zoom-us.enable = true;
+
+          programs.appimage = {
+            enable = true;
+            binfmt = true;
+          };
+
           environment.systemPackages = with pkgs; [
             pulseaudioFull
+            miraclecast
+            magic-wormhole
+            linux-wifi-hotspot
+            gitolite
+            baobab
+            proton-vpn-cli
+            digikam
+            wl-clipboard
+            pinentry-gnome3
+            borgbackup
+            refind
+            _7zz-rar
+            fd
+            ueberzugpp
+            nushell
+            beeper
           ];
+
           hardware.alsa.enablePersistence = true;
 
           services.printing = {
