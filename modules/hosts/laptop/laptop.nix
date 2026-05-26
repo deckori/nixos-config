@@ -1,17 +1,29 @@
 {
   inputs,
   self,
+  username,
   ...
 }:
 
 {
   flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
+    specialArgs = {
+      inherit inputs self username;
+    };
     modules = [
+      self.nixosModules.shared
       self.nixosModules.bootLoader
       self.nixosModules.secureBoot
 
       self.nixosModules.homeManager
       self.nixosModules.laptopUser
+
+      self.nixosModules.nix
+      self.nixosModules.lix
+
+      # Package config
+      self.nixosModules.cliMisc
+      self.nixosModules.ssh
 
       # Hardware Configuration
       (
