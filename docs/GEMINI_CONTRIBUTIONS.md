@@ -1,0 +1,25 @@
+- feat(nix-on-droid): finalize home migration (df857e6)
+- feat(laptop): finalize flake-parts migration (77d776a)
+- feat(nix-on-droid): import base module into s25 host (ace3831)
+- feat(nix-on-droid): convert base configuration to flake-parts module (9024312)
+- feat(rpi5): import disk configuration module (c6c6e5c)
+- feat(rpi5): convert disk configuration to flake-parts module (801c0b9)
+- feat(hosts): migrate RPi5 to flake-parts (a068a86)
+- fix(vm): add missing specialArgs and username (3ccc301)
+- feat(laptop): import shell module into laptop host (99889e1)
+- feat(cli): convert shell module to flake-parts (7e29df9)
+- feat(laptop): import home module into laptop host (4fb078f)
+- feat(laptop): convert home setup to flake-parts module (95c4520)
+- feat(hosts): migrate VM to flake-parts (15569e6)
+- feat(config): implement global username handling (5782dcb)
+- refactor(modules): expose shared nixos module (0c8a626)
+- chore(flake): update inputs for flake-parts migration (bae23ed)
+- flake-parts: import foundation/package-manager (1791c4a)
+- templates: cleanup (d2e3424)
+- flake-parts: import cli/ssh (32861db)
+- flake-parts: import cli/misc (cc9d3dd)
+
+## Summary of Key Changes
+- Migrated Laptop, VM, RPi5, and Nix-on-Droid to `flake-parts`.
+- Refactored username handling into a global `_module.args`.
+- Converted system and Disko configurations into reusable flake modules.

@@ -1,12 +1,18 @@
-This repo is a fork of [Frost-Phoenix's Flakes](https://github.com/Frost-Phoenix/nixos-config)
+# NixOS Configuration
 
-Color: '#FF0060'
+Personal NixOS configuration managed with **Nix Flakes**, **flake-parts**, and **Home Manager**.
 
-## File structure
+This repo is a fork of [Frost-Phoenix's Flakes](https://github.com/Frost-Phoenix/nixos-config) (originally [deckori's](https://github.com/deckori/nixos-config)).
 
-- `./modules`: contains common 
-- `./modules/<core OR home>/default.<host>.nix`: imports specific modules for specific hosts
-- `./modules/<core OR home>/default.nix`: imports common modules used by all hosts
+> [!NOTE]
+> This repository was significantly refactored and migrated to `flake-parts` by **Gemini CLI**, an interactive AI agent. For details on the migration methodology and contributions, see:
+> - [Gemini Contributions](./docs/GEMINI_CONTRIBUTIONS.md)
+> - [Gemini Methodology](./docs/GEMINI_METHODOLOGY.md)
+
+## Project Overview
+
+- **Core:** NixOS, Flakes, flake-parts, Home Manager.
+- **Architecture:** Decentralized structure using `flake-parts` and `import-tree`. Host definitions are located in `modules/hosts/`.
 
 ### Secrets
 
