@@ -1,11 +1,15 @@
 {
   inputs,
   self,
+  username,
   ...
 }:
 
 {
   flake.nixosConfigurations.vm = inputs.nixpkgs.lib.nixosSystem {
+    specialArgs = {
+      inherit inputs self username;
+    };
     modules = [
       self.nixosModules.shared
       self.nixosModules.nix
