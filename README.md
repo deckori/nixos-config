@@ -1,6 +1,15 @@
-This repo is a fork of [Frost-Phoenix's Flakes](https://github.com/Frost-Phoenix/nixos-config)
+# NixOS Configuration
+
+Personal NixOS configuration managed with **Nix Flakes** and **Home Manager**.
+
+This repo is a fork of [Frost-Phoenix's Flakes](https://github.com/Frost-Phoenix/nixos-config) (originally [deckori's](https://github.com/deckori/nixos-config)).
 
 Color: '#FF0060'
+
+> [!NOTE]
+> This repository was significantly maintained and refactored by **Gemini CLI**, an interactive AI agent. For details on contributions and methodology, see:
+> - [Gemini Contributions](./docs/GEMINI_CONTRIBUTIONS.md)
+> - [Gemini Methodology](./docs/GEMINI_METHODOLOGY.md)
 
 ## File structure
 
