@@ -8,7 +8,6 @@
     inputs.nix-flatpak.nixosModules.nix-flatpak
     inputs.stylix.nixosModules.stylix
     inputs.nix-index-database.nixosModules.default
-    inputs.noctalia.nixosModules.default
     inputs.aagl.nixosModules.default # For hsr
     # inputs.niri-flake.nixosModules.niri
     inputs.nix-minecraft.nixosModules.minecraft-servers # For minecraft

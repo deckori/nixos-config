@@ -16,13 +16,9 @@
       ];
     };
 
-    services.noctalia-shell = {
-      enable = true;
-      package = pkgs.noctalia-shell;
-    };
-
     environment.systemPackages = with pkgs; [
       # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+      noctalia-shell
       pywalfox-native # Native app used alongside the Pywalfox addon
 
       # GTK theming dependancies
