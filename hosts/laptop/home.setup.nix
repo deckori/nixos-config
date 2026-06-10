@@ -18,7 +18,7 @@
   programs.kitty.enable = true;
 
   consuetudo.programs.nemo.enable = true;
-  consuetudo.programs.cisco-packet-tracer_9.enable = false;
+  consuetudo.programs.cisco-packet-tracer_9.enable = true;
 
   services.flatpak = {
     packages = [
@@ -49,7 +49,7 @@
     imagemagick
     tesseract
     evtest
-    pkgs-custom.sticker-convert
+    # pkgs-custom.sticker-convert
     phototonic
     discord
     vesktop

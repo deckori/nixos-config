@@ -101,7 +101,7 @@
       pandoc
     ]
     ++ lib.optionals (stdenv.hostPlatform.system == "x86_64-linux") [
-      pkgs-custom.say
+      # pkgs-custom.say # Fun pkg. I don't really need it
       ffmpeg
     ];
 }

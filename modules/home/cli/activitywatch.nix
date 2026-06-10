@@ -2,7 +2,7 @@
 
 {
   services.activitywatch = {
-    enable = true;
+    enable = false;
     watchers = {
       # NOTE:
       /*
