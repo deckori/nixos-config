@@ -15,6 +15,7 @@
       self.nixosModules.overlays
       self.nixosModules.audio
       self.nixosModules.bluetooth
+      self.nixosModules.clock
       self.nixosModules.bootLoader
       self.nixosModules.secureBoot
 
