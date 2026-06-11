@@ -52,6 +52,7 @@
       # gamescope
       inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.wine-ge
 
+      inputs.flightcore-pr.legacyPackages.x86_64-linux.flightcore
       ## Minecraft
       prismlauncher
       (modrinth-app.override {
