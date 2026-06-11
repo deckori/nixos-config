@@ -13,6 +13,7 @@
     modules = [
       self.nixosModules.shared
       self.nixosModules.overlays
+      self.nixosModules.audio
       self.nixosModules.bootLoader
       self.nixosModules.secureBoot
 
