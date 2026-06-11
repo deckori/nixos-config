@@ -12,6 +12,7 @@
     };
     modules = [
       self.nixosModules.shared
+      self.nixosModules.overlays
       self.nixosModules.bootLoader
       self.nixosModules.secureBoot
 
