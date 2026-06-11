@@ -145,12 +145,6 @@
 
     nix-gaming.url = "github:fufexan/nix-gaming";
 
-    # For titanfall
-    flightcore-pr = {
-      url = "github:NixOS/nixpkgs/pull/506992/head";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     # For hsr
