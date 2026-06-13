@@ -47,6 +47,7 @@
     #
     #misc
     imagemagick
+    teamviewer
     tesseract
     evtest
     # pkgs-custom.sticker-convert
