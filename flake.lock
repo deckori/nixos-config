@@ -539,22 +539,6 @@
         "type": "github"
       }
     },
-    "flightcore-pr": {
-      "locked": {
-        "lastModified": 1780248566,
-        "narHash": "sha256-N53Ou5XpUEH/fE4hu2bUNJFBpB+gD2EfIAEtMFGy4f8=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "957bc4efe132baa75decb5440938666e13ec5fd6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "pull/506992/head",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "fromYaml": {
       "flake": false,
       "locked": {
@@ -2069,7 +2053,6 @@
         "adw-bluetooth": "adw-bluetooth",
         "disko": "disko",
         "firefox": "firefox",
-        "flightcore-pr": "flightcore-pr",
         "home-manager": "home-manager",
         "hypr-contrib": "hypr-contrib",
         "hyprland": "hyprland",
