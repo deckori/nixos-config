@@ -4,7 +4,6 @@
   imports = [
     ./audio.nix
     ./bluetooth.nix
-    ./fixes.nix
     ./bootloader.nix
     ./clock.nix
     ./gpu.nix
