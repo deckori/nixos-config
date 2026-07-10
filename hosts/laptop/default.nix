@@ -51,7 +51,7 @@
   services.odoo.enable = false;
   services.davfs2.enable = false;
   services.gotenberg.enable = false;
-  services.suwayomi-server.enable = true;
+  services.suwayomi-server.enable = false;
   services.nextcloud = {
     enable = false;
     package = pkgs.nextcloud32;

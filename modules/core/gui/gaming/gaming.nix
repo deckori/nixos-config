@@ -53,6 +53,7 @@
       inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.wine-ge
 
       ## Minecraft
+      mcpelauncher-ui-qt
       prismlauncher
       (modrinth-app.override {
         jdks = [
