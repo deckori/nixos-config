@@ -16,10 +16,11 @@
       self.nixosModules.audio
       self.nixosModules.network
       self.nixosModules.bluetooth
-      self.nixosModules.clock
+      self.nixosModules.hardware
       self.nixosModules.fonts
       self.nixosModules.bootLoader
       self.nixosModules.secureBoot
+      self.nixosModules.security
       self.nixosModules.nvidiaIntelHybridGpu
 
       self.nixosModules.homeManager
