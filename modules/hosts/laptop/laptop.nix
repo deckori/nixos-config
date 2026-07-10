@@ -14,6 +14,7 @@
       self.nixosModules.shared
       self.nixosModules.overlays
       self.nixosModules.audio
+      self.nixosModules.network
       self.nixosModules.bluetooth
       self.nixosModules.clock
       self.nixosModules.fonts
