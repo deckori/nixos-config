@@ -21,6 +21,7 @@
       59010
       59011
     ];
+    trustedInterfaces = [ "tailscale0" ];
   };
 
   services.tailscale = {
