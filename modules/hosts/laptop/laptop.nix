@@ -19,6 +19,7 @@
       self.nixosModules.fonts
       self.nixosModules.bootLoader
       self.nixosModules.secureBoot
+      self.nixosModules.nvidiaIntelHybridGpu
 
       self.nixosModules.homeManager
       self.nixosModules.laptopUser
@@ -62,7 +63,7 @@
           services.desktopManager.plasma6.enable = true;
 
           services.printing.enable = true;
-          
+
           # Custom module options (Assuming these are defined in modules/core)
           # consuetudo.nvidia-intel.enable = true;
           # consuetudo.power.enable = true;
