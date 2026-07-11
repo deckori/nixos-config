@@ -17,6 +17,7 @@
       self.nixosModules.network
       self.nixosModules.bluetooth
       self.nixosModules.hardware
+      self.nixosModules.power
       self.nixosModules.fonts
       self.nixosModules.bootLoader
       self.nixosModules.secureBoot
