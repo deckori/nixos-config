@@ -23,6 +23,8 @@
       self.nixosModules.secureBoot
       self.nixosModules.security
       self.nixosModules.nvidiaIntelHybridGpu
+      self.nixosModules.stylix
+      self.nixosModules.customColorOptions
 
       self.nixosModules.homeManager
       self.nixosModules.laptopUser
