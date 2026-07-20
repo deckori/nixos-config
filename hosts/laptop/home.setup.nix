@@ -78,7 +78,7 @@
     #   video-trimmer
     vlc
     xournalpp
-    #
+
     #   ## Office
     #   rstudio
     libreoffice
