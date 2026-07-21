@@ -53,7 +53,7 @@
     # pkgs-custom.sticker-convert
     phototonic
     discord
-    vesktop
+    # vesktop
     gemini-cli
     claude-code
     thunderbird

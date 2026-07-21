@@ -55,14 +55,31 @@
       ## Minecraft
       mcpelauncher-ui-qt
       prismlauncher
-      (modrinth-app.override {
-        jdks = [
-          jdk8
-          jdk17
-          jdk21
-          jdk25
-        ];
-      })
+      (modrinth-app.override
+        {
+          jdks = [
+            jdk8
+            jdk17
+            jdk21
+            jdk25
+          ];
+        }
+        .overrideAttrs
+        (old: {
+          postBuild = ''
+            gappsWrapperArgs+=(
+              --prefix PATH : ${lib.makeSearchPath "bin/java" jdks}
+              ${lib.optionalString stdenv.hostPlatform.isLinux ''
+                --prefix PATH : ${lib.makeBinPath [ xrandr ]}
+                --set LD_LIBRARY_PATH $runtimeDependencies
+              ''}
+            )
+            glibPostInstallHook
+            gappsWrapperArgsHook
+            wrapGApp "$out/bin/ModrinthApp"
+          '';
+        })
+      )
 
       ## Cli games
       _2048-in-terminal
