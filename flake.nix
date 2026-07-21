@@ -74,7 +74,7 @@
     };
 
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v1.0.0";
+      url = "github:nix-community/lanzaboote/v1.1.0";
     };
 
     xremap-flake.url = "github:xremap/nix-flake";
