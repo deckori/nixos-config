@@ -36,6 +36,7 @@
       self.nixosModules.shell
       self.nixosModules.cliMisc
       self.nixosModules.ssh
+      self.nixosModules.gaming
 
       self.nixosModules.niri
       self.nixosModules.noctalia
