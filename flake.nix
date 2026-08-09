@@ -51,6 +51,9 @@
     };
 
     yazi.url = "github:sxyazi/yazi/nightly";
+
+    noctalia.url = "github:noctalia-dev/noctalia";
+
     winapps = {
       url = "github:winapps-org/winapps";
       inputs.nixpkgs.follows = "nixpkgs";
