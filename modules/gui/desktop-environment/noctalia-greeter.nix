@@ -2,7 +2,12 @@
 
 {
   flake.nixosModules.noctalia-greeter =
-    { pkgs, inputs, ... }:
+    {
+      pkgs,
+      inputs,
+      username,
+      ...
+    }:
     {
       imports = [
         inputs.noctalia-greeter.nixosModules.default
@@ -12,7 +17,7 @@
         enable = true;
 
         # Optional configuration
-        greeter-args = "";
+        greeter-args = "--user ${username}";
         # Full declarative greeter.toml (overwritten on each activation).
         # See examples/greeter.toml for every key (appearance.palette, output, …).
         settings = {
