@@ -26,8 +26,9 @@
           home.stateVersion = "26.05";
           home.username = "${username}";
           imports = [
-            self.homeModules.btop
+            self.homeModules.niri
             self.homeModules.laptopHome
+            self.homeModules.btop
           ];
         };
       };

@@ -37,6 +37,10 @@
       self.nixosModules.cliMisc
       self.nixosModules.ssh
 
+      self.nixosModules.niri
+      self.nixosModules.noctalia
+      self.nixosModules.noctalia-greeter
+
       # Laptop specific configuration merged from old hosts/laptop/default.nix
       (
         {
