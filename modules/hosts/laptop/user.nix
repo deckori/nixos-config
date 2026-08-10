@@ -29,6 +29,7 @@
             self.homeModules.niri
             self.homeModules.laptopHome
             self.homeModules.btop
+            self.homeModules.git
           ];
         };
       };

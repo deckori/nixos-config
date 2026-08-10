@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  flake.nixosModules.git =
+  flake.homeModules.git =
     { pkgs, username, ... }:
     {
       # git aliases are placed in .zshrc in chezmoi repo
