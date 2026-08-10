@@ -32,7 +32,7 @@
       self.nixosModules.nix
       self.nixosModules.lix
 
-      # Package config
+      ## Package config
       self.nixosModules.shell
       self.nixosModules.cliMisc
       self.nixosModules.git
