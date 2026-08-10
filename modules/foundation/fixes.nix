@@ -31,7 +31,7 @@
       services.xremap = {
         enable = true;
         package = pkgs.xremap; # Use the official package to skip building xremap from source
-        userName = config.consuetudo.mainUsername;
+        userName = config.consuetudo.username;
         yamlConfig = ''
           experimental_map:
             - chords:

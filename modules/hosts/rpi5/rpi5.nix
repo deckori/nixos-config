@@ -2,6 +2,7 @@
   inputs,
   self,
   username,
+  config,
   ...
 }:
 
@@ -14,7 +15,7 @@
     modules = [
       self.nixosModules.nix
       self.nixosModules.lix
-      self.nixosModules.mainUsername
+      self.nixosModules.username
       self.nixosModules.rpi5DiskConfiguration
       inputs.disko.nixosModules.disko
 
@@ -22,6 +23,7 @@
         {
           pkgs,
           lib,
+          config,
           ...
         }:
         {
@@ -39,20 +41,18 @@
             originalsPath = "/st/photoprism/originals";
             storagePath = "/st/photoprism/storage";
           };
-          
+
           services.jellyfin.enable = true;
           services.suwayomi-server.enable = true;
 
           services.gitolite = {
             enable = true;
             adminPubkey = (
-              lib.strings.removeSuffix "\n" (
-                builtins.readFile "${inputs.secrets}/.ssh/rpi5-hosted-gitolite.pub"
-              )
+              lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/.ssh/rpi5-hosted-gitolite.pub")
             );
           };
 
-          users.users.${username} = {
+          users.users.${config.consuetudo.username} = {
             isNormalUser = true;
             extraGroups = [
               "wheel"
@@ -60,9 +60,7 @@
               "video"
             ];
             openssh.authorizedKeys.keys = [
-              (lib.strings.removeSuffix "\n" (
-                builtins.readFile "${inputs.secrets}/.ssh/rpi5-main-user.pub"
-              ))
+              (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/.ssh/rpi5-main-user.pub"))
             ];
           };
 

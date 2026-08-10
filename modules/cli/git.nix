@@ -2,7 +2,7 @@
 
 {
   flake.homeModules.git =
-    { pkgs, username, ... }:
+    { pkgs, config, ... }:
     {
       # git aliases are placed in .zshrc in chezmoi repo
       programs.git = {
@@ -24,7 +24,7 @@
           diff.colorMoved = "default";
           pull.ff = "only";
           color.ui = true;
-          core.excludesFile = "/home/${username}/.config/git/.gitignore";
+          core.excludesFile = "/home/${config.consuetudo.username}/.config/git/.gitignore";
 
           credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
 
