@@ -7,6 +7,7 @@
       # git aliases are placed in .zshrc in chezmoi repo
       programs.git = {
         enable = true;
+        package = pkgs.gitFull;
 
         lfs.enable = true;
 
@@ -26,7 +27,9 @@
           color.ui = true;
           core.excludesFile = "/home/${config.consuetudo.username}/.config/git/.gitignore";
 
-          credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
+          credential.helper = "libsecret";
+          # This line results in git being built from source
+          # credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
 
           aliases = {
             apply-gitignore = "!git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached";
