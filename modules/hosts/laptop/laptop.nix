@@ -68,10 +68,10 @@
           xdg.portal.enable = true;
 
           programs.niri.enable = true;
-          programs.hyprland.enable = false;
+          # programs.hyprland.enable = false;
 
-          services.displayManager.sddm.enable = true;
-          services.desktopManager.plasma6.enable = true;
+          # services.displayManager.sddm.enable = true;
+          # services.desktopManager.plasma6.enable = true;
 
           services.printing.enable = true;
 
