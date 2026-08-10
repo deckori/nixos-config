@@ -32,6 +32,8 @@
             self.homeModules.laptopHome
             self.homeModules.btop
             self.homeModules.git
+            self.homeModules.zoxide
+            self.homeModules.neovim
           ];
         };
       };
