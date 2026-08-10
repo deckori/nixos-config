@@ -35,6 +35,7 @@
       # Package config
       self.nixosModules.shell
       self.nixosModules.cliMisc
+      self.nixosModules.git
       self.nixosModules.ssh
       self.nixosModules.gaming
 
