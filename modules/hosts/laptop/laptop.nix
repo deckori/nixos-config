@@ -32,6 +32,9 @@
       self.nixosModules.nix
       self.nixosModules.lix
 
+      ## Service config
+      self.nixosModules.qbittorrent
+
       ## Package config
       self.nixosModules.shell
       self.nixosModules.cliMisc
