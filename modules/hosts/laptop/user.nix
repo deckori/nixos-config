@@ -29,11 +29,13 @@
             self.homeModules.username
 
             self.homeModules.niri
+
             self.homeModules.laptopHome
             self.homeModules.btop
             self.homeModules.git
             self.homeModules.zoxide
             self.homeModules.neovim
+            self.homeModules.tmux
           ];
         };
       };
