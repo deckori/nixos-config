@@ -4,7 +4,6 @@
   flake.nixosModules.gaming =
     {
       pkgs,
-      pkgs-custom,
       inputs,
       config,
       lib,
@@ -48,10 +47,6 @@
         wineWow64Packages.stable
         winetricks
 
-        ## Utils
-        # gamescope
-        inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.wine-ge
-
         ## Minecraft
         prismlauncher
         (modrinth-app.override {
@@ -83,12 +78,6 @@
         # dolphin-emu
       ];
 
-      services.flatpak.packages = [
-        "com.github.Matoking.protontricks"
-        "io.itch.itch"
-        "com.heroicgameslauncher.hgl"
-      ];
-
       services.sunshine = {
         enable = false;
         autoStart = true;
@@ -97,12 +86,12 @@
       };
 
       # For hsr
-      nix.settings = inputs.aagl.nixConfig; # Set up Cachix
-      programs.anime-game-launcher.enable = false; # Adds launcher and /etc/hosts rules
-      programs.anime-games-launcher.enable = false;
-      programs.honkers-railway-launcher.enable = true;
-      programs.honkers-launcher.enable = false;
-      programs.wavey-launcher.enable = false;
-      programs.sleepy-launcher.enable = false;
+      # nix.settings = inputs.aagl.nixConfig; # Set up Cachix
+      # programs.anime-game-launcher.enable = false; # Adds launcher and /etc/hosts rules
+      # programs.anime-games-launcher.enable = false;
+      # programs.honkers-railway-launcher.enable = true;
+      # programs.honkers-launcher.enable = false;
+      # programs.wavey-launcher.enable = false;
+      # programs.sleepy-launcher.enable = false;
     };
 }
