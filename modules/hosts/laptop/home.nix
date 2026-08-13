@@ -31,7 +31,18 @@
         tesseract
         evtest
         phototonic
-        discord
+
+        (discover-overlay.override {
+          python3 = pkgs.python3.override {
+            packageOverrides = self: super: {
+              setuptools = super.setuptools_80;
+            };
+          };
+        })
+        (discord.override {
+          # withOpenASAR = true; # can do this here too
+          withVencord = true;
+        })
         vesktop
         gemini-cli
         claude-code
