@@ -36,6 +36,7 @@
             self.homeModules.zoxide
             self.homeModules.neovim
             self.homeModules.tmux
+            self.homeModules.guiMisc
           ];
         };
       };
