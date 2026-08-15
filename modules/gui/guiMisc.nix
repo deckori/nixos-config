@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  flake.nixosModules.guiMisc =
+  flake.homeModules.guiMisc =
     { pkgs, ... }:
     {
       home.packages = with pkgs; [
