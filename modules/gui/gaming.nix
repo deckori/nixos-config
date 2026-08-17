@@ -47,6 +47,8 @@
         wineWow64Packages.stable
         winetricks
 
+        flightcore
+
         ## Minecraft
         prismlauncher
         (modrinth-app.override {

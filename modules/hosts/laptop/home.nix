@@ -44,7 +44,7 @@
           withVencord = true;
         })
         vesktop
-        gemini-cli
+        antigravity-cli
         claude-code
         thunderbird
         firefox

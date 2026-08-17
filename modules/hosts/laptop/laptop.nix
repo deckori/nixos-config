@@ -107,7 +107,6 @@
             );
           };
 
-          programs.ladybird.enable = true;
           programs.kdeconnect.enable = true;
           programs.zoom-us.enable = true;
 
@@ -118,17 +117,14 @@
 
           environment.systemPackages = with pkgs; [
             pulseaudioFull
-            miraclecast
-            magic-wormhole
+            # miraclecast # screencast stuff, doesn't work
             linux-wifi-hotspot
             gitolite
-            baobab
             proton-vpn-cli
             digikam
             wl-clipboard
             pinentry-gnome3
             borgbackup
-            refind
             _7zz-rar
             fd
             ueberzugpp
