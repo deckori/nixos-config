@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs-custom, ... }:
 
 {
   flake.homeModules.guiMisc =
@@ -7,6 +7,7 @@
       home.packages = with pkgs; [
         mpv
         picard # Official MusicBrainz tagger
+        pkgs-custom.onetagger
       ];
     };
 }
