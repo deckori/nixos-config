@@ -6,7 +6,11 @@
     {
       home.packages = with pkgs; [
         mpv
+
+        # Music
         picard # Official MusicBrainz tagger
+        fooyin
+        lrcget
         pkgs-custom.onetagger
       ];
     };
