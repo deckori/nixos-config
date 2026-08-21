@@ -1,10 +1,10 @@
 { inputs, pkgs, ... }:
+let
+  system = "x86_64-linux";
+in
 {
   _module.args = {
-    pkgs-custom = import inputs.nixpkgs-custom {
-      system = pkgs.stdenv.hostPlatform.system;
-      config.allowUnfree = true;
-    };
+    pkgs-custom = inputs.nixpkgs-custom.packages.${system};
 
     # This makes 'username' available as an argument to all flake-parts modules
     username = inputs.nixpkgs.lib.strings.removeSuffix "\n" (
