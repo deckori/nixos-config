@@ -2,7 +2,7 @@
 
 {
   flake.nixosModules.cliMisc =
-    { pkgs, ... }:
+    { pkgs, username, ... }:
     {
       programs.nano.enable = false;
       programs.vim = {
@@ -17,6 +17,9 @@
       };
       environment.systemPackages = with pkgs; [
         veracrypt
+        android-tools
       ];
+
+      users.users.${username}.extraGroups = [ "adbusers" ];
     };
 }
