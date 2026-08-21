@@ -78,13 +78,6 @@
 
           services.printing.enable = true;
 
-          # Custom module options (Assuming these are defined in modules/core)
-          # consuetudo.nvidia-intel.enable = true;
-          # consuetudo.power.enable = true;
-          # consuetudo.gaming-config.enable = true;
-          # consuetudo.btop-cuda.enable = true;
-          # consuetudo.winApps.enable = true;
-
           virtualisation.libvirtd.enable = true;
           services.avahi.enable = true;
           services.suwayomi-server.enable = true;
