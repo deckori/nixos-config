@@ -39,6 +39,7 @@
       self.nixosModules.shell
       self.nixosModules.cliMisc
       self.nixosModules.ssh
+      self.nixosModules.btopNvidiaIntel
       self.nixosModules.gaming
 
       self.nixosModules.niri
