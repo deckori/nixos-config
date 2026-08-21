@@ -34,7 +34,6 @@
 
       ## Service config
       self.nixosModules.qbittorrent
-      self.nixosModules.navidrome
 
       ## Package config
       self.nixosModules.shell
