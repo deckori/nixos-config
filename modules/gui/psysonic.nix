@@ -1,0 +1,15 @@
+{ ... }:
+
+{
+  flake.homeModules.psysonic =
+    { inputs, pkgs, ... }:
+    {
+      nix.settings = {
+        extra-substituters = [ "https://psysonic.cachix.org" ];
+        extra-trusted-public-keys = [
+          "psysonic.cachix.org-1:M9cQyQ7tgvUWOQ5Pyt8ozlMoPLtOZir6MfRuTH9/VYA="
+        ];
+      };
+      home.packages = [ inputs.psysonic.${pkgs.stdenv.hostPlatform.system}.psysonic ];
+    };
+}
