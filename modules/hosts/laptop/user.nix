@@ -7,6 +7,8 @@
   flake.nixosModules.laptopUser =
     { pkgs, ... }:
     {
+      nix.settings.trusted-users = [ username ];
+
       users.users.${username} = {
         isNormalUser = true;
         group = username;
