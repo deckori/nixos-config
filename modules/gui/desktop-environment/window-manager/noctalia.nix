@@ -31,6 +31,11 @@
         recommendedServices.enable = true;
       };
 
+      environment.systemPackages = with pkgs; [
+        scrcpy
+        sshfs
+      ];
+
       # environment.systemPackages = with pkgs; [
       #   # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       #   pywalfox-native # Native app used alongside the Pywalfox addon

@@ -12,6 +12,7 @@
         fooyin
         lrcget
         pkgs-custom.onetagger
+        pkgs-custom.simkl-mps
       ];
     };
 }
