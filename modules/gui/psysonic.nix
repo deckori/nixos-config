@@ -1,8 +1,8 @@
-{ ... }:
+{ inputs, ... }:
 
 {
   flake.homeModules.psysonic =
-    { inputs, pkgs, ... }:
+    { pkgs, ... }:
     {
       nix.settings = {
         extra-substituters = [ "https://psysonic.cachix.org" ];
@@ -10,6 +10,6 @@
           "psysonic.cachix.org-1:M9cQyQ7tgvUWOQ5Pyt8ozlMoPLtOZir6MfRuTH9/VYA="
         ];
       };
-      home.packages = [ inputs.psysonic.${pkgs.stdenv.hostPlatform.system}.psysonic ];
+      home.packages = [ inputs.psysonic.packages.${pkgs.stdenv.hostPlatform.system}.psysonic ];
     };
 }
