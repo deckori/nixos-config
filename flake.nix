@@ -57,6 +57,11 @@
 
     yazi.url = "github:sxyazi/yazi/nightly";
 
+    subtui = {
+      url = "github:MattiaPun/SubTUI";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     noctalia.url = "github:noctalia-dev/noctalia";
 
     noctalia-greeter = {

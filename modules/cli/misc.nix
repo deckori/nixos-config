@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 
 {
   flake.nixosModules.cliMisc =
@@ -18,6 +18,7 @@
       environment.systemPackages = with pkgs; [
         veracrypt
         android-tools
+        inputs.subtui.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
 
       users.users.${username}.extraGroups = [ "adbusers" ];
