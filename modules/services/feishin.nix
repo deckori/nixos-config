@@ -2,8 +2,12 @@
 
 {
   flake.nixosModules.feishin =
-    { pkgs, ... }:
+    { pkgs, laptop, ... }:
     {
-      services.feishin.enable = true;
+      services.feishin = {
+        enable = true;
+        domain = "localhost:9180";
+        caddy.enable = true;
+      };
     };
 }
