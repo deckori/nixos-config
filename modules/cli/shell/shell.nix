@@ -24,5 +24,9 @@
         /run/current-system/sw/bin/nu
         ${pkgs.nushell}/bin/nu
       '';
+
+      environment.shellAliases = {
+        n = "noctalia msg notification-show 'nix update' 'finished'";
+      };
     };
 }
