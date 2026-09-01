@@ -1,4 +1,8 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  lib,
+  ...
+}:
 let
   system = "x86_64-linux";
 in
@@ -10,5 +14,7 @@ in
     username = inputs.nixpkgs.lib.strings.removeSuffix "\n" (
       builtins.readFile "${inputs.secrets}/users/main"
     );
+
+    laptop = (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/hosts/laptop"));
   };
 }
