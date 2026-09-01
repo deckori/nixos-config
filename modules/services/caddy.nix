@@ -1,15 +1,22 @@
-{ ... }:
+{ inputs, ... }:
 
 {
   flake.nixosModules.caddy =
-    { pkgs, ... }:
+    {
+      pkgs,
+      laptop,
+      ...
+    }:
     {
       services.caddy = {
         enable = true;
-        virtualHosts."localhost".extraConfig = ''
+
+        virtualHosts."laptop".extraConfig = ''
           tls internal
-          respond "Hello, world!"
+          reverse_proxy ${laptop}
+          respond "Hello. You're supposed to use the sub-domains."
         '';
+
       };
     };
 }
