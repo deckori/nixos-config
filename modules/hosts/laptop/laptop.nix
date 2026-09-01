@@ -18,7 +18,7 @@
     };
     modules = [
       self.nixosModules.shared
-      self.nixosModules.overlays
+      # self.nixosModules.overlays
       self.nixosModules.audio
       self.nixosModules.network
       self.nixosModules.bluetooth
@@ -39,13 +39,17 @@
       self.nixosModules.lix
 
       ## Service config
+      self.nixosModules.caddy
+      self.nixosModules.feishin
       self.nixosModules.qbittorrent
+      self.nixosModules.navidrome
 
       ## Package config
       self.nixosModules.shell
       self.nixosModules.cliMisc
       self.nixosModules.ssh
       self.nixosModules.btopNvidiaIntel
+
       self.nixosModules.gaming
 
       self.nixosModules.niri
