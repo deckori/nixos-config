@@ -23,4 +23,15 @@
 
       users.users.${username}.extraGroups = [ "adbusers" ];
     };
+
+  flake.homeModules.cliMisc =
+    { pkgs, username, ... }:
+    {
+      home.packages = [
+        inputs.subtui.packages.${pkgs.stdenv.hostPlatform.system}.default
+        # (inputs.wptui.packages.${pkgs.stdenv.hostPlatform.system}.wp-tui.overrideAttrs (old: {
+        #   vendorHash = "sha256-dGQJJTuiPqp+s9leWl02lbm58loA9yb7gQZEYtDH7tk=";
+        # }))
+      ];
+    };
 }
