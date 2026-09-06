@@ -43,6 +43,7 @@
       self.nixosModules.feishin
       self.nixosModules.qbittorrent
       self.nixosModules.navidrome
+      self.nixosModules.radicale
 
       ## Package config
       self.nixosModules.shell
