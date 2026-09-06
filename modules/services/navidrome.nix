@@ -28,11 +28,11 @@
             );
           };
         };
-      };
 
-      services.navidrome.plugins = with pkgs.navidromePlugins; [
-        listenbrainz-daily-playlist
-        discord-rich-presence
-      ];
+        plugins = with pkgs.navidromePlugins; [
+          listenbrainz-daily-playlist
+          discord-rich-presence
+        ];
+      };
     };
 }
