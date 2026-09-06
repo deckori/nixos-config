@@ -949,11 +949,11 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1788177380,
-        "narHash": "sha256-9sodCV1Jpu7lSEbPHHTSfScQXjKG2DEmknoZdErzmJg=",
+        "lastModified": 1788679050,
+        "narHash": "sha256-HCjZrXDA8f0MM0G/XhVOJRc3JcGJEgfS0ESGcsXAXk0=",
         "ref": "refs/heads/main",
-        "rev": "2bfd1d57ccf58ff64986cceaf8c832b28cc5c7a8",
-        "revCount": 16,
+        "rev": "cf0f29ab4665f7db539e949f9cd8aa501f0f61d7",
+        "revCount": 17,
         "type": "git",
         "url": "ssh://deck-repos:/secrets.git"
       },
