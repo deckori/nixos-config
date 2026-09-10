@@ -8,6 +8,7 @@ let
 in
 {
   _module.args = {
+    # Note: This has unfree packages
     pkgs-custom = inputs.nixpkgs-custom.packages.${system};
 
     # This makes 'username' available as an argument to all flake-parts modules
