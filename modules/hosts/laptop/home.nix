@@ -44,12 +44,8 @@
           # withOpenASAR = true; # can do this here too
           withVencord = true;
         })
-        vesktop
-        antigravity-cli
-        claude-code
         thunderbird
         firefox
-        google-chrome
         gnome-sound-recorder
         gthumb
         feh
