@@ -36,7 +36,6 @@
     discord # gui #communication
     firewalld # cli #security
     gimp # gui #image-editor
-    google-chrome # gui #browser
     imagemagick # cli #image-tools
     inkscape # gui #vector-editor
     kitty # gui #terminal

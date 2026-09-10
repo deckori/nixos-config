@@ -1,6 +1,7 @@
 {
   inputs,
   self,
+  pkgs-custom,
   username,
   laptop,
   ...
@@ -11,6 +12,7 @@
     specialArgs = {
       inherit
         inputs
+        pkgs-custom
         self
         username
         laptop
@@ -43,7 +45,7 @@
       self.nixosModules.feishin
       self.nixosModules.qbittorrent
       self.nixosModules.navidrome
-      self.nixosModules.radicale
+      self.nixosModules.baikal
 
       ## Package config
       self.nixosModules.shell
@@ -61,6 +63,7 @@
       (
         {
           pkgs,
+          pkgs-custom,
           config,
           lib,
           modulesPath,
@@ -87,7 +90,17 @@
           # services.displayManager.sddm.enable = true;
           # services.desktopManager.plasma6.enable = true;
 
-          services.printing.enable = true;
+          services.printing = {
+            enable = true;
+
+            drivers = with pkgs; [
+              brlaser
+              brgenml1lpr
+              pkgs-custom.dcpt520w
+              brgenml1cupswrapper
+            ];
+
+          };
 
           virtualisation.libvirtd.enable = true;
           services.avahi.enable = true;
@@ -138,14 +151,6 @@
           ];
 
           hardware.alsa.enablePersistence = true;
-
-          services.printing = {
-            drivers = with pkgs; [
-              brlaser
-              brgenml1lpr
-              brgenml1cupswrapper
-            ];
-          };
 
           imports = [
             (modulesPath + "/installer/scan/not-detected.nix")
