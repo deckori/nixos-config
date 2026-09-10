@@ -18,7 +18,7 @@
         enable = true;
         # needed for GNOME services outside of GNOME Desktop
         packages = with pkgs; [
-          gcr
+          gcr_4
           gnome-settings-daemon
         ];
       };
