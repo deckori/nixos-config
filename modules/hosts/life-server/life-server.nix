@@ -1,7 +1,7 @@
 { inputs, self, ... }:
 
 {
-  flake.systemConfigs.life-server = inputs.nixpkgs.lib.nixosSystem {
+  flake.systemConfigs.life-server = inputs.system-manager.lib.makeSystemConfig {
     modules = [
       # # Service config
       self.nixosModules.caddy
