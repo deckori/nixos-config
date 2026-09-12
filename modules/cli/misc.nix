@@ -32,10 +32,6 @@
         # (inputs.wptui.packages.${pkgs.stdenv.hostPlatform.system}.wp-tui.overrideAttrs (old: {
         #   vendorHash = "sha256-dGQJJTuiPqp+s9leWl02lbm58loA9yb7gQZEYtDH7tk=";
         # }))
-
-        # Scheduling
-        vdirsyncer
-        khal
       ];
     };
 }
