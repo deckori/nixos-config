@@ -51,6 +51,7 @@
       self.nixosModules.shell
       self.nixosModules.cliMisc
       self.nixosModules.ssh
+      self.nixosModules.scheduling
       self.nixosModules.btopNvidiaIntel
 
       self.nixosModules.gaming
