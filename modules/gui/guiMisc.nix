@@ -5,6 +5,8 @@
     { pkgs, ... }:
     {
       home.packages = with pkgs; [
+        brave
+
         mpv
 
         # Music
