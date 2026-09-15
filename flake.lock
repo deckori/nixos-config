@@ -645,11 +645,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789207575,
-        "narHash": "sha256-G4EO1w5XfF2D/EGVZ6y9tI9ZjMV6fvh9Bh4r0FJFhFk=",
+        "lastModified": 1789444280,
+        "narHash": "sha256-PIkYEksQ9FxWOZf3vSYwT2pKwTDgVlG0Z+DR73t+ugc=",
         "ref": "refs/heads/main",
-        "rev": "64b86724c4fa99c6b06fcae7815246bbf4080805",
-        "revCount": 13,
+        "rev": "4eeb93ae47df26c45172d8fd8fba631e1b4b3fab",
+        "revCount": 16,
         "type": "git",
         "url": "ssh://deck-repos:/nixpkgs-custom"
       },
