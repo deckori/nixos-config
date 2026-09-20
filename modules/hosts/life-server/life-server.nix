@@ -4,17 +4,16 @@
   flake.systemConfigs.life-server = inputs.system-manager.lib.makeSystemConfig {
     modules = [
       # # Service config
-      self.nixosModules.feishin
-      self.nixosModules.qbittorrent
-      self.nixosModules.navidrome
       # self.nixosModules.baikal
-      {
+      ({ pkgs, ... }: {
         nix.settings.experimental-features = [
           "nix-command"
           "flakes"
         ];
         system-manager.allowAnyDistro = true;
-      }
+
+        nixpkgs.hostPlatform = "x86_64-linux";
+      })
     ];
   };
 }
