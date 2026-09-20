@@ -1,8 +1,0 @@
-{ ... }:
-
-{
-  imports = [
-    ./yazi.nix
-    ./plugins
-  ];
-}
