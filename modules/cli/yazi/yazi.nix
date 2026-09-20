@@ -34,17 +34,16 @@
       #     rm -fp $tmp
       #   }
       # '';
+      imports = [
+        self.homeModules.yaziSettings
+        self.homeModules.yaziKeymap
+
+        # Plugins
+        self.homeModules.yaziGit
+        self.homeModules.yaziLazygit
+        self.homeModules.yaziRestore
+        self.homeModules.yaziSmart-enter
+        self.homeModules.yaziSudo
+      ];
     };
-
-  imports = [
-    self.homeModules.yaziSettings
-    self.homeModules.yaziKeymap
-
-    # Plugins
-    self.homeModules.yaziGit
-    self.homeModules.yaziLazygit
-    self.homeModules.yaziRestore
-    self.homeModules.yaziSmart-enter
-    self.homeModules.yaziSudo
-  ];
 }

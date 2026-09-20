@@ -1,8 +1,8 @@
-{ ... }:
+{ pkgs-custom, ... }:
 
 {
   flake.homeModules.yaziSettings =
-    { pkgs-custom, ... }:
+    { ... }:
     {
       home.packages = [
         pkgs-custom.program-chooser
