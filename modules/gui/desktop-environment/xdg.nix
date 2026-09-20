@@ -1,0 +1,23 @@
+{ ... }:
+
+{
+  flake.nixosModules.xdg =
+    {
+      pkgs,
+      ...
+    }:
+    {
+      xdg.portal = {
+        xdgOpenUsePortal = true;
+        config = {
+          common.default = [ "gtk" ];
+        };
+        extraPortals = with pkgs; [
+          xdg-desktop-portal-gtk
+          xdg-desktop-portal-gnome
+          xdg-desktop-portal-wlr
+          xdg-desktop-portal-termfilechooser
+        ];
+      };
+    };
+}
