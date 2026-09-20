@@ -41,6 +41,7 @@
             self.homeModules.neovim
             self.homeModules.tmux
             self.homeModules.nushell
+            self.homeModules.yazi
 
             self.homeModules.guiMisc
           ];
