@@ -44,7 +44,6 @@
       self.nixosModules.caddy
       self.nixosModules.feishin
       self.nixosModules.qbittorrent
-      self.nixosModules.navidrome
       self.nixosModules.baikal
 
       ## Package config
@@ -129,7 +128,6 @@
           programs.fuse.userAllowOther = true;
 
           programs.kdeconnect.enable = true;
-          programs.zoom-us.enable = true;
 
           programs.appimage = {
             enable = true;
