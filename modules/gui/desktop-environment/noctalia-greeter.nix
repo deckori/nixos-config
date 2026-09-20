@@ -13,11 +13,16 @@
         inputs.noctalia-greeter.nixosModules.default
       ];
 
-      programs.noctalia-greeter = {
+      services.displayManager.noctalia-greeter = {
         enable = true;
 
         # Optional configuration
-        greeter-args = "--user ${username}";
+        extraArgs = [
+          "--session"
+          "niri"
+          "--user"
+          "${username}"
+        ];
         # Full declarative greeter.toml (overwritten on each activation).
         # See examples/greeter.toml for every key (appearance.palette, output, …).
         settings = {
