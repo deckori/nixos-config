@@ -16,5 +16,14 @@
         # pkgs-custom.onetagger
         pkgs-custom.simkl-mps
       ];
+
+      programs.pidgin = {
+        enable = true;
+        plugins = with pkgs.pidginPackages; [
+          pidgin
+          pidgin-latex
+          purple-googlechat
+        ];
+      };
     };
 }
