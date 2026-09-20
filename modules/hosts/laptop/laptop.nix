@@ -126,6 +126,8 @@
             );
           };
 
+          programs.fuse.userAllowOther = true;
+
           programs.kdeconnect.enable = true;
           programs.zoom-us.enable = true;
 
