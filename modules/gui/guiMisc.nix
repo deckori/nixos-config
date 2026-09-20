@@ -13,7 +13,7 @@
         picard # Official MusicBrainz tagger
         fooyin
         lrcget
-        pkgs-custom.onetagger
+        # pkgs-custom.onetagger
         pkgs-custom.simkl-mps
       ];
     };
