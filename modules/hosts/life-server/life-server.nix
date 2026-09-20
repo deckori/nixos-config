@@ -1,23 +1,25 @@
-{ inputs, self, ... }:
+{
+  inputs,
+  self,
+  username,
+  ...
+}:
 
 {
   flake.systemConfigs.life-server = inputs.system-manager.lib.makeSystemConfig {
+    specialArgs = {
+      inherit
+        inputs
+        self
+        username
+        ;
+    };
     modules = [
       # # Service config
       # self.nixosModules.baikal
-      ({ pkgs, ... }: {
-        nix.settings.experimental-features = [
-          "nix-command"
-          "flakes"
-        ];
-        system-manager.allowAnyDistro = true;
 
-        nixpkgs.hostPlatform = "x86_64-linux";
-
-        environment.systemPackages = with pkgs; [
-          aw-server-rust
-        ];
-      })
+      self.nixosModules.nix
+      self.nixosModules.lix
     ];
   };
 }
