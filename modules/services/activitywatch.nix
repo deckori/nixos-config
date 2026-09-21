@@ -8,6 +8,7 @@
     {
       services.activitywatch = {
         enable = true;
+        package = pkgs.pkgs.aw-server-rust;
         watchers = {
           # NOTE:
           /*
