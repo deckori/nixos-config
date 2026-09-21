@@ -82,3 +82,13 @@ For the token:
 ```bash
 sudo cryptsetup token remove --token-id <tokenNo> /dev/nvme0n1px
 ```
+
+## Usefule sites
+
+https://github.com/nix-community/nix-init
+
+https://system-manager.net/main/how-to/import-nixos-module/
+
+To be set up:
+
+aw-sync-rust
