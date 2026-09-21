@@ -35,6 +35,7 @@
       self.nixosModules.customColorOptions
 
       self.nixosModules.homeManager
+      self.nixosModules.user
       self.nixosModules.laptopUser
 
       self.nixosModules.nix
