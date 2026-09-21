@@ -19,7 +19,8 @@
       # self.nixosModules.baikal
 
       self.nixosModules.nix
-      self.nixosModules.lix
+      # self.nixosModules.lix
+      self.nixosModules.life-serverConfig
     ];
   };
 }
