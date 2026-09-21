@@ -15,10 +15,14 @@
         ;
     };
     modules = [
+
       # # Service config
       # self.nixosModules.baikal
 
       self.nixosModules.nix
+      self.nixosModules.shared
+      self.nixosModules.user
+      self.nixosModules.serverUser
       # self.nixosModules.lix
       self.nixosModules.life-serverConfig
     ];
