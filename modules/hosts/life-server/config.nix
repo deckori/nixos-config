@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  flake.nixosModules.life-serverConfig = { pkgs, ... }: {
+  flake.nixosModules.lifeServerConfig = { pkgs, ... }: {
     nix.settings.experimental-features = [
       "nix-command"
       "flakes"
