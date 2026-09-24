@@ -18,7 +18,6 @@
 
       self.nixosModules.nix
       self.nixosModules.lifeServerExternalImports
-      self.nixosModules.shared
       self.nixosModules.user
       self.nixosModules.serverUser
       # self.nixosModules.lix
