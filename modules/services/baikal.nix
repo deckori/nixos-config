@@ -23,4 +23,16 @@
         };
       };
     };
+
+  flake.nixosModules.baikalSysMgr =
+    { ... }:
+    {
+      services.phpfpm.pools.baikal.settings = {
+        "listen.owner" = "baikal";
+        "listen.group" = "baikal";
+        "listen.mode" = "0660";
+      };
+
+      systemd.services.nginx.serviceConfig.SupplementaryGroups = [ "baikal" ];
+    };
 }
