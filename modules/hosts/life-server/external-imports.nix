@@ -12,6 +12,7 @@
         self.nixosModules.baikalSysMgr
 
         (nixosModulesPath + "/services/audio/navidrome.nix")
+        (nixosModulesPath + "/security/ca.nix")
         self.nixosModules.navidrome
         self.nixosModules.navidromeSysMgr
       ];
