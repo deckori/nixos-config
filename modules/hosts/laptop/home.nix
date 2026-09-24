@@ -18,19 +18,25 @@
       # consuetudo.programs.nemo.enable = true;
 
       home.packages = with pkgs; [
-        godot
-        audacity
-        kdePackages.kdenlive
-        gimp
-        darktable
-        inkscape
-        krita
-        ardour
-        blender
+        # godot # game engine
+
+        # Audio
+        # audacity
+        # ardour
+
+        # kdePackages.kdenlive #video editor
+
+        # Image editors
+        # gimp
+        # darktable
+        # inkscape
+
+        # krita
+        # blender
         imagemagick
         tesseract
-        evtest
-        phototonic
+        # evtest
+        # phototonic
 
         # discover-overlay
         # (discover-overlay.override {
@@ -54,7 +60,6 @@
         libreoffice
         dconf-editor
         gnome-disk-utility
-        zenity
         freefilesync
       ];
     };
