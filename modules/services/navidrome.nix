@@ -35,4 +35,13 @@
         ];
       };
     };
+  flake.nixosModules.navidromeSysMgr =
+    { lib, ... }:
+    {
+      options.services.resolved.enable = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+        description = "Stub for nixpkgs modules that check it; system-manager doesn't manage resolved.";
+      };
+    };
 }

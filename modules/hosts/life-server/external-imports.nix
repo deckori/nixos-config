@@ -13,6 +13,7 @@
 
         (nixosModulesPath + "/services/audio/navidrome.nix")
         self.nixosModules.navidrome
+        self.nixosModules.navidromeSysMgr
       ];
     };
 }
