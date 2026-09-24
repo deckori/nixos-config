@@ -35,11 +35,11 @@
       environment.systemPackages = with pkgs; [
         scrcpy
         sshfs
+        pywalfox-native # Native app used alongside the Pywalfox addon
       ];
 
       # environment.systemPackages = with pkgs; [
-      #   # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-      #   pywalfox-native # Native app used alongside the Pywalfox addon
+      #   #   # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       #
       #   # GTK theming dependancies
       #   adw-gtk3
@@ -58,10 +58,8 @@
       #
       # # Disable in favor of noctalia's applet
       # programs.nm-applet.enable = false;
-      # # Calendar events dependancy
-      # services.gnome.evolution-data-server.enable = true;
-      # # Screen recorder plugin dependancy
-      # programs.gpu-screen-recorder.enable = true;
+      # Screen recorder plugin dependancy
+      programs.gpu-screen-recorder.enable = true;
       #
       # networking.networkmanager.enable = true;
       # hardware.bluetooth.enable = true;
