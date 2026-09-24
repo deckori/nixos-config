@@ -20,6 +20,7 @@
       self.nixosModules.lifeServerExternalImports
       self.nixosModules.user
       self.nixosModules.serverUser
+      self.nixosModules.homeManager
       # self.nixosModules.lix
       self.nixosModules.lifeServerConfig
     ];
