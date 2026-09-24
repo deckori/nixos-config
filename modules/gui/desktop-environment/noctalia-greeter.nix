@@ -4,14 +4,10 @@
   flake.nixosModules.noctalia-greeter =
     {
       pkgs,
-      inputs,
       username,
       ...
     }:
     {
-      imports = [
-        inputs.noctalia-greeter.nixosModules.default
-      ];
 
       services.displayManager.noctalia-greeter = {
         enable = true;
