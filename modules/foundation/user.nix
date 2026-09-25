@@ -9,6 +9,9 @@
     {
       nix.settings.trusted-users = [ username ];
 
+      # For media file services
+      users.groups.media = { };
+
       users.users.${username} = {
         isNormalUser = true;
         group = username;
@@ -17,6 +20,7 @@
           "networkmanager"
           "kvm"
           "wheel"
+          "media"
         ];
         shell = pkgs.bash;
       };
