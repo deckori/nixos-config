@@ -33,11 +33,12 @@
           listenbrainz-daily-playlist
           discord-rich-presence
         ];
-
-        users.users.navidrome = {
-          extraGroups = [ "media" ];
-        };
       };
+
+      users.users.navidrome = {
+        extraGroups = [ "media" ];
+      };
+
     };
   flake.nixosModules.navidromeSysMgr =
     { lib, ... }:
