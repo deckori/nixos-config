@@ -34,18 +34,8 @@
           discord-rich-presence
         ];
 
-        systemd.services.navidrome.serviceConfig = {
-          DynamicUser = lib.mkForce false;
-          User = "navidrome";
-          Group = "media";
-          SupplementaryGroups = [ "media" ];
-          # the module sandboxes the unit's filesystem access; add /data explicitly
-          ReadWritePaths = [ "/data" ];
-        };
-
         users.users.navidrome = {
-          isSystemUser = true;
-          group = "media";
+          extraGroups = [ "media" ];
         };
       };
     };
