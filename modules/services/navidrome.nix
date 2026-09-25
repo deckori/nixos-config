@@ -35,9 +35,7 @@
         ];
       };
 
-      users.users.navidrome = {
-        extraGroups = [ "media" ];
-      };
+      users.users.navidrome.extraGroups = [ "media" ];
 
     };
   flake.nixosModules.navidromeSysMgr =
