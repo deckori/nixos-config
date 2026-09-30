@@ -172,6 +172,7 @@
           ];
 
           boot.initrd.kernelModules = [ ];
+          boot.kernelPackages = lib.mkForce pkgs.linuxPackages_cachyos;
           boot.kernelModules = [ "kvm-intel" ];
           boot.extraModulePackages = [ ];
 
