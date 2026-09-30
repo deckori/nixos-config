@@ -10,6 +10,10 @@ in
   _module.args = {
     # Note: This has unfree packages
     pkgs-custom = inputs.nixpkgs-custom.packages.${system};
+    pkgs-stable = import inputs.nixpkgs-stable {
+      inherit system;
+      config.allowUnfree = true;
+    };
 
     # This makes 'username' available as an argument to all flake-parts modules
     username = inputs.nixpkgs.lib.strings.removeSuffix "\n" (

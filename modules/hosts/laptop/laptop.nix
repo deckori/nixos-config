@@ -2,6 +2,7 @@
   inputs,
   self,
   pkgs-custom,
+  pkgs-stable,
   username,
   laptop,
   ...
@@ -13,6 +14,7 @@
       inherit
         inputs
         pkgs-custom
+        pkgs-stable
         self
         username
         laptop
