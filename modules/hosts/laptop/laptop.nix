@@ -21,6 +21,7 @@
         ;
     };
     modules = [
+      inputs.chaotic.nixosModules.default
       self.nixosModules.shared
       # self.nixosModules.overlays
       self.nixosModules.audio
