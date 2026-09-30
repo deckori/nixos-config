@@ -15,7 +15,7 @@
         settings = {
           Address = "0.0.0.0";
           Port = 4533;
-          MusicFolder = "/data/music/music";
+          MusicFolder = "/data/music/";
 
           Plugins.Enabled = true;
 
