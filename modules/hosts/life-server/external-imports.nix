@@ -19,8 +19,8 @@
         (nixosModulesPath + "/services/torrent/qbittorrent.nix")
         self.nixosModules.qbittorrent
 
-        (nixosModulesPath + "/services/misc/jellyfin.nix")
-        self.nixosModules.jellyfin
+        # (nixosModulesPath + "/services/misc/jellyfin.nix")
+        # self.nixosModules.jellyfin
       ];
     };
 }
