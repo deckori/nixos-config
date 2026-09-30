@@ -23,6 +23,7 @@
       self.nixosModules.homeManager
       # self.nixosModules.lix
       self.nixosModules.lifeServerConfig
+      self.nixosModules.feishinSysMgr
     ];
   };
 }
