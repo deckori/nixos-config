@@ -1,8 +1,15 @@
-{ ... }:
+{
+  pkgs-stable,
+  ...
+}:
 
 {
   flake.homeModules.git =
-    { pkgs, config, ... }:
+    {
+      pkgs,
+      config,
+      ...
+    }:
     {
       # git aliases are placed in .zshrc in chezmoi repo
       programs.git = {
@@ -39,7 +46,7 @@
 
       home.packages = with pkgs; [
         # keychain # credential helper. no longer used
-        git-annex
+        pkgs-stable.git-annex
         git-crypt
         git-remote-gcrypt
         git-credential-manager
