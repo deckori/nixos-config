@@ -1,5 +1,13 @@
-{ ... }:
+{ self, ... }:
 {
+  flake.nixosModules.feishinSysMgr = { nixosModulesPath, ... }: {
+    imports = [
+      (nixosModulesPath + "/services/web-apps/feishin.nix")
+      (nixosModulesPath + "/services/web-servers/caddy/default.nix")
+      self.nixosModules.feishin
+    ];
+  };
+
   flake.nixosModules.feishin =
     { pkgs, laptop, ... }:
     {
