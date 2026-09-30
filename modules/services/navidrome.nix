@@ -1,4 +1,4 @@
-{ inputs, pkgs-stable, ... }:
+{ inputs, ... }:
 
 {
   flake.nixosModules.navidrome =
@@ -29,7 +29,7 @@
           };
         };
 
-        plugins = with pkgs-stable.navidromePlugins; [
+        plugins = with pkgs.pkgsCross.wasi32.navidromePlugins; [
           listenbrainz-daily-playlist
           discord-rich-presence
         ];
