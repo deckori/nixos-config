@@ -223,4 +223,33 @@
       )
     ];
   };
+  flake.systemConfigs.laptop = inputs.system-manager.lib.makeSystemConfig {
+    specialArgs = {
+      inherit
+        inputs
+        pkgs-custom
+        pkgs-stable
+        self
+        username
+        laptop
+        ;
+    };
+	modules = [
+
+      self.nixosModules.stylix
+
+      self.nixosModules.homeManager
+      self.nixosModules.user
+      self.nixosModules.laptopUser
+
+      self.nixosModules.nix
+
+      ## Package config
+      self.nixosModules.shell
+      self.nixosModules.cliMisc
+      self.nixosModules.ssh
+      #self.nixosModules.scheduling
+      #self.nixosModules.btopNvidiaIntel
+];
+};
 }
