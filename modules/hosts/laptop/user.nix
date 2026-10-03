@@ -14,6 +14,7 @@
             self.homeModules.laptopHome
 
             self.homeModules.cliMisc
+            self.homeModules.nushell
             self.homeModules.neovim
 
             self.homeModules.guiMisc
