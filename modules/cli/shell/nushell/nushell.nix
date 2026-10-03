@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self, username, ... }:
 
 {
   flake.homeModules.nushell =
@@ -45,6 +45,7 @@
               '~/.local/bin',
               '~/.config/nixCats-nvim/result/bin',
               '~/.cargo/bin'
+              '/etc/profiles/per-user/${username}/bin/'
             ]
           )
 
@@ -61,6 +62,11 @@
           config.edit_mode = "vi";
           config.show_banner = false;
         };
+
+      };
+      programs.zoxide = {
+        enable = true;
+        enableNushellIntegration = true;
       };
     };
 }
