@@ -3,7 +3,8 @@
 
     # deck-repos is a custom Host definition i made in $HOME/.ssh/config. Create the definition before you use this flake
     secrets = {
-      url = "git+ssh://deck-repos:/secrets.git";
+      #url = "git+ssh://deck-repos:/secrets.git";
+      url = "git+file:///st/remotes/secrets";
       flake = false;
     };
 
@@ -16,7 +17,8 @@
     import-tree.url = "github:vic/import-tree";
 
     nixpkgs-custom = {
-      url = "git+ssh://deck-repos:/nixpkgs-custom";
+      #url = "git+ssh://deck-repos:/nixpkgs-custom";
+      url = "git+file:///st/remotes/nixpkgs-custom";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
