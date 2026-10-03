@@ -56,7 +56,6 @@
         gthumb
         feh
         vlc
-        xournalpp
         libreoffice
         dconf-editor
         gnome-disk-utility
