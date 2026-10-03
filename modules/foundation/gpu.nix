@@ -48,8 +48,8 @@
           nvidiaSettings = true;
 
           # Optionally, you may need to select the appropriate driver version for your specific GPU.
-          # package = config.boot.kernelPackages.nvidiaPackages.stable;
-          package = pkgs.nvidia_cachyos;
+          package = config.boot.kernelPackages.nvidiaPackages.stable;
+          # package = pkgs.nvidia_cachyos;
 
           prime = {
             #  offload = {
