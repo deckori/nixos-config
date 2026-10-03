@@ -5,6 +5,7 @@
     { pkgs, ... }:
     {
       home.packages = with pkgs; [
+firefox
         brave
 
         mpv
