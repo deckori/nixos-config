@@ -37,6 +37,7 @@
         "x86_64-linux"
         "i686-linux"
       ];
+nixpkgs.config.allowUnfree = true;
 
       nix.settings = {
         # max-jobs = 3;
