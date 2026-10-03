@@ -223,7 +223,7 @@
       )
     ];
   };
-  flake.systemConfigs.laptop = inputs.system-manager.lib.makeSystemConfig {
+  flake.systemConfigs.x86_64-linux."debian" = inputs.system-manager.lib.makeSystemConfig {
     specialArgs = {
       inherit
         inputs
@@ -234,9 +234,10 @@
         laptop
         ;
     };
-	modules = [
+    modules = [
+      ({ ... }: { nixpkgs.hostPlatform = "x86_64-linux"; })
 
-      self.nixosModules.stylix
+      #self.nixosModules.stylix
 
       self.nixosModules.homeManager
       self.nixosModules.user
@@ -245,11 +246,14 @@
       self.nixosModules.nix
 
       ## Package config
-      self.nixosModules.shell
-      self.nixosModules.cliMisc
-      self.nixosModules.ssh
+      #self.nixosModules.shell
+      #self.nixosModules.cliMisc
+      #self.nixosModules.ssh
       #self.nixosModules.scheduling
       #self.nixosModules.btopNvidiaIntel
-];
-};
+
+      #self.nixosModules.niri
+      #self.nixosModules.noctalia
+    ];
+  };
 }
