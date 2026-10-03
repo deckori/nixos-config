@@ -704,11 +704,11 @@
         "rev": "276c8e4e3b700e1ec749613b4924ee5f5495416e",
         "revCount": 18,
         "type": "git",
-        "url": "ssh://deck-repos:/nixpkgs-custom"
+        "url": "file:///st/remotes/nixpkgs-custom"
       },
       "original": {
         "type": "git",
-        "url": "ssh://deck-repos:/nixpkgs-custom"
+        "url": "file:///st/remotes/nixpkgs-custom"
       }
     },
     "nixpkgs-docs": {
@@ -1111,11 +1111,11 @@
         "rev": "cf0f29ab4665f7db539e949f9cd8aa501f0f61d7",
         "revCount": 17,
         "type": "git",
-        "url": "ssh://deck-repos:/secrets.git"
+        "url": "file:///st/remotes/secrets"
       },
       "original": {
         "type": "git",
-        "url": "ssh://deck-repos:/secrets.git"
+        "url": "file:///st/remotes/secrets"
       }
     },
     "sops-nix": {
