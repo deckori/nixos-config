@@ -6,7 +6,7 @@
 }:
 
 {
-  flake.systemConfigs.life-server = inputs.system-manager.lib.makeSystemConfig {
+  flake.systemConfigs.x86_64-linux.life-server = inputs.system-manager.lib.makeSystemConfig {
     specialArgs = {
       inherit
         inputs
