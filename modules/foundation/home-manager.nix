@@ -1,4 +1,5 @@
 {
+  self,
   inputs,
   ...
 }:
@@ -21,6 +22,19 @@
         useGlobalPkgs = true;
         useUserPackages = true;
         backupFileExtension = ".backup";
+      };
+    };
+
+  flake.nixosModules.homeManagerSysMgr =
+    { lib, ... }:
+    {
+      imports = [
+        self.nixosModules.homeManager
+      ];
+
+      home-manager = {
+        useGlobalPkgs = lib.mkForce false;
+        useUserPackages = lib.mkForce false;
       };
     };
 }
