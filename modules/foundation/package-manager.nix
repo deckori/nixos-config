@@ -37,7 +37,8 @@
         "x86_64-linux"
         "i686-linux"
       ];
-nixpkgs.config.allowUnfree = true;
+
+      nixpkgs.config.allowUnfree = true;
 
       nix.settings = {
         # max-jobs = 3;
@@ -63,5 +64,13 @@ nixpkgs.config.allowUnfree = true;
       nixpkgs = {
         overlays = [ inputs.nur.overlays.default ];
       };
+    };
+  flake.nixosModules.system-manager =
+    { pkgs, ... }:
+    {
+      system-manager.allowAnyDistro = true;
+      environment.systemPackages = with pkgs; [
+        system-manager
+      ];
     };
 }
