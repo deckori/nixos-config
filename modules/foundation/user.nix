@@ -31,6 +31,7 @@
         users.${username} = {
           home.stateVersion = "26.05";
           home.username = "${username}";
+          nixpkgs.config.allowUnfree = true;
           imports = [
             self.homeModules.username
 
