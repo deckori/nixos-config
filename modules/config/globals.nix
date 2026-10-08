@@ -7,7 +7,7 @@ let
   system = "x86_64-linux";
 in
 {
-  _module.args = {
+  config._module.args = {
     # Note: This has unfree packages
     pkgs-custom = inputs.nixpkgs-custom.packages.${system};
     pkgs-stable = import inputs.nixpkgs-stable {
@@ -21,5 +21,10 @@ in
     );
 
     laptop = (lib.strings.removeSuffix "\n" (builtins.readFile "${inputs.secrets}/hosts/laptop"));
+
+  };
+  options.flake.systemConfigs = lib.mkOption {
+    type = lib.types.lazyAttrsOf lib.types.raw;
+    default = { };
   };
 }
