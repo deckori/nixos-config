@@ -37,4 +37,16 @@
 
       home.packages = with pkgs; [ niri ];
     };
+
+  flake.nixosModules.niriSysMgr =
+    { pkgs, ... }:
+    {
+      environment.systemPackages = with pkgs; [ niri ];
+
+      systemd.tmpfiles.rules = [
+        "L+ /usr/share/wayland-sessions/niri.desktop - - - - ${pkgs.niri}/share/wayland-sessions/niri.desktop"
+        "L+ /etc/systemd/user/niri.service - - - - ${pkgs.niri}/share/systemd/user/niri.service"
+        "L+ /etc/systemd/user/niri-shutdown.target - - - - ${pkgs.niri}/share/systemd/user/niri-shutdown.target"
+      ];
+    };
 }
