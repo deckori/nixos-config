@@ -1,6 +1,15 @@
-{ ... }:
+{ self, ... }:
 
 {
+  flake.nixosModules.noctaliaSysMgr =
+    { nixosModulesPath, ... }:
+    {
+      imports = [
+        (nixosModulesPath + "/programs/gpu-screen-recorder.nix")
+        self.nixosModules.noctalia
+      ];
+    };
+
   flake.nixosModules.noctalia =
     {
       pkgs,

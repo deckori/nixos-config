@@ -1,6 +1,14 @@
-{ ... }:
+{ self, ... }:
 
 {
+  flake.nixosModules.noctalia-greeterSysMgr =
+    { nixosModulesPath, ... }:
+    {
+      imports = [
+        (nixosModulesPath + "/services/display-managers/noctalia-greeter.nix")
+        self.nixosModules.noctalia-greeter
+      ];
+    };
   flake.nixosModules.noctalia-greeter =
     {
       pkgs,
