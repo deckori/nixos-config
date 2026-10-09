@@ -30,6 +30,7 @@
     {
       home.sessionPath = [
         "$HOME/.config/nixCats-nvim/result/bin"
+        "$HOME/.local/bin"
         "/etc/profiles/per-user/${username}/bin/"
         "/usr/local/MATLAB/R2026b/bin/"
       ];
