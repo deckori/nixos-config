@@ -51,7 +51,6 @@
           withVencord = true;
         })
         thunderbird
-        firefox
         gnome-sound-recorder
         gthumb
         feh

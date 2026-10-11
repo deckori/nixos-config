@@ -5,7 +5,6 @@
     { pkgs, ... }:
     {
       home.packages = with pkgs; [
-firefox
         brave
 
         mpv
@@ -26,5 +25,11 @@ firefox
           purple-googlechat
         ];
       };
+    };
+
+  flake.nixosModules.guiMiscNixos =
+    { ... }:
+    {
+      programs.firefox.enable = true;
     };
 }

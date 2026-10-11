@@ -57,6 +57,7 @@
       self.nixosModules.scheduling
       self.nixosModules.btopNvidiaIntel
 
+      self.nixosModules.guiMiscNixos
       self.nixosModules.gaming
 
       self.nixosModules.niri
