@@ -224,7 +224,7 @@
       )
     ];
   };
-  flake.systemConfigs.x86_64-linux."debian" = inputs.system-manager.lib.makeSystemConfig {
+  flake.systemConfigs.cachyos = inputs.system-manager.lib.makeSystemConfig {
     specialArgs = {
       inherit
         inputs
