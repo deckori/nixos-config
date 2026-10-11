@@ -15,6 +15,8 @@
         lrcget
         # pkgs-custom.onetagger
         pkgs-custom.simkl-mps
+
+        pywalfox-native # firefox noctalia theming dep
       ];
 
       programs.pidgin = {
