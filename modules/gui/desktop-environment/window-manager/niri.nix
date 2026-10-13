@@ -36,6 +36,7 @@
     {
 
       home.packages = with pkgs; [ niri ];
+      programs.niri.package = pkgs.niri;
     };
 
   flake.nixosModules.niriSysMgr =
@@ -43,10 +44,21 @@
     {
       environment.systemPackages = with pkgs; [ niri ];
 
-      systemd.tmpfiles.rules = [
-        "L+ /usr/share/wayland-sessions/niri.desktop - - - - ${pkgs.niri}/share/wayland-sessions/niri.desktop"
-        "L+ /etc/systemd/user/niri.service - - - - ${pkgs.niri}/share/systemd/user/niri.service"
-        "L+ /etc/systemd/user/niri-shutdown.target - - - - ${pkgs.niri}/share/systemd/user/niri-shutdown.target"
-      ];
+      systemd.tmpfiles.rules =
+        let
+          niriDesktop = "${pkgs.niri}/share/wayland-sessions/niri.desktop";
+
+          # Read and patch the package desktop file
+          niriNixglDesktop = pkgs.writeText "niri-nixgl.desktop" (
+            builtins.replaceStrings [ "Exec=niri-session" ] [ "Exec=nixGL niri-session" ] (
+              builtins.readFile niriDesktop
+            )
+          );
+        in
+        [
+          "L+ /usr/share/wayland-sessions/niri.desktop - - - - ${niriNixglDesktop}"
+          "L+ /etc/systemd/user/niri.service - - - - ${pkgs.niri}/share/systemd/user/niri.service"
+          "L+ /etc/systemd/user/niri-shutdown.target - - - - ${pkgs.niri}/share/systemd/user/niri-shutdown.target"
+        ];
     };
 }
