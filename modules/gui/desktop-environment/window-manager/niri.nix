@@ -34,16 +34,26 @@
     }:
 
     {
-
       home.packages = with pkgs; [ niri ];
       programs.niri.package = pkgs.niri;
     };
 
+  flake.homeModules.niriSysMgr =
+    {
+      pkgs,
+      nixgl,
+      config,
+      ...
+    }:
+    {
+      home.packages = [
+        (config.lib.nixGL.wrap pkgs.niri)
+        pkgs.wl-clipboard
+      ];
+    };
   flake.nixosModules.niriSysMgr =
     { pkgs, ... }:
     {
-      environment.systemPackages = with pkgs; [ niri ];
-
       systemd.tmpfiles.rules =
         let
           niriDesktop = "${pkgs.niri}/share/wayland-sessions/niri.desktop";
