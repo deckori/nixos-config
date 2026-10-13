@@ -13,7 +13,6 @@
       programs.obs-studio.enable = true;
       programs.zathura.enable = true;
       programs.cava.enable = true;
-      programs.kitty.enable = true;
 
       # consuetudo.programs.nemo.enable = true;
 
