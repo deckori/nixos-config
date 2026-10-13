@@ -32,6 +32,5 @@
   flake.nixosModules.guiMiscNixos =
     { ... }:
     {
-      programs.firefox.enable = true;
     };
 }
