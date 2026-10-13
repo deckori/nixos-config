@@ -2,7 +2,7 @@
 
 {
   flake.nixosModules.lix =
-    { pkgs, ... }:
+    { inputs, pkgs, ... }:
     {
       nixpkgs.overlays = [
         (final: prev: {
@@ -66,11 +66,18 @@
       };
     };
   flake.nixosModules.system-manager =
-    { pkgs, ... }:
+    { pkgs, inputs, ... }:
+    let
+      pkgs = import inputs.nixpkgs {
+        system = "x86_64-linux";
+        overlays = [ inputs.nixgl.overlay ];
+      };
+    in
     {
       system-manager.allowAnyDistro = true;
       environment.systemPackages = with pkgs; [
         system-manager
+        nixgl.auto.nixGLDefault
       ];
     };
 }

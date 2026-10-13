@@ -32,6 +32,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixgl = {
+      url = "github:nix-community/nixGL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     lanzaboote.url = "github:nix-community/lanzaboote/v1.1.0";
 
     nur.url = "github:nix-community/NUR";
