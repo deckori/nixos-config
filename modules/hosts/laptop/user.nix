@@ -10,14 +10,17 @@
       home-manager = {
         users.${username} = {
           imports = [
-            self.homeModules.niri
             self.homeModules.laptopHome
 
             self.homeModules.cliMisc
-            self.homeModules.nushell
+            self.homeModules.shell
             self.homeModules.neovim
 
             self.homeModules.guiMisc
+            self.homeModules.kitty
+            self.homeModules.xournalpp
+
+            self.homeModules.noctalia
           ];
         };
       };
