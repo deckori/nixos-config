@@ -56,14 +56,16 @@ See `./secrets-example` for the required directory structure of the private repo
 - Cmd to set partition to unlock at boot:
 
 ```bash
-sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 /dev/nvme0n1px
+sudo systemd-cryptenroll --tpm2-device=auto --wipe-slot=tpm2 --tpm2-pcrs=0+7 /dev/nvme0n1px
 ```
 
 - When above setup breaks:
   - The corresponding luks keyslot and token become useless and have to be deleted
-  - The above cmd has to be executed again
+  - The above cmd has to be executed again (it takes care of the deletions)
 
-Here's how to cleanup the broken parts:
+If the above auto deletion doesn't work, do the following.
+
+Here's how to manually cleanup the broken parts:
 
 Extract info on the device to check which token and which key it uses:
 
