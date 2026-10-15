@@ -39,7 +39,7 @@
       #self.nixosModules.scheduling
       #self.nixosModules.btopNvidiaIntel
 
-      self.nixosModules.niriSysMgr
+      # self.nixosModules.niriSysMgr
       # self.nixosModules.noctaliaSysMgr
     ];
   };
