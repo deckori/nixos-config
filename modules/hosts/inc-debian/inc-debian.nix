@@ -27,7 +27,7 @@
 
       self.nixosModules.homeManagerSysMgr
       self.nixosModules.user
-      self.nixosModules.laptopUser
+      self.nixosModules.sysMgrUser
 
       self.nixosModules.nix
       self.nixosModules.system-manager

@@ -4,7 +4,7 @@
   ...
 }:
 {
-  flake.nixosModules.laptopUser = { pkgs, lib, ... }: {
+  flake.nixosModules.sysMgrUser = { pkgs, lib, ... }: {
     nixpkgs.hostPlatform = "x86_64-linux";
 
     users.users.root.shell = lib.mkForce "/usr/bin/bash";
@@ -21,8 +21,12 @@
       ];
 
       imports = [
+        self.homeModules.system-manager
+
         self.homeModules.niriSysMgr
+        self.homeModules.wmPackages
         self.homeModules.firefoxSysMgr
+        self.homeModules.xournalpp
       ];
     };
   };
