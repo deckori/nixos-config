@@ -1,4 +1,4 @@
-{ ... }:
+{ self, ... }:
 {
   flake.nixosModules.baikal =
     { pkgs, ... }:
@@ -25,7 +25,7 @@
     };
 
   flake.nixosModules.baikalSysMgr =
-    { ... }:
+    { nixosModulesPath, ... }:
     {
       services.phpfpm.pools.baikal.settings = {
         "listen.owner" = "baikal";
@@ -34,5 +34,12 @@
       };
 
       systemd.services.nginx.serviceConfig.SupplementaryGroups = [ "baikal" ];
+
+      imports = [
+
+        (nixosModulesPath + "/services/web-apps/baikal.nix")
+        (nixosModulesPath + "/services/web-servers/phpfpm/default.nix")
+        self.nixosModules.baikal
+      ];
     };
 }

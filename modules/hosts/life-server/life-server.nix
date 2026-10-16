@@ -17,14 +17,17 @@
     modules = [
 
       self.nixosModules.nix
-      self.nixosModules.lifeServerExternalImports
       self.nixosModules.user
       self.nixosModules.serverUser
       self.nixosModules.homeManager
       # self.nixosModules.lix
       self.nixosModules.lifeServerConfig
+
+      # Services
       self.nixosModules.feishinSysMgr
       self.nixosModules.jellyfinSysMgr
+      self.nixosModules.baikalSysMgr
+      self.nixosModules.lifeServerExternalImports
     ];
   };
 }
