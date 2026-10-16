@@ -1,14 +1,6 @@
 { self, ... }:
 
 {
-  flake.nixosModules.gitoliteSysMgr =
-    { nixosModulesPath, ... }:
-    {
-      imports = [
-        (nixosModulesPath + "/services/misc/gitolite.nix")
-        self.nixosModules.gitolite
-      ];
-    };
   flake.nixosModules.gitolite =
     {
       inputs,
@@ -27,5 +19,14 @@
           )
         );
       };
+    };
+  # Not worth using cuz it somehow triggers a build from source
+  flake.nixosModules.gitoliteSysMgr =
+    { nixosModulesPath, ... }:
+    {
+      imports = [
+        (nixosModulesPath + "/services/misc/gitolite.nix")
+        self.nixosModules.gitolite
+      ];
     };
 }
