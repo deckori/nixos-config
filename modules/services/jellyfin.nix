@@ -1,6 +1,14 @@
-{ username, ... }:
+{ self, ... }:
 
 {
+  flake.nixosModules.jellyfinSysMgr =
+    { nixosModulesPath, ... }:
+    {
+      imports = [
+        (nixosModulesPath + "/services/misc/jellyfin.nix")
+        self.nixosModules.jellyfin
+      ];
+    };
   flake.nixosModules.jellyfin =
     {
       pkgs,
@@ -12,7 +20,6 @@
       services.jellyfin = {
         enable = true;
         openFirewall = true;
-        user = "${username}";
       };
 
       environment.systemPackages = with pkgs; [
