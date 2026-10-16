@@ -20,6 +20,11 @@
         "/usr/local/sbin"
       ];
 
+      home.packages = with pkgs; [
+        cargo
+        cargo-update
+      ];
+
       imports = [
         self.homeModules.system-manager
 
