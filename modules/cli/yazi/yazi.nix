@@ -19,6 +19,7 @@
         enableNushellIntegration = true;
         plugins = {
           sudo = pkgs.yaziPlugins.sudo;
+          mime-ext = pkgs.yaziPlugins.mime-ext;
         };
         shellWrapperName = "y";
       };
@@ -44,6 +45,8 @@
         self.homeModules.yaziRestore
         self.homeModules.yaziSmart-enter
         self.homeModules.yaziSudo
+        self.homeModules.projects-yazi
+        self.homeModules.close-and-restore-tab-yazi
       ];
     };
 }
