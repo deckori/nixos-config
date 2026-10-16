@@ -1,6 +1,16 @@
-{ ... }:
+{ self, ... }:
 
 {
+  flake.nixosModules.fontsSysMgr =
+    { nixosModulesPath, ... }:
+    {
+      imports = [
+        (nixosModulesPath + "/config/fonts/packages.nix")
+        (nixosModulesPath + "/config/fonts/ghostscript.nix")
+        self.nixosModules.fonts
+      ];
+    };
+
   flake.nixosModules.fonts =
     { pkgs, ... }:
     {
