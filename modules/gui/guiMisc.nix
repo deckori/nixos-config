@@ -15,8 +15,6 @@
         lrcget
         # pkgs-custom.onetagger
         pkgs-custom.simkl-mps
-
-        pywalfox-native # firefox noctalia theming dep
       ];
 
       programs.pidgin = {
@@ -30,7 +28,19 @@
     };
 
   flake.nixosModules.guiMiscNixos =
-    { ... }:
+    { pkgs, ... }:
     {
+
+      environment.systemPackages = with pkgs; [
+
+        # Image editors
+        # gimp
+        # darktable
+        # inkscape
+
+        # krita # Drawing
+        # blender # 3D Modelling
+
+      ];
     };
 }
