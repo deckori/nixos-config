@@ -32,6 +32,8 @@
       self.nixosModules.nix
       self.nixosModules.system-manager
 
+      self.nixosModules.gitoliteSysMgr
+
       # Package config
       #self.nixosModules.shell
       #self.nixosModules.cliMisc
