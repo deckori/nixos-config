@@ -31,16 +31,6 @@
       imports = [
         inputs.noctalia.nixosModules.default
       ];
-
-      programs.noctalia = {
-        enable = true;
-        package = pkgs.noctalia;
-        systemd.enable = true;
-
-        # Enables NetworkManager, Bluetooth, UPower, and a power profile service.
-        recommendedServices.enable = true;
-      };
-
       environment.systemPackages = with pkgs; [
         scrcpy
         sshfs
@@ -76,5 +66,12 @@
       # services.upower.enable = true;
 
     };
-
+  flake.homeModules.noctalia =
+    { inputs, pkgs, ... }:
+    {
+      programs.noctalia = {
+        enable = true;
+        systemd.enable = true;
+      };
+    };
 }
