@@ -15,9 +15,10 @@
       config,
       pkgs,
       nixgl,
+      ...
     }:
     {
-      programs.firefox.package = config.lib.nixGL.wrappers.nvidiaPrime pkgs.firefox;
+      programs.firefox.package = config.lib.nixGL.wrap pkgs.firefox;
 
       imports = [ self.homeModules.firefox ];
 
