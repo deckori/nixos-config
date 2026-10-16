@@ -24,6 +24,7 @@
       # self.nixosModules.lix
       self.nixosModules.lifeServerConfig
       self.nixosModules.feishinSysMgr
+      self.nixosModules.jellyfinSysMgr
     ];
   };
 }
