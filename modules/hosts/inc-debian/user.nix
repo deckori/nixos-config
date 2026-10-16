@@ -27,6 +27,7 @@
 
       imports = [
         self.homeModules.system-manager
+        self.homeModules.topgrade
 
         # self.homeModules.niriSysMgr
         self.homeModules.wmPackages
