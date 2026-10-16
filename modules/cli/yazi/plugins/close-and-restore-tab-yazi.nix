@@ -6,13 +6,13 @@
     {
       programs.yazi = {
         plugins = {
-          git = {
-            package = pkgs.yaziPlugins.git;
+          close-and-restore-tab = {
+            package = pkgs.yaziPlugins.close-and-restore-tab;
             setup = true;
           };
         };
-        settings = {
-          plugin.prepend_keymap = [
+        keymap = {
+          mgr.prepend_keymap = [
             {
               on = [ "<C-t>" ];
               run = "plugin close-and-restore-tab restore";
