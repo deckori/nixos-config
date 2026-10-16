@@ -23,7 +23,7 @@
       imports = [
         self.homeModules.system-manager
 
-        self.homeModules.niriSysMgr
+        # self.homeModules.niriSysMgr
         self.homeModules.wmPackages
         self.homeModules.firefoxSysMgr
         self.homeModules.xournalpp
