@@ -4,15 +4,11 @@
   flake.nixosModules.jellyfinSysMgr =
     { lib, nixosModulesPath, ... }:
     {
-      options.boot.kernelModules = lib.mkOption {
-        type = lib.types.listOf lib.types.str;
-        default = [ ];
+      config.boot = lib.mkForce {
+        kernelModules = [ ];
+        isContainer = false;
       };
 
-      options.boot.isContainer = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
       imports = [
         (nixosModulesPath + "/services/misc/jellyfin.nix")
         self.nixosModules.jellyfin
