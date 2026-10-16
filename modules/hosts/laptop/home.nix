@@ -25,13 +25,6 @@
 
         # kdePackages.kdenlive #video editor
 
-        # Image editors
-        # gimp
-        # darktable
-        # inkscape
-
-        # krita
-        # blender
         imagemagick
         tesseract
         # evtest
