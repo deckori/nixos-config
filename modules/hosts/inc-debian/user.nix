@@ -32,7 +32,7 @@
         # self.homeModules.niriSysMgr
         self.homeModules.wmPackages
         self.homeModules.firefoxSysMgr
-        self.homeModules.xournalpp
+        self.homeModules.xournalppSysMgr
       ];
     };
   };
