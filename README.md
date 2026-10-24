@@ -94,3 +94,8 @@ https://system-manager.net/main/how-to/import-nixos-module/
 To be set up:
 
 aw-sync-rust
+
+
+## I like
+
+color: #FF0060
