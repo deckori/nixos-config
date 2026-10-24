@@ -7,7 +7,16 @@
     {
       programs.yazi = {
         plugins = {
-          projects = pkgs.yaziPlugins.projects;
+          projects = {
+            package = pkgs.yaziPlugins.projects;
+            setup = true;
+            settings = {
+              last = {
+                update_before_quit = true;
+                load_after_start = true;
+              };
+            };
+          };
         };
         keymap = {
           mgr.prepend_keymap = [
